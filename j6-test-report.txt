@@ -1,7 +1,6 @@
 J6-EVM DCAN test results
 ========================
 
-Update date: 17-Oct-2014
 Test setup:
 - AM43xx-gp-evm DCAN1 to DCAN2 to J6-evm DCAN1.
 - AM43xx is continuously sending packets from DCAN1 to DCAN2 @ 250Kbps
@@ -13,10 +12,12 @@ on https://github.com/rogerq/linux/commits/ti-linux-3.8.y/dcan
 
 ===========
 Test case 1:
-1) Power up J6-evm while am43xx DCAN is active
-2) Bring up DCAN1 and check if packets received and can be sent
+1) Power up J6-evm while am43xx DCAN is active @250Kbps.
+2) Bring up DCAN1 and check if packets are received.
 3) Bring down DCAN1
-4) reboot (goto step 1)
+4) goto step 2
+
+script used: dcanrxpacket.sh
 
 Observations:
 1) "omap_hwmod: dcan1: _wait_target_disable failed" seen in kernel log even before
@@ -25,16 +26,25 @@ Enabling and disabling modules happens during the Kernel initialization phase.
 
 This error is not seen if CAN bus was idle during boot up.
 
-2) DCAN1 was successful in receiving packets as well as sending packets when brought up.
-Although I have tried only a few times. I still need to run this test overnight. Right now
-I'm blocked on how to reboot the j6-evm. Reboot command doesn't seem to work.
+2) Lockdep warning observed when DCAN1 is brought up the first time.
+This lockdep issue is fixed by commit
+	net: can: c_can: Get rid of lockdep warning on bringing up CAN on DRA7
 
-3) Lockdep warning observed when DCAN1 is brought up the first time.
-This lockdep issue is fixed by
-commit 3b4cf66bfd41ca4ca786098810f1747ee4751d20
-    net: can: c_can: Get rid of lockdep warning on bringing up CAN on DRA7
+3) Board hangs within 10 iterations.
 
-TODO: run this test without rebooting but just cycling the DCAN1 down and up.
+Board hang issue is fixed by commit
+	can: c_can: Fix RX message handling, handle lost message before EOB
+
+4) After above 2 fixes, the test could run long enough. DCAN1 was able to receive packets always.
+See 0 READ failures in below 2 test runs.
+
+UP fails: 19/600
+OFF fails: 591/600
+READ fails: 0/600
+
+UP fails: 21/600
+OFF fails: 586/600
+READ fails: 0/600
 
 ===========
 Test case 2:
@@ -47,6 +57,8 @@ Start and stop DCAN1 repeatedly with idle CAN bus and check if DCAN1 module is O
 6) Check if CM_WKUPAON_DCAN1_CLKCTRL is 0x30000 (i.e. Module disabled and can't be accessed)
 7) goto step 4.
 
+script used: dcanstartstop.sh
+
 Observations:
 1) "omap_hwmod: dcan1: _wait_target_disable failed" seen 6/100 times.
 2) DCAN1 is always stuck in transition after DCAN1 is brought down. (100/100 times)
@@ -54,9 +66,8 @@ Observations:
 3) DCAN1_CTL register 0x4AE3C000 is still accessible (reads 0x1) after DCAN1 brought down.
 
 Fix:
-This issue was fixed by setting INPUTENABLE bit (bit 16) for WAKEUP0.DCAN1_RX pin. Surprisingly, this pin is marked
-reserved in the TRM.
-commit 855e06667602884a580a70dd52c500e2129b5988
+This issue was fixed by setting PULL_DIS bit (bit 16) for DCAN1_TX pin.
+commit
     ARM: dts: DRA7xx: Fix DCAN1 stuck in transition
 
 Observations post fix:
@@ -65,12 +76,17 @@ Observations post fix:
 |CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00030000|
 3) DCAN1_CTL register 0x4AE3C000 can't be accessed after DCAN1 brought down. This is what we want.
 
+UP fails: 0/600
+OFF fails: 0/600
+
 ===========
 Test case 3:
 Start and stop DCAN1 repeatedly with traffic on CAN bus and check if DCAN1 module is initialized
 (i.e. DCAN1_CTL is 0xE)
-commit 3b4cf66bfd41ca4ca786098810f1747ee4751d20
-    net: can: c_can: Get rid of lockdep warning on bringing up CAN on DRA7
+commit
+	ARM: dts: DRA7xx: Fix DCAN1 stuck in transition
+
+script used: dcanstartstop.sh
 
 1) Connect DUT to active traffic CAN bus.
 2) Boot DUT
@@ -81,13 +97,6 @@ commit 3b4cf66bfd41ca4ca786098810f1747ee4751d20
 7) goto step 4.
 
 Observations:
-1) Board hangs within 10 iterations.
-
-Board hang issue is fixed by
-commit ddfb16bab1e25d9cf903063aa4b7b441d30abd33
-	can: c_can: Fix RX message handling, handle lost message before EOB
-
-Post fix Observations:
 1) DCAN1 fails to initialize (i.e. DCAN1_CTL = 0x0) about 6/100 times if you don't delay between
 DCAN1 up and reading DCAN1_CTL register. But if you delay it seems to be always set to 0xE. (not tested
 long enough with delay)
@@ -95,14 +104,16 @@ Upon further investigation it was observed that DCAN1_CTL is in fact 0xE when re
 0x0 when read using devmem2 or omapconf vi user space. I'm not sure why this happens..
 I was able to read packets even when the script indicated DCAN1 up failed.
 
-TODO: Run the test overnight with 1 second delay between UP and read CTL and see how many times it fails.
-Also club with reading packets and flagging error if no packets are received.
+UP fails: 23/600	(NOTE: UP didn't really fail, just that devmem2 didn't notice it)
+OFF fails: 579/600
 
 ===========
 Test case 4:
 Start and stop DCAN1 repeatedly with traffic on CAN bus with all above fixes applied.
-commit ddfb16bab1e25d9cf903063aa4b7b441d30abd33
-    can: c_can: Fix RX message handling, handle lost message before EOB
+commit
+	ARM: dts: DRA7xx: Fix DCAN1 stuck in transition
+
+script used: dcanstartstop.sh
 
 1) Connect DUT to active traffic CAN bus.
 2) Boot DUT
@@ -117,3 +128,43 @@ Observations:
 |CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00010000|
 2) DCAN1_CTL register 0x4AE3C000 reads 0x1 after brought down.
 3) DCAN1 being stuck in transition is the reason why sometimes DCAN_CTL register is accessible even after DCAN1 is brought down.
+
+UP fails: 23/600	(NOTE: UP didn't really fail, just that devmem2 didn't notice it)
+OFF fails: 579/600
+
+Workaround:
+1) Putting the WAKEUP0 pin (DCAN1_RX line) in driver off mode (0xF) before DCAN1 module is disabled seems to fix this issue.
+This is just like idling the CAN bus.
+commits implementing the workaround
+	net: can: c_can: Disable pins when CAN interface is down
+
+	ARM: dts: DRA7xx: Add SLEEP pins for DCAN1
+
+Post workaround observations:
+1) DCAN1 is never stuck in transition after DCAN1 is brought down. (0/100 times).
+|CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00030000|
+2) DCAN1_CTL register 0x4AE3C000 is not accessible after DCAN1 is brought down.
+
+============
+Test case 5:
+
+First send packets without CAN bus connected, then connect CAN bus and resend packets. Check if transmission succeeds.
+commit
+	can: c_can: Fix RX message handling, handle lost message before EOB
+
+1) Disconnect DCAN1 from physical CAN bus
+2) Boot DUT
+3) Configure DCAN1 (ip link set can0 type can bitrate 250000 triple-sampling on)
+4) Bring up DCAN1 (ifconfig can0 up)
+5) Check DCAN1 state is running (ifconfig can0 -> UP RUNNING NOARP)
+6) Send a CAN packet on DCAN1 (cansend can0 -i 0x123 1 2 3 4 5 6 7 8)
+7) Check DCAN1 state. It must still be running.
+8) Connect DCAN1 to physical CAN bus
+9) Send a CAN packet on DCAN1 (cansend can0 -i 0x123 1 2 3 4 5 6 7 8)
+10) Check if DCAN1 state is running and packets are received on the other end. Including the packets that were attempted to be sent before the physical CAN bus was connected.
+
+Observations:
+1) At step 7. DACN1 remains in the running state as expected.
+2) At step 10, DCAN1 remains in the running state and both can packets are received at the receiving end.
+
+
