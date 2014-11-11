@@ -1,0 +1,310 @@
+-------
+canregstartstop.sh run on j6-evm with CAN traffic present
+on DCAN1 pins.
+-------
+root@rockdesk:~# ./canregstartstop.sh 
+/dev/mem opened.
+Memory mapped at address 0xb6fb0000.
+Value at address 0x4A0037D0 (0xb6fb07d0): 0x10000
+Written 0x10000; readback 0x10000
+/dev/mem opened.
+Memory mapped at address 0xb6faa000.
+Value at address 0x4A003818 (0xb6faa818): 0x10001
+Written 0x10001; readback 0x10001
+/dev/mem opened.
+Memory mapped at address 0xb6f13000.
+Value at address 0x4A0037D4 (0xb6f137d4): 0xF
+Written 0xF; readback 0xF
+test 1
+/dev/mem opened.
+Memory mapped at address 0xb6f39000.
+Value at address 0x4AE07888 (0xb6f39888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f0a000.
+Value at address 0x4A002558 (0xb6f0a558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f0b000.
+Value at address 0x4A002558 (0xb6f0b558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f32000.
+Value at address 0x4A002558 (0xb6f32558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f30000.
+Value at address 0x4A002558 (0xb6f30558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f85000.
+Value at address 0x4AE07888 (0xb6f85888): 0x2
+Written 0x0; readback 0x10000
+off failed 1 - VAL:0x10000
+RAMINIT fails: 0/1 OFF fails: 1/1
+test 2
+/dev/mem opened.
+Memory mapped at address 0xb6f68000.
+Value at address 0x4AE07888 (0xb6f68888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f1a000.
+Value at address 0x4A002558 (0xb6f1a558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f4b000.
+Value at address 0x4A002558 (0xb6f4b558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f5d000.
+Value at address 0x4A002558 (0xb6f5d558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f5f000.
+Value at address 0x4A002558 (0xb6f5f558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f21000.
+Value at address 0x4AE07888 (0xb6f21888): 0x2
+Written 0x0; readback 0x10000
+off failed 2 - VAL:0x10000
+RAMINIT fails: 0/2 OFF fails: 2/2
+test 3
+/dev/mem opened.
+Memory mapped at address 0xb6f26000.
+Value at address 0x4AE07888 (0xb6f26888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f55000.
+Value at address 0x4A002558 (0xb6f55558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6fbb000.
+Value at address 0x4A002558 (0xb6fbb558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fc0000.
+Value at address 0x4A002558 (0xb6fc0558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f55000.
+Value at address 0x4A002558 (0xb6f55558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f2a000.
+Value at address 0x4AE07888 (0xb6f2a888): 0x2
+Written 0x0; readback 0x10000
+off failed 3 - VAL:0x10000
+RAMINIT fails: 0/3 OFF fails: 3/3
+test 4
+/dev/mem opened.
+Memory mapped at address 0xb6fd8000.
+Value at address 0x4AE07888 (0xb6fd8888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fa6000.
+Value at address 0x4A002558 (0xb6fa6558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6ff4000.
+Value at address 0x4A002558 (0xb6ff4558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f88000.
+Value at address 0x4A002558 (0xb6f88558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f82000.
+Value at address 0x4A002558 (0xb6f82558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fac000.
+Value at address 0x4AE07888 (0xb6fac888): 0x2
+Written 0x0; readback 0x10000
+off failed 4 - VAL:0x10000
+RAMINIT fails: 0/4 OFF fails: 4/4
+test 5
+/dev/mem opened.
+Memory mapped at address 0xb6ff3000.
+Value at address 0x4AE07888 (0xb6ff3888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f7a000.
+Value at address 0x4A002558 (0xb6f7a558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f7e000.
+Value at address 0x4A002558 (0xb6f7e558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f71000.
+Value at address 0x4A002558 (0xb6f71558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f93000.
+Value at address 0x4A002558 (0xb6f93558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f4d000.
+Value at address 0x4AE07888 (0xb6f4d888): 0x2
+Written 0x0; readback 0x10000
+off failed 5 - VAL:0x10000
+RAMINIT fails: 0/5 OFF fails: 5/5
+test 6
+/dev/mem opened.
+Memory mapped at address 0xb6f11000.
+Value at address 0x4AE07888 (0xb6f11888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f7a000.
+Value at address 0x4A002558 (0xb6f7a558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f08000.
+Value at address 0x4A002558 (0xb6f08558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f24000.
+Value at address 0x4A002558 (0xb6f24558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f61000.
+Value at address 0x4A002558 (0xb6f61558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f3a000.
+Value at address 0x4AE07888 (0xb6f3a888): 0x2
+Written 0x0; readback 0x10000
+off failed 6 - VAL:0x10000
+RAMINIT fails: 0/6 OFF fails: 6/6
+test 7
+/dev/mem opened.
+Memory mapped at address 0xb6fc1000.
+Value at address 0x4AE07888 (0xb6fc1888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f05000.
+Value at address 0x4A002558 (0xb6f05558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f91000.
+Value at address 0x4A002558 (0xb6f91558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fea000.
+Value at address 0x4A002558 (0xb6fea558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fd4000.
+Value at address 0x4A002558 (0xb6fd4558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fe2000.
+Value at address 0x4AE07888 (0xb6fe2888): 0x2
+Written 0x0; readback 0x10000
+off failed 7 - VAL:0x10000
+RAMINIT fails: 0/7 OFF fails: 7/7
+test 8
+/dev/mem opened.
+Memory mapped at address 0xb6f6f000.
+Value at address 0x4AE07888 (0xb6f6f888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fd1000.
+Value at address 0x4A002558 (0xb6fd1558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f04000.
+Value at address 0x4A002558 (0xb6f04558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f21000.
+Value at address 0x4A002558 (0xb6f21558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f3b000.
+Value at address 0x4A002558 (0xb6f3b558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fa6000.
+Value at address 0x4AE07888 (0xb6fa6888): 0x2
+Written 0x0; readback 0x10000
+off failed 8 - VAL:0x10000
+RAMINIT fails: 0/8 OFF fails: 8/8
+test 9
+/dev/mem opened.
+Memory mapped at address 0xb6fd2000.
+Value at address 0x4AE07888 (0xb6fd2888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f16000.
+Value at address 0x4A002558 (0xb6f16558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f1f000.
+Value at address 0x4A002558 (0xb6f1f558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fc8000.
+Value at address 0x4A002558 (0xb6fc8558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fc3000.
+Value at address 0x4A002558 (0xb6fc3558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fb7000.
+Value at address 0x4AE07888 (0xb6fb7888): 0x2
+Written 0x0; readback 0x10000
+off failed 9 - VAL:0x10000
+RAMINIT fails: 0/9 OFF fails: 9/9
+test 10
+/dev/mem opened.
+Memory mapped at address 0xb6fdb000.
+Value at address 0x4AE07888 (0xb6fdb888): 0x10000
+Written 0x2; readback 0x2
+/dev/mem opened.
+Memory mapped at address 0xb6f19000.
+Value at address 0x4A002558 (0xb6f19558): 0x0
+Written 0x8; readback 0x8
+/dev/mem opened.
+Memory mapped at address 0xb6f7a000.
+Value at address 0x4A002558 (0xb6f7a558): 0xA
+Written 0x0; readback 0x2
+after enable iocontrol=0x2
+/dev/mem opened.
+Memory mapped at address 0xb6fee000.
+Value at address 0x4A002558 (0xb6fee558): 0x2
+Written 0x2; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0xb6f17000.
+Value at address 0x4A002558 (0xb6f17558): 0x0
+Written 0x0; readback 0x0
+after disable iocontrol=0x0
+/dev/mem opened.
+Memory mapped at address 0xb6fa2000.
+Value at address 0x4AE07888 (0xb6fa2888): 0x2
+Written 0x0; readback 0x10000
+off failed 10 - VAL:0x10000
+RAMINIT fails: 0/10 OFF fails: 10/10
+SUMMARY
+RAMINIT fails: 0/10
+OFF fails: 10/10
