@@ -1,0 +1,935 @@
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd4 (1582)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd4ro (1583)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd4/mtdblock4 (1585)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd5 (1586)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd5ro (1587)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd5/mtdblock5 (1589)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd6 (1590)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd6ro (1591)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd6/mtdblock6 (1593)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd7 (1594)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd7ro (1595)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd7/mtdblock7 (1597)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd8 (1598)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd8ro (1599)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd8/mtdblock8 (1601)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd9 (1602)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd9ro (1603)
+  /sys/devices/44000000.ocp/4b300000.qspi/spi_master/spi32766/spi32766.0/mtd/mtd9/mtdblock9 (1605)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0 (1612)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0/queues/rx-0 (1613)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0/queues/tx-0 (1614)
+  /sys/devices/44000000.ocp/48880000.omap_dwc3_1/48890000.usb/udc/48890000.usb (1616)
+  /sys/devices/44000000.ocp/488c0000.omap_dwc3[    6.942380] EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+_2/488d0000.usb/xhci-hcd.0.auto (1617)
+[    6.996820] (stc):  chnl_id list empty :4 
+[    7.000966] (stk) : st_kim_startStarting Bootlog daemon: bootlogd: cannot allocate pseudo tty: No such file or directory
+bootlogd.
+(stk) :ldisc_install = 1
+[    7.238556] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    7.245236] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    7.259847] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    7.273239] xhci-hcd xhci-hcd.0.auto: irq 422, io mem 0x488d0000
+[    7.280949] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    7.288077] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    7.295672] usb usb1: Product: xHCI Host Controller
+[    7.300796] usb usb1: Manufacturer: Linux 3.14.26-02526-g71613a2-dirty xhci-hcd
+[    7.308467] usb usb1: SerialNumber: xhci-hcd.0.auto
+[    7.315097] hub 1-0:1.0: USB hub found
+[    7.319811] hub 1-0:1.0: 1 port detected
+[    7.328036] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    7.336070] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    7.344914] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    7.352050] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    7.359637] usb usb2: Product: xHCI Host Controller
+[    7.364745] usb usb2: Manufacturer: Linux 3.14.26-02526-g71613a2-dirty xhci-hcd
+[    7.372423] usb usb2: SerialNumber: xhci-hcd.0.auto
+[    7.378719] hub 2-0:1.0: USB hub found
+[    7.385024] hub 2-0:1.0: 1 port detected
+ALSA: Restoring mixer settings...
+INIT: Entering runlevel: 5
+Configuring network interfaces... [    7.590755] net eth0: initializing cpsw version 1.15 (0)
+[    7.682176] net eth0: phy found : id is : 0x20005c7a
+udhcpc (v1.22.1) started
+Sending discover...
+[    8.108187] (stk) :ldisc installation timeout
+[    8.112579] (stk) :ldisc_install = 0(stk) : timed out waiting for ldisc to be un-installed
+[    9.220053] (stk) :ldisc_install = 1[    9.685331] libphy: 48485000.mdio:02 - Link is Up - 100/Full
+[   10.218125] (stk) :ldisc installation timeout
+[   10.222516] (stk) :ldisc_install = 0Sending discover...
+Sending select for 192.168.1.60...
+Lease of 192.168.1.60 obtained, lease time 86400
+(stk) : timed out waiting for ldisc to be un-installed
+[   11.330054] (stk) :ldisc_install = 1/etc/udhcpc.d/50default: Adding DNS 192.168.1.1
+done.
+Starting system message bus: dbus.
+UIM SYSFS Node Found at /sys/./devices/kim.10/install
+Starting uim-sysfs daemon.
+uim:@ main
+uim:install = /sys/./devices/kim.10/install
+uim:dev_name = /sys/./devices/kim.10/dev_name
+uim:baud_rate = /sys/./devices/kim.10/baud_rate
+uim:flow_cntrl = /sys/./devices/kim.10/flow_cntrl
+uim:install set previously...
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+Starting Dropbear SSH server: dropbear.
+Starting telnet daemon.
+Starting rpcbind daemon...uim:Invalid response
+uim:begin polling...
+(stk) :ldisc installation timeout
+[   12.331137] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+rpcbind: cannot create socket for udp6
+rpcbind: cannot create socket for tcp6
+done.
+[   12.412971] omap_hwmod: dcan1: _wait_target_disable failed
+creating NFS state directory: done
+starting statd: [   12.507193] omap_hwmod: dcan1: _wait_target_disable failed
+[   12.522427] omap_hwmod: dcan1: _wait_target_disable failed
+[   12.537841] omap_hwmod: dcan1: _wait_target_disable failed
+done
+Starting syslogd/klogd: done
+Starting thttpd.
+[   12.702926] Unhandled fault: imprecise external abort (0x1406) at 0x00000000
+ioctl FBIOPUT_VSCREENINFO: Invalid argument
+No SGX hardware, not starting PVR
+Starting Lighttpd Web Server: lighttpd.
+2014-10-12 15:11:20: (/scratch/jenkins/coresdk-nightly-build/build-CORTEX_2/arago-tmp-external-linaro-toolchain/work/cortexa9t2hf-vfp-neon-oe-linux-gnueabi/lighttpd/1.4.33-r1/lighttpd-1.4.33/src/log.c.166) serv 
+[   13.328154] (stk) : timed out waiting for ldisc to be un-installed
+[   13.441459] (stk) :ldisc_install = 1uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+uim:Invalid response
+uim:begin polling...
+***************************************************************
+***************************************************************
+NOTICE: This file system contains the followin GPLv3 packages:
+        binutils
+        elfutils
+        gdbserver
+        libdw1
+        libelf1
+        m4
+
+If you do not wish to distribute GPLv3 components please remove
+the above packages prior to distribution.  This can be done using
+the opkg remove command.  i.e.:
+    opkg remove <package>
+Where <package> is the name printed in the list above
+
+NOTE: If the package is a dependency of another package you
+      will be notified of the dependent packages.  You should
+      use the --force-removal-of-dependent-packages option to
+      also remove the dependent packages as well
+***************************************************************
+***************************************************************
+Stopping Bootlog daemon: bootlogd.
+custom script
+(stk) :ldisc installation timeout
+[   14.441142] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+DCANRXPACKETREBOOT test iteration: 99
+[   14.841290] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+[   15.438122] (stk) : timed out waiting for ldisc to be un-installed
+[   15.444567] c_can_platform 4ae3c000.can can0: msg lost in buffer 16
+[   15.558651] (stk) :ldisc_install = 1uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+uim:Invalid response
+uim:begin polling...
+interface = can0, family = 29, type = 3, proto = 1
+
+[   15.890638] can: controller area network core (rev 20120528 abi 9)
+[   15.897473] NET: Registered protocol family 29
+[   15.919785] can: raw protocol (rev 20120528)
+[   16.558125] (stk) :ldisc installation timeout
+[   16.562516] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+candump size 64336
+[   16.890680] omap_hwmod: dcan1: _wait_target_disable failed
+[   17.558126] (stk) : timed out waiting for ldisc to be un-installed
+[   17.671429] (stk) :ldisc_install = 1uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+uim:Invalid response
+uim:begin polling...
+can0 off failed - VAL:0x00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Boots: 99, UP fails: 2, OFF fails: 99, READ fails: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Broadcast message from root@am437x-evm (ttyO0) (Sun Oct 12 15:11:26 2014):
+The system is going down for reboot NOW!
+(stk) :ldisc installation timeout
+[   18.671149] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+(stk) : timed out waiting for ldisc to be un-installed
+[   19.675063] Bluetooth: st_register failed -22
+INIT: Switching to runlevel: 6
+INIT: Sending processeUIM SYSFS Node Found at /sys/./devices/kim.10/install
+Stopping uim-sysfs daemon.
+Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 1846)
+dropbear.
+Stopping telnet daemon.
+Stopping system message bus: dbus.
+Stopping syslogd/klogd: stopped syslogd (pid 1882)
+stopped klogd (pid 1885)
+done
+Stopping thttpd.
+Stopping Weston
+stopping statd: done
+[   26.731921] omap_hwmod: dcan1: _wait_target_disable failed
+ALSA: Storing mixer settings...
+[   26.806881] Unhandled fault: imprecise external abort (0x1406) at 0x00000000
+Stopping PVR
+rmmod: ERROR: Module bufferclass_ti is not currently loaded
+Stopping rpcbind daemon...
+done.
+Stopping Lighttpd Web Server: stopped /usr/sbin/lighttpd (pid 1929)
+lighttpd.
+Deconfiguring network interfaces... done.
+***************************************************************
+***************************************************************
+NOTICE: This file system contains the followin GPLv3 packages:
+        binutils
+        elfutils
+        gdbserver
+        libdw1
+        libelf1
+        m4
+
+If you do not wish to distribute GPLv3 components please remove
+the above packages prior to distribution.  This can be done using
+the opkg remove command.  i.e.:
+    opkg remove <package>
+Where <package> is the name printed in the list above
+
+NOTE: If the package is a dependency of another package you
+      will be notified of the dependent packages.  You should
+      use the --force-removal-of-dependent-packages option to
+      also remove the dependent packages as well
+***************************************************************
+***************************************************************
+Sending all processes the TERM signal...
+Error VT_WAITACTIVE failed
+: Interrupted system call
+Sending all processes the KILL signal...
+Unmounting remote filesystems...
+Deactivating swap...
+Unmounting local filesystems...
+[   38.754633] EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+Rebooting... [   41.094157] reboot: Restarting system
+
+U-Boot SPL 2014.07-00086-g3a10fdf-dirty (Dec 12 2014 - 12:24:28)
+DRA752 ES1.1
+SYSBOOT 0x8115
+reading args
+spl_load_image_fat_os: error reading image args, err - -1
+reading u-boot.img
+reading u-boot.img
+
+
+U-Boot 2014.07-00086-g3a10fdf-dirty (Dec 12 2014 - 12:24:28)
+
+CPU  : DRA752 ES1.1
+Board: DRA7xx
+I2C:   ready
+DRAM:  1.5 GiB
+NAND:  0 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Using default environment
+
+SATA link 0 timeout.
+AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+flags: 64bit ncq stag pm led clo only pmp pio slum part ccc apst 
+scanning bus for devices...
+Found 0 device(s).
+SCSI:  Net:   <ethaddr> not set. Validating first E-fuse MAC
+cpsw
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+SD/MMC found on device 0
+reading uEnv.txt
+745 bytes read in 7 ms (103.5 KiB/s)
+Loaded environment from
+Importing environment from mmc0 ...
+Running uenvcmd ...
+4386296 bytes read in 270 ms (15.5 MiB/s)
+84634 bytes read in 38 ms (2.1 MiB/s)
+Kernel image @ 0x82000000 [ 0x000000 - 0x42edf8 ]
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8ffe8000, end 8ffffa99 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.26-02526-g71613a2-dirty (roger@rockdesk) (gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-11ubuntu1) ) #857 SMP Fri Dec 12 11:51:05 EET 2014
+[    0.000000] CPU: ARMv7 Processor [412fc0f2] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: TI DRA742
+[    0.000000] Reserved memory: created CMA memory pool at 0x95800000, size 56 MiB
+[    0.000000] Reserved memory: initialized node ipu2_cma@95800000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x99000000, size 64 MiB
+[    0.000000] Reserved memory: initialized node dsp1_cma@99000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB
+[    0.000000] Reserved memory: initialized node ipu1_cma@9d000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9f000000, size 8 MiB
+[    0.000000] Reserved memory: initialized node dsp2_cma@9f000000, compatible id shared-dma-pool
+[    0.000000] cma: CMA: reserved 24 MiB at ae000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] DRA752 ES1.1
+[    0.000000] PERCPU: Embedded 8 pages/cpu @ed361000 s8832 r8192 d15744 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 391440
+[    0.000000] Kernel command line: console=ttyO0,115200n8 vram=16M root=/dev/mmcblk1p2 rw rootfstype=ext4 rootwait
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1360648K/1571840K available (6019K kernel code, 386K rwdata, 1960K rodata, 336K init, 251K bss, 211192K reserved, 793600K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc07d3044   (7981 kB)
+[    0.000000]       .init : 0xc07d4000 - 0xc0828280   ( 337 kB)
+[    0.000000]       .data : 0xc082a000 - 0xc088a950   ( 387 kB)
+[    0.000000]        .bss : 0xc088a958 - 0xc08c990c   ( 252 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] OMAP clockevent source: timer1 at 32768 Hz
+[    0.000000] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 65536000000000ns
+[    0.000030] OMAP clocksource: 32k_counter at 32768 Hz
+[    0.000366] Architected cp15 timer(s) running at 6.14MHz (virt).
+[    0.000401] sched_clock: 56 bits at 6MHz, resolution 162ns, wraps every 2796202663936ns
+[    0.000409] Switching to timer-based delay loop
+[    0.001245] Console: colour dummy device 80x30
+[    0.001264] Calibrating delay loop (skipped), value calculated using timer frequency.. 12.28 BogoMIPS (lpj=61440)
+[    0.001276] pid_max: default: 32768 minimum: 301
+[    0.001378] Security Framework initialized
+[    0.001421] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001431] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.019118] CPU: Testing write buffer coherency: ok
+[    0.019337] /cpus/cpu@0 missing clock-frequency property
+[    0.019368] /cpus/cpu@1 missing clock-frequency property
+[    0.019379] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.019398] Setting up static identity map for 0x805e6c88 - 0x805e6ce0
+[    0.020510] CPU1: Booted secondary processor
+[    0.020538] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.020658] Brought up 2 CPUs
+[    0.020671] SMP: Total of 2 processors activated.
+[    0.020677] CPU: All CPU(s) started in SVC mode.
+[    0.021050] devtmpfs: initialized
+[    0.021599] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.022893] omap_hwmod: l3_main_2 using broken dt data from ocp
+[    0.181843] pinctrl core: initialized pinctrl subsystem
+[    0.182390] regulator-dummy: no parameters
+[    0.185711] NET: Registered protocol family 16
+[    0.187358] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.189021] cpuidle: using governor ladder
+[    0.189029] cpuidle: using governor menu
+[    0.192367] syscon 4a002000.tisysconcore: regmap [mem 0x4a002000-0x4a0026cf] registered
+[    0.192607] syscon 4a002e00.tisyscon: regmap [mem 0x4a002e00-0x4a002e7b] registered
+[    0.194295] OMAP GPIO hardware version 0.1
+[    0.199948] irq: no irq domain found for /ocp/pinmux@4a003400 !
+[    0.205332] platform 58820000.ipu: assigned reserved memory node ipu1_cma@9d000000
+[    0.205585] platform 55020000.ipu: assigned reserved memory node ipu2_cma@95800000
+[    0.205827] platform 40800000.dsp: assigned reserved memory node dsp1_cma@99000000
+[    0.218169] platform 41000000.dsp: assigned reserved memory node dsp2_cma@9f000000
+[    0.222408] No ATAGs?
+[    0.222431] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.222440] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.223242] OMAP DMA hardware revision 0.0
+[    0.223599] omap-dma-xbar 4a002b78.dma-crossbar: OMAP DMA Crossbar driver
+[    0.244747] bio: create slab <bio-0> at 0
+[    0.278551] omap-dma-engine 4a056000.dma-controller: OMAP DMA engine driver
+[    0.279264] evm_3v3_sw: 3300 mV 
+[    0.279507] aic_dvdd: 1800 mV 
+[    0.279581] aic_dvdd: supplied by evm_3v3_sw
+[    0.279869] vmmcwl_fixed: 1800 mV 
+[    0.280158] vtt_fixed: 1350 mV 
+[    0.281827] vgaarb: loaded
+[    0.282147] i2c-core: driver [palmas] using legacy suspend method
+[    0.282154] i2c-core: driver [palmas] using legacy resume method
+[    0.282653] SCSI subsystem initialized
+[    0.283624] usbcore: registered new interface driver usbfs
+[    0.283753] usbcore: registered new interface driver hub
+[    0.283906] usbcore: registered new device driver usb
+[    0.284670] omap_i2c 48070000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c1_pins, deferring probe
+[    0.284686] platform 48070000.i2c: Driver omap_i2c requests probe deferral
+[    0.284717] omap_i2c 48072000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c2_pins, deferring probe
+[    0.284730] platform 48072000.i2c: Driver omap_i2c requests probe deferral
+[    0.284758] omap_i2c 48060000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c3_pins, deferring probe
+[    0.284770] platform 48060000.i2c: Driver omap_i2c requests probe deferral
+[    0.285066] pps_core: LinuxPPS API ver. 1 registered
+[    0.285074] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.285163] PTP clock support registered
+[    0.286375] omap-mailbox 48840000.mailbox: omap mailbox rev 0x400
+[    0.286762] omap-mailbox 48842000.mailbox: omap mailbox rev 0x400
+[    0.287645] omap-iommu 40d01000.mmu: 40d01000.mmu registered
+[    0.287741] omap-iommu 40d02000.mmu: 40d02000.mmu registered
+[    0.287834] omap-iommu 58882000.mmu: 58882000.mmu registered
+[    0.287921] omap-iommu 55082000.mmu: 55082000.mmu registered
+[    0.288070] omap-iommu 41501000.mmu: 41501000.mmu registered
+[    0.288164] omap-iommu 41502000.mmu: 41502000.mmu registered
+[    0.288435] Advanced Linux Sound Architecture Driver Initialized.
+[    0.289524] Switched to clocksource arch_sys_counter
+[    0.305718] NET: Registered protocol family 2
+[    0.306328] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.306395] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.306525] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.306568] TCP: reno registered
+[    0.306579] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.306609] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.306803] NET: Registered protocol family 1
+[    0.307035] RPC: Registered named UNIX socket transport module.
+[    0.307043] RPC: Registered udp transport module.
+[    0.307048] RPC: Registered tcp transport module.
+[    0.307054] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.307949] hw perfevents: enabled with ARMv7 Cortex-A15 PMU driver, 7 counters available
+[    0.310513] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.405801] bounce pool size: 64 pages
+[    0.406057] VFS: Disk quotas dquot_6.5.2
+[    0.406164] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.406682] NFS: Registering the id_resolver key type
+[    0.406714] Key type id_resolver registered
+[    0.406722] Key type id_legacy registered
+[    0.406757] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    0.406921] msgmni has been set to 1475
+[    0.408114] NET: Registered protocol family 38
+[    0.408139] io scheduler noop registered
+[    0.408146] io scheduler deadline registered
+[    0.408175] io scheduler cfq registered (default)
+[    0.412723] pinctrl-single 4a003400.pinmux: 281 pins at pa fc003400 size 1124
+[    0.420304] omap_hwmod: pcie1: _wait_target_disable failed
+[    0.450071] dra7-pcie 51000000.pcie: PCI host bridge to bus 0000:00
+[    0.450085] pci_bus 0000:00: root bus resource [io  0x1000-0x10000]
+[    0.450100] pci_bus 0000:00: root bus resource [mem 0x20013000-0x2fffffff]
+[    0.450110] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.450564] PCI: bus0: Fast back to back transfers disabled
+[    0.450775] PCI: bus1: Fast back to back transfers enabled
+[    0.450888] pci 0000:00:00.0: BAR 0: assigned [mem 0x20100000-0x201fffff]
+[    0.450903] pci 0000:00:00.0: BAR 1: assigned [mem 0x20020000-0x2002ffff]
+[    0.450915] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.450935] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.452555] OMAP DSS rev 6.1
+[    0.455769] dra7evm-tpd12s015 encoder.14: failed to parse CT CP HPD gpio
+[    0.455793] platform encoder.14: Driver dra7evm-tpd12s015 requests probe deferral
+[    0.456220] connector-hdmi connector.13: failed to find video source
+[    0.456235] platform connector.13: Driver connector-hdmi requests probe deferral
+[    0.456960] pbias_mmc_omap5: 1800 <--> 3000 mV at 3000 mV 
+[    0.457582] abb_mpu: 1060 <--> 1210 mV 
+[    0.457861] abb_ivahd: 1055 <--> 1250 mV 
+[    0.458146] abb_dspeve: 1055 <--> 1250 mV 
+[    0.458429] abb_gpu: 1090 <--> 1280 mV 
+[    0.459327] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.461932] 4806a000.serial: ttyO0 at MMIO 0x4806a000 (irq = 296, base_baud = 3000000) is a OMAP UART0
+[    1.469445] console [ttyO0] enabled
+[    1.473533] platform 48020000.serial: Driver omap_uart requests probe deferral
+[    1.481832] omap_rng 48090000.rng: OMAP Random Number Generator ver. 20
+[    1.489018] [drm] Initialized drm 1.1.0 20060810
+[    1.502893] brd: module loaded
+[    1.510760] loop: module loaded
+[    1.514242] (stk) :sysfs entries created
+[    1.518347] (stk) : debugfs entries creation failed 
+[    1.523510] (hci_tty): inside hci_tty_init
+[    1.528270] (hci_tty): allocated 249, 0
+[    1.533307] ahci 4a140000.sata: SSS flag set, parallel bus scan disabled
+[    1.540364] ahci 4a140000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.549310] ahci 4a140000.sata: flags: 64bit ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.560098] scsi0 : ahci_platform
+[    1.563994] ata1: SATA max UDMA/133 mmio [mem 0x4a140000-0x4a1410ff] port 0x100 irq 329
+[    1.573461] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    1.584809] usbcore: registered new interface driver asix
+[    1.590619] usbcore: registered new interface driver ax88179_178a
+[    1.597113] usbcore: registered new interface driver cdc_ether
+[    1.603364] usbcore: registered new interface driver smsc95xx
+[    1.609491] usbcore: registered new interface driver net1080
+[    1.615560] usbcore: registered new interface driver cdc_subset
+[    1.621893] usbcore: registered new interface driver zaurus
+[    1.627875] usbcore: registered new interface driver cdc_ncm
+[    1.634147] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.641004] ehci-pci: EHCI PCI platform driver
+[    1.645785] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.651637] usbcore: registered new interface driver cdc_wdm
+[    1.657700] usbcore: registered new interface driver usb-storage
+[    1.664925] mousedev: PS/2 mouse device common for all mice
+[    1.671920] i2c-core: driver [rtc-ds1307] using legacy suspend method
+[    1.678683] i2c-core: driver [rtc-ds1307] using legacy resume method
+[    1.685931] omap_rtc 48838000.rtcss: rtc core: registered 48838000.rtcss as rtc0
+[    1.693740] 48838000.rtcss: already running
+[    1.698563] i2c /dev entries driver
+[    1.702331] Driver for 1-wire Dallas network protocol.
+[    1.711785] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    1.720258] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    1.727176] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.734839] omap_hsmmc 480b4000.mmc: pins are not configured from the driver
+[    1.823274] mmc0: BKOPS_EN bit is not set
+[    1.831299] mmc0: new high speed MMC card at address 0001
+[    1.837360] mmcblk0: mmc0:0001 MMC08G 7.25 GiB 
+[    1.842308] mmcblk0boot0: mmc0:0001 MMC08G partition 1 8.00 MiB
+[    1.848674] mmcblk0boot1: mmc0:0001 MMC08G partition 2 8.00 MiB
+[    1.855687]  mmcblk0: unknown partition table
+[    1.861252]  mmcblk0boot1: unknown partition table
+[    1.867213]  mmcblk0boot0: unknown partition table
+[    1.900104] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.906683] omap-aes 4b500000.aes: OMAP AES hw accel rev: 3.3
+[    1.913375] omap-des 480a5000.des: OMAP DES hw accel rev: 2.2
+[    1.919568] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.925916] omap-sham 4b101000.sham: hw accel on OMAP rev 4.3
+[    1.933273] usbcore: registered new interface driver usbhid
+[    1.939118] usbhid: USB HID core driver
+[    1.944157] platform dra7x_usbid_extcon1.5: Driver extcon-gpio requests probe deferral
+[    1.952580] platform dra7x_usbid_extcon2.6: Driver extcon-gpio requests probe deferral
+[    1.963073] asoc-simple-card asoc-simple-card.0: hdmi-hifi <-> 58040000.encoder mapping ok
+[    1.973585] davinci_evm primary_sound.15: ASoC: CODEC (null) not registered
+[    1.980912] davinci_evm primary_sound.15: snd_soc_register_card failed (-517)
+[    1.988409] platform primary_sound.15: Driver davinci_evm requests probe deferral
+[    1.997018] oprofile: using timer interrupt.
+[    2.001677] TCP: cubic registered
+[    2.005137] Initializing XFRM netlink socket
+[    2.009632] NET: Registered protocol family 17
+[    2.014307] NET: Registered protocol family 15
+[    2.019008] Key type dns_resolver registered
+[    2.023894] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.030473] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.037060] omap_voltdm 4a003b20.voltdm: Unable to get vdd regulator:-517
+[    2.044190] cpu cpu0: of_pm_voltdm_notifier_register: Failed to get cpu0 regulator/voltdm: -517
+[    2.053324] cpu cpu0: cpu0 clock notifier not ready, retry
+[    2.059148] platform cpufreq-cpu0.0: Driver cpufreq-cpu0 requests probe deferral
+[    2.067093] Power Management for TI OMAP4+ devices.
+[    2.072401] ThumbEE CPU extension supported.
+[    2.076888] Registering SWP/SWPB emulation handler
+[    2.082830] vmmcwl_fixed: disabling
+[    2.086497] aic_dvdd: disabling
+[    2.089802] regulator-dummy: disabling
+[    2.096037] dmm 4e000000.dmm: initialized all PAT entries
+[    2.102053] platform omapdrm.0: Driver omapdrm requests probe deferral
+[    2.111402] palmas 0-0058: IRQ missing: skipping irq request
+[    2.117665] palmas 0-0058: Muxing GPIO 2e, PWM 0, LED 0
+[    2.125256] smps123: 850 <--> 1250 mV at 990 mV 
+[    2.131654] smps45: 850 <--> 1150 mV at 960 mV 
+[    2.137907] smps6: 850 <--> 1250 mV at 970 mV 
+[    2.144036] smps7: 850 <--> 1060 mV at 950 mV 
+[    2.150244] smps8: 850 <--> 1250 mV at 980 mV 
+[    2.156271] smps9: 1800 mV 
+[    2.160559] ldo1: 1800 <--> 3300 mV at 3000 mV 
+[    2.166875] ldo2: 3300 mV 
+[    2.171283] ldo3: 1800 mV 
+[    2.174923] LDO4: at 1800 mV 
+[    2.178538] LDO5: no parameters
+[    2.182406] LDO6: no parameters
+[    2.186230] LDO7: no parameters
+[    2.190064] LDO8: no parameters
+[    2.194655] ldo9: 1050 mV 
+[    2.199050] ldoln: 1800 mV 
+[    2.203600] ldousb: 3300 mV 
+[    2.207238] REGEN1: no parameters
+[    2.210933] REGEN2: no parameters
+[    2.214599] REGEN3: no parameters
+[    2.218256] SYSEN1: no parameters
+[    2.221986] SYSEN2: no parameters
+[    2.226151] pcf857x 0-0020: probed
+[    2.230524] pcf857x 0-0021: probed
+[    2.234612] atmel_mxt_ts 0-004a: __mxt_read_reg: i2c transfer failed (-121)
+[    2.241959] atmel_mxt_ts: probe of 0-004a failed with error -121
+[    2.248839] omap_i2c 48070000.i2c: bus 0 rev0.12 at 400 kHz
+[    2.255976] pcf857x 1-0026: probed
+[    2.259589] omap_i2c 48072000.i2c: bus 1 rev0.12 at 400 kHz
+[    2.266080] omap_i2c 48060000.i2c: bus 2 rev0.12 at 400 kHz
+[    2.272923] omap_uart 48020000.serial: no wakeirq for uart0
+[    2.278879] 48020000.serial: ttyO2 at MMIO 0x48020000 (irq = 297, base_baud = 3000000) is a OMAP UART2
+[    2.291204] omap_hsmmc 4809c000.mmc: pins are not configured from the driver
+[    2.342811] davinci_evm primary_sound.15: tlv320aic3x-hifi <-> 48468000.mcasp mapping ok
+[    2.353141] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.359732] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.376987] mmc2: host does not support reading read-only switch. assuming write-enable.
+[    2.387242] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.394191] [drm] No driver support for vblank timestamp query.
+[    2.400420] omapdrm omapdrm.0: No connectors reported connected with modes
+[    2.400428] mmc2: new high speed SDHC card at address 1234
+[    2.413396] [drm] Cannot find any crtc or sizes - going 1024x768
+[    2.419874] mmcblk1: mmc2:1234 SA08G 7.28 GiB 
+[    2.423025] [drm] Enabling DMM ywrap scrolling
+[    2.431000]  mmcblk1: p1 p2
+[    2.433337] Console: switching to colour frame buffer device 128x48
+[    2.446166] omapdrm omapdrm.0: fb0: omapdrm frame buffer device
+[    2.452374] omapdrm omapdrm.0: registered panic notifier
+[    2.457957] [drm] Initialized omapdrm 1.0.0 20110917 on minor 0
+[    2.519533] davinci_mdio 48485000.mdio: davinci mdio revision 1.6
+[    2.525917] davinci_mdio 48485000.mdio: detected phy mask fffffff3
+[    2.536442] libphy: 48485000.mdio: probed
+[    2.540650] davinci_mdio 48485000.mdio: phy[2]: device 48485000.mdio:02, driver unknown
+[    2.549035] davinci_mdio 48485000.mdio: phy[3]: device 48485000.mdio:03, driver unknown
+[    2.558016] cpsw 48484000.ethernet: Detected MACID = b4:99:4c:c7:d2:48
+[    2.565624] cpsw 48484000.ethernet: cpsw: Detected MACID = b4:99:4c:c7:d2:49
+[    2.573948] omap_rtc 48838000.rtcss: setting system clock to 2014-10-12 15:11:54 UTC (1413126714)
+[    2.583526] ALSA device list:
+[    2.586620]   #0: DRA7xx-EVM
+[    2.589640]   #1: HDMI 58040000.encoder
+[    2.609976] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+[    2.618476] VFS: Mounted root (ext4 filesystem) on device 179:26.
+[    2.626670] devtmpfs: mounted
+[    2.629968] Freeing unused kernel memory: 336K (c07d4000 - c0828000)
+INIT: version 2.88 booting
+Starting udev
+[    3.150268] udevd[1164]: starting version 182
+[    3.317987]  remoteproc0: 58820000.ipu is available
+[    3.323138]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    3.332588]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    3.432680]  remoteproc1: 55020000.ipu is available
+[    3.437828]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    3.447273]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    3.458307]  remoteproc0: Direct firmware load failed with error -2
+[    3.464922]  remoteproc0: Falling back to user helper
+[    3.521064]  remoteproc1: Direct firmware load failed with error -2
+[    3.527659]  remoteproc1: Falling back to user helper
+[    3.535421]  remoteproc2: 40800000.dsp is available
+[    3.540564]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    3.549975]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    3.589763]  remoteproc3: 41000000.dsp is available
+[    3.594874]  remoteproc3: Note: remoteproc is still under development and considered experimental.
+[    3.604298]  remoteproc3: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    3.622588]  remoteproc2: Direct firmware load failed with error -2
+[    3.629153]  remoteproc2: Falling back to user helper
+[    3.706907]  remoteproc3: Direct firmware load failed with error -2
+[    3.713514]  remoteproc3: Falling back to user helper
+[    4.140195]  remoteproc0: failed to load dra7-ipu1-fw.xem4
+[    4.146023]  remoteproc3: failed to load dra7-dsp2-fw.xe66
+[    4.152483]  remoteproc2: failed to load dra7-dsp1-fw.xe66
+[    4.158308]  remoteproc1: failed to load dra7-ipu2-fw.xem4
+[    4.697242] m25p80 spi32766.0: s25fl256s1 (32768 Kbytes)
+[    4.702900] 10 ofpart partitions found on MTD device spi32766.0
+[    4.709119] Creating 10 MTD partitions on "spi32766.0":
+[    4.714618] 0x000000000000-0x000000010000 : "QSPI.SPL"
+[    4.721760] 0x000000010000-0x000000020000 : "QSPI.SPL.backup1"
+[    4.728987] CAN device driver interface
+[    4.735315] 0x000000020000-0x000000030000 : "QSPI.SPL.backup2"
+[    4.743083] 0x000000030000-0x000000040000 : "QSPI.SPL.backup3"
+[    4.750808] 0x000000040000-0x000000140000 : "QSPI.u-boot"
+[    4.758052] 0x000000140000-0x0000001c0000 : "QSPI.u-boot-spl-os"
+[    4.765972] 0x0000001c0000-0x0000001d0000 : "QSPI.u-boot-env"
+[    4.773672] 0x0000001d0000-0x0000001e0000 : "QSPI.u-boot-env.backup1"
+[    4.782114] 0x0000001e0000-0x0000009e0000 : "QSPI.kernel"
+[    4.789382] 0x0000009e0000-0x000002000000 : "QSPI.file-system"
+[    5.581883] c_can_platform 4ae3c000.can: c_can_platform device registered (regs=fce3c000, irq=343)
+[    6.381634] random: nonblocking pool is initialized
+[    6.662752] Bluetooth: Core ver 2.18
+[    6.666533] NET: Registered protocol family 31
+[    6.671224] Bluetooth: HCI device and connection manager initialized
+[    6.677973] Bluetooth: HCI socket layer initialized
+[    6.683136] Bluetooth: L2CAP socket layer initialized
+[    6.688435] Bluetooth: SCO socket layer initialized
+[    6.713631] (stc):  chnl_id list empty :4 
+[    6.717746] (stk) : st_kim_start(stk) :ldisc_install = 1
+[    7.819595] (stk) :ldisc installation timeout(stk) :ldisc_install = 0
+udevadm settle - timeout of 3 seconds reached, the event queue contains:
+  /sys/devices/44000000.ocp/4809c000.mmc/mmc_host/mmc2/mmc2:1234/block/mmcblk1/mmcblk1p1 (1108)
+  /sys/devices/44000000.ocp/4809c000.mmc/mmc_host/mmc2/mmc2:1234/block/mmcblk1/m
+[    8.058103] EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mcblk1p2 (1109)
+  /sys/devices/44000000.ocp/4ae3c000.can (1398)
+  /sys/devices/44000000.ocp/58000000.dss/58040000.encoder/asoc-simple-card.0/sound/card1/controlC1 (1413)
+  /sys/devices/btwilink.11 (1423)
+  /sys/devices/primary_sound.15/sound/card0/controlC0 (1457)
+  /sys/devices/44000000.ocp/48880000.omap_dwc3_1/48890000.usb (1554)
+  /sys/devices/44000000.ocp/488c0000.omap_dwc3_2/488d0000.usb (1555)
+  /sys/devices/44000000.ocp/58000000.dss/58040000.encoder/asoc-simple-card.0/sound/card1 (1559)
+  /sys/devices/primary_sound.15/sound/card0 (1560)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0 (1611)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0/queues/rx-0 (1612)
+  /sys/devices/44000000.ocp/4ae3c000.can/net/can0/queues/tx-0 (1613)
+  /sys/devices/44000000.ocp/48880000.omap_dwc3_1/48890000.usb/udc/48890000.usb (1622)
+  /sys/devices/44000000.ocp/488c0000.omap_dwc3_2/488d0000.usb/xhci-hcd.0.auto (1623)
+Starting Bootlog daemon: bootlogd: cannot allocate pseudo tty: No such file or directory
+bootlogd.
+[    8.278438] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    8.285163] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    8.295878] xhci-hcd xhci-hcd.0.auto: irq 422, io mem 0x488d0000
+[    8.300130] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    8.315897] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    8.323025] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    8.330610] usb usb1: Product: xHCI Host Controller
+[    8.335718] usb usb1: Manufacturer: Linux 3.14.26-02526-g71613a2-dirty xhci-hcd
+[    8.343388] usb usb1: SerialNumber: xhci-hcd.0.auto
+[    8.349214] hub 1-0:1.0: USB hub found
+[    8.354708] hub 1-0:1.0: 1 port detected
+[    8.359058] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    8.366512] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    8.378103] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    8.385254] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    8.392845] usb usb2: Product: xHCI Host Controller
+[    8.397959] usb usb2: Manufacturer: Linux 3.14.26-02526-g71613a2-dirty xhci-hcd
+[    8.405640] usb usb2: SerialNumber: xhci-hcd.0.auto
+[    8.411236] hub 2-0:1.0: USB hub found
+[    8.415185] hub 2-0:1.0: 1 port detected
+ALSA: Restoring mixer settings...
+INIT: Entering runlevel: 5
+Configuring network interfaces... [    8.652315] net eth0: initializing cpsw version 1.15 (0)
+[    8.743432] net eth0: phy found : id is : 0x20005c7a
+udhcpc (v1.22.1) started
+[    8.819553] (stk) : timed out waiting for ldisc to be un-installed
+[    8.932852] (stk) :ldisc_install = 1Sending discover...
+(stk) :ldisc installation timeout
+[    9.932565] (stk) :ldisc_install = 0[   10.746589] libphy: 48485000.mdio:02 - Link is Up - 100/Full
+[   10.929538] (stk) : timed out waiting for ldisc to be un-installed
+[   11.042843] (stk) :ldisc_install = 1Sending discover...
+(stk) :ldisc installation timeout
+[   12.042586] (stk) :ldisc_install = 0Sending select for 192.168.1.60...
+Lease of 192.168.1.60 obtained, lease time 86400
+/etc/udhcpc.d/50default: Adding DNS 192.168.1.1
+done.
+Starting system message bus: dbus.
+UIM SYSFS Node Found at /sys/./devices/kim.10/install
+Starting uim-sysfs daemon.
+uim:@ main
+uim:install = /sys/./devices/kim.10/install
+uim:dev_name = /sys/./devices/kim.10/dev_name
+uim:baud_rate = /sys/./devices/kim.10/baud_rate
+uim:flow_cntrl = /sys/./devices/kim.10/flow_cntrl
+uim:begin polling...
+Starting Dropbear SSH server: dropbear.
+Starting telnet daemon.
+(stk) : timed out waiting for ldisc to be un-installedStarting rpcbind daemon...
+[   13.151470] (stk) :ldisc_install = 1rpcbind: cannot create socket for udp6
+uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /[   13.174497] omap_hwmod: dcan1: _wait_target_disable failed
+dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+rpcbind: cannot create socket for tcp6
+done.
+creating NFS state directory: done
+starting statd: [   13.349690] omap_hwmod: dcan1: _wait_target_disable failed
+uim:Invalid response
+uim:begin polling...
+[   13.367815] omap_hwmod: dcan1: _wait_target_disable failed
+[   13.383172] omap_hwmod: dcan1: _wait_target_disable failed
+done
+Starting syslogd/klogd: done
+Starting thttpd.
+[   13.584247] Unhandled fault: imprecise external abort (0x1406) at 0x00000000
+ioctl FBIOPUT_VSCREENINFO: Invalid argument
+No SGX hardware, not starting PVR
+Starting Lighttpd Web Server: lighttpd.
+2014-10-12 15:12:05: (/scratch/jenkins/coresdk-nightly-build/build-CORTEX_2/arago-tmp-external-linaro-toolchain/work/cortexa9t2hf-vfp-neon-oe-linux-gnueabi/lighttpd/1.4.33-r1/lighttpd-1.4.33/src/log.c.166) serv 
+[   14.149540] (stk) :ldisc installation timeout
+[   14.153953] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+***************************************************************
+***************************************************************
+NOTICE: This file system contains the followin GPLv3 packages:
+        binutils
+        elfutils
+        gdbserver
+        libdw1
+        libelf1
+        m4
+
+If you do not wish to distribute GPLv3 components please remove
+the above packages prior to distribution.  This can be done using
+the opkg remove command.  i.e.:
+    opkg remove <package>
+Where <package> is the name printed in the list above
+
+NOTE: If the package is a dependency of another package you
+      will be notified of the dependent packages.  You should
+      use the --force-removal-of-dependent-packages option to
+      also remove the dependent packages as well
+***************************************************************
+***************************************************************
+Stopping Bootlog daemon: bootlogd.
+custom script
+(stk) : timed out waiting for ldisc to be un-installed
+[   15.261488] (stk) :ldisc_install = 1uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+uim:Invalid response
+uim:begin polling...
+DCANRXPACKETREBOOT test iteration: 100
+[   15.754702] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+[   16.259547] (stk) :ldisc installation timeout
+[   16.263943] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+interface = can0, family = 29, type = 3, proto = 1
+[   16.946424] can: controller area network core (rev 20120528 abi 9)
+[   16.953168] NET: Registered protocol family 29
+[   16.974129] can: raw protocol (rev 20120528)
+[   17.259536] (stk) : timed out waiting for ldisc to be un-installed
+[   17.372840] (stk) :ldisc_install = 1uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 1 from install 
+
+uim:@ st_uart_config
+uim: signal received, opening /dev/ttyO2
+uim:@ set_baud_rate
+uim:set_baud_rate() done
+uim:Setting speed to 3686400
+uim:@ read_command_complete
+uim: Command complete started
+uim:@ read_hci_event
+uim: read_hci_event
+uim:Invalid response
+uim:begin polling...
+candump size 63824
+(stk) :ldisc installation timeout
+[   18.372566] (stk) :ldisc_install = 0uim:poll broke due to event 10(PRI:2/ERR:8)
+
+uim:read 0 from install 
+
+uim:@ st_uart_config
+uim:Un-Installed N_TI_WL Line displine
+uim:begin polling...
+can0 off failed - VAL:0x00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Boots: 100, UP fails: 2, OFF fails: 100, READ fails: 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(stk) : timed out waiting for ldisc to be un-installed
+[   19.376489] Bluetooth: st_register failed -22
+
+Broadcast message from root@am437x-evm (ttyO0) (Sun Oct 12 15:12:11 2014):
+The system is going down for reboot NOW!
+INIT: Switching to runlevel: 6
+INIT: Sending processeUIM SYSFS Node Found at /sys/./devices/kim.10/install
+Stopping uim-sysfs daemon.
+Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 1917)
+dropbear.
+Stopping telnet daemon.
+Stopping system message bus: dbus.
+Stopping syslogd/klogd: stopped syslogd (pid 1952)
+stopped klogd (pid 1955)
+done
+Stopping thttpd.
+Stopping Weston
+stopping statd: [   27.832466] omap_hwmod: dcan1: _wait_target_disable failed
+done
+ALSA: Storing mixer settings...
+[   27.907863] Unhandled fault: imprecise external abort (0x1406) at 0x00000000
+Stopping PVR
+rmmod: ERROR: Module bufferclass_ti is not currently loaded
+Stopping rpcbind daemon...
+done.
+Stopping Lighttpd Web Server: stopped /usr/sbin/lighttpd (pid 2000)
+lighttpd.
+Deconfiguring network interfaces... done.
+***************************************************************
+***************************************************************
+NOTICE: This file system contains the followin GPLv3 packages:
+        binutils
+        elfutils
+        gdbserver
+        libdw1
+        libelf1
+        m4
+
+If you do not wish to distribute GPLv3 components please remove
+the above packages prior to distribution.  This can be done using
+the opkg remove command.  i.e.:
+    opkg remove <package>
+Where <package> is the name printed in the list above
+
+NOTE: If the package is a dependency of another package you
+      will be notified of the dependent packages.  You should
+      use the --force-removal-of-dependent-packages option to
+      also remove the dependent packages as well
+***************************************************************
+***************************************************************
+Sending all processes the TERM signal...
+Error VT_WAITACTIVE failed
+: Interrupted system call
+Sending all processes the KILL signal...
+Unmounting remote filesystems...
+Deactivating swap...
+Unmounting local filesystems...
+[   40.485758] EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+Rebooting... [   42.855461] reboot: Restarting system
