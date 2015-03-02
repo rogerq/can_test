@@ -70,6 +70,9 @@ This issue was fixed by setting PULL_DIS bit (bit 16) for DCAN1_TX pin.
 commit
     ARM: dts: DRA7xx: Fix DCAN1 stuck in transition
 
+The issue can also be fixed by enabling internal PULL_UP instead of PULL_DOWN.
+i.e. PULLUPTYPESEL (bit 17) 1 and PULL_DIS (bit 16) 0.
+
 Observations post fix:
 1) "omap_hwmod: dcan1: _wait_target_disable failed" is never seen.
 2) DCAN1 is never stuck in transition when DCAN1 is brought down.
