@@ -1,0 +1,841 @@
+date: 1/5/2015
+
+branch dcan-pinmux-hack
+kernel hacked to disable dcan pinmux during modulemode change
+dcan mux kept active otherwise.
+
+[    1.857343] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.862978] usbcore: registered new interface driver cdc_wdm
+[    1.868794] usbcore: registered new interface driver usb-storage
+[    1.875728] mousedev: PS/2 mouse device common for all mice
+[    1.881899] atmel_mxt_ts 0-004a: __mxt_read_reg: i2c transfer failed (-121)
+[    1.888935] atmel_mxt_ts: probe of 0-004a failed with error -121
+[    1.895813] i2c-core: driver [rtc-ds1307] using legacy suspend method
+[    1.902281] i2c-core: driver [rtc-ds1307] using legacy resume method
+[    1.909244] omap_rtc 48838000.rtcss: rtc core: registered 48838000.rtcss as rtc0
+[    1.916725] 48838000.rtcss: already running
+[    1.921374] i2c /dev entries driver
+[    1.925589] Driver for 1-wire Dallas network protocol.
+[    1.935014] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    1.943284] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    1.949899] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.957296] omap_hsmmc 480b4000.mmc: unable to get vmmc regulator -517
+[    1.963907] platform 480b4000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.971088] omap_hsmmc 480d1000.mmc: no pinctrl state for default mode
+[    2.093607] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.102980] omap-aes 4b500000.aes: OMAP AES hw accel rev: 3.3
+[    2.109413] omap-des 480a5000.des: OMAP DES hw accel rev: 2.2
+[    2.116076] omap-sham 4b101000.sham: hw accel on OMAP rev 4.3
+[    2.123221] usbcore: registered new interface driver usbhid
+[    2.128852] usbhid: USB HID core driver
+[    2.132961] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.142601] tlv320aic3x-codec 0-0018: Failed to get supply 'IOVDD': -517
+[    2.149368] tlv320aic3x-codec 0-0018: Failed to request supplies: -517
+[    2.156030] i2c 0-0018: Driver tlv320aic3x-codec requests probe deferral
+[    2.163434] asoc-simple-card asoc-simple-card.0: hdmi-hifi <-> 58040000.encoder mapping ok
+[    2.173610] davinci_evm primary_sound: ASoC: CODEC (null) not registered
+[    2.180361] davinci_evm primary_sound: snd_soc_register_card failed (-517)
+[    2.187332] platform primary_sound: Driver davinci_evm requests probe deferral
+[    2.195345] oprofile: using timer interrupt.
+[    2.199798] TCP: cubic registered
+[    2.203155] Initializing XFRM netlink socket
+[    2.207461] NET: Registered protocol family 17
+[    2.211941] NET: Registered protocol family 15
+[    2.216471] Key type dns_resolver registered
+[    2.221170] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.227483] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.235246] Power Management for TI OMAP4+ devices.
+[    2.240309] ThumbEE CPU extension supported.
+[    2.244620] Registering SWP/SWPB emulation handler
+[    2.251140] vmmcwl_fixed: disabling
+[    2.254688] regulator-dummy: disabling
+[    2.260195] dmm 4e000000.dmm: initialized all PAT entries
+[    2.284843] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.291482] [drm] No driver support for vblank timestamp query.
+[    2.297446] omapdrm omapdrm.0: No connectors reported connected with modes
+[    2.304354] [drm] Cannot find any crtc or sizes - going 1024x768
+[    2.313080] [drm] Enabling DMM ywrap scrolling
+[    2.321578] Console: switching to colour frame buffer device 128x48
+[    2.331545] omapdrm omapdrm.0: fb0: omapdrm frame buffer device
+[    2.337493] omapdrm omapdrm.0: registered panic notifier
+[    2.342830] [drm] Initialized omapdrm 1.0.0 20110917 on minor 0
+[    2.349978] evm_3v3_sd: 3300 mV 
+[    2.353471] evm_3v3_sw: 3300 mV 
+[    2.356732] evm_3v3_sw: supplied by sysen1
+[    2.361222] aic_dvdd: 1800 mV 
+[    2.364325] aic_dvdd: supplied by evm_3v3_sw
+[    2.368841] vtt_fixed: 1350 mV 
+[    2.372016] vtt_fixed: supplied by sysen2
+[    2.454187] davinci_evm primary_sound: tlv320aic3x-hifi <-> 48468000.mcasp mapping ok
+[    2.522922] davinci_mdio 48485000.mdio: davinci mdio revision 1.6
+[    2.529046] davinci_mdio 48485000.mdio: detected phy mask fffffff3
+[    2.539504] libphy: 48485000.mdio: probed
+[    2.543561] davinci_mdio 48485000.mdio: phy[2]: device 48485000.mdio:02, driver unknown
+[    2.551607] davinci_mdio 48485000.mdio: phy[3]: device 48485000.mdio:03, driver unknown
+[    2.560302] cpsw 48484000.ethernet: Detected MACID = b4:99:4c:c7:d2:48
+[    2.567758] cpsw 48484000.ethernet: cpsw: Detected MACID = b4:99:4c:c7:d2:49
+[    2.575949] omap_rtc 48838000.rtcss: setting system clock to 2000-01-01 01:50:24 UTC (946691424)
+[    2.595461] net eth0: initializing cpsw version 1.15 (0)
+[    2.608126] mmc1: host does not support reading read-only switch. assuming write-enable.
+[    2.619822] mmc1: new high speed SD card at address e624
+[    2.625670] mmcblk0: mmc1:e624 SU02G 1.84 GiB 
+[    2.637477]  mmcblk0: p1 p2
+[    2.676712] mmc2: BKOPS_EN bit is not set
+[    2.684616] mmc2: new high speed MMC card at address 0001
+[    2.687007] net eth0: phy found : id is : 0x20005c7a
+[    2.699451] net eth1: initializing cpsw version 1.15 (0)
+[    2.699650] mmcblk1: mmc2:0001 MMC08G 7.25 GiB 
+[    2.699841] mmcblk1boot0: mmc2:0001 MMC08G partition 1 8.00 MiB
+[    2.700034] mmcblk1boot1: mmc2:0001 MMC08G partition 2 8.00 MiB
+[    2.723824]  mmcblk1: unknown partition table
+[    2.729182]  mmcblk1boot1: unknown partition table
+[    2.735001]  mmcblk1boot0: unknown partition table
+[    2.806605] net eth1: phy found : id is : 0x20005c7a
+[    4.690048] libphy: 48485000.mdio:02 - Link is Up - 100/Full
+[    4.712932] Sending DHCP requests ., OK
+[    5.012925] IP-Config: Got DHCP answer from 192.168.1.1, my address is 192.168.1.42
+[    5.024639] IP-Config: Complete:
+[    5.027886]      device=eth0, hwaddr=b4:99:4c:c7:d2:48, ipaddr=192.168.1.42, mask=255.255.255.0, gw=192.168.1.1
+[    5.038040]      host=192.168.1.42, domain=Home, nis-domain=(none)
+[    5.044258]      bootserver=0.0.0.0, rootserver=192.168.1.36, rootpath=
+[    5.050724]      nameserver0=192.168.1.1
+[    5.055152] ALSA device list:
+[    5.058130]   #0: DRA7xx-EVM
+[    5.061019]   #1: HDMI 58040000.encoder
+[    5.074878] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.081256] devtmpfs: mounted
+[    5.084463] Freeing unused kernel memory: 340K (c0812000 - c0867000)
+INIT: version 2.88 booting
+[    5.548221] random: nonblocking pool is initialized
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd[    6.285835] udevd[1294]: starting version 175
+. ok 
+[....] Synthesizing the initial hotplug events...[    6.851441]  remoteproc0: 58820000.ipu is available
+[    6.856395]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    6.865530]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    6.876195]  remoteproc1: 55020000.ipu is available
+[    6.881095]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    6.890132]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    6.930146]  remoteproc0: Direct firmware load failed with error -2
+[    6.936462]  remoteproc0: Falling back to user helper
+[    7.030592]  remoteproc2: 40800000.dsp is available
+[    7.035534]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    7.045404]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.074272]  remoteproc1: Direct firmware load failed with error -2
+[    7.081232]  remoteproc1: Falling back to user helper
+[    7.103267]  remoteproc3: 41000000.dsp is available
+[    7.108173]  remoteproc3: Note: remoteproc is still under development and considered experimental.
+[    7.117210]  remoteproc3: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.198803]  remoteproc2: Direct firmware load failed with error -2
+[    7.205149]  remoteproc2: Falling back to user helper
+udevd[1344]: error changing net interface name eth0 to eth14: Device or resource busy
+
+[    7.249049]  remoteproc3: Direct firmware load failed with error -2
+[    7.255392]  remoteproc3: Falling back to user helper
+[    7.462156] CAN device driver interface
+[ ok [    7.629757] omap_hwmod: oh->enable: disabling dcan1 mux
+[    7.635011] omap_hwmod: oh->enable: enabling dcan1 mux
+[    7.640218] omap_hwmod: oh->disable: disabling dcan1 mux
+[    7.645555] omap_hwmod: oh->disable: enabling dcan1 mux
+[    7.650843] c_can_platform 4ae3c000.can: c_can_platform device registered (regs=fce3c000, irq=346)
+[    7.760956] Bluetooth: Core ver 2.18
+[    7.764631] NET: Registered protocol family 31
+[    7.769094] Bluetooth: HCI device and connection manager initialized
+done.
+[    7.856047] Bluetooth: HCI socket layer initialized
+[    7.871396] Bluetooth: L2CAP socket layer initialized
+[    7.950521] m25p80 spi32766.0: s25fl256s1 (32768 Kbytes)
+[    7.965988] Bluetooth: SCO socket layer initialized
+[....] [    7.972532] 10 ofpart partitions found on MTD device spi32766.0
+[    7.978502] Creating 10 MTD partitions on "spi32766.0":
+[    7.991438] 0x000000000000-0x000000010000 : "QSPI.SPL"
+[    8.025416] 0x000000010000-0x000000020000 : "QSPI.SPL.backup1"
+[    8.069470] 0x000000020000-0x000000030000 : "QSPI.SPL.backup2"
+Waiting for /dev to be fully populated...[    8.099716] (stc):  chnl_id list empty :4 
+[    8.103791] (stk) : st_kim_start[    8.164581] 0x000000030000-0x000000040000 : "QSPI.SPL.backup3"
+[    8.180826] 0x000000040000-0x000000140000 : "QSPI.u-boot"
+[    8.188375] 0x000000140000-0x0000001c0000 : "QSPI.u-boot-spl-os"
+[    8.196185] 0x0000001c0000-0x0000001d0000 : "QSPI.u-boot-env"
+[    8.203109] 0x0000001d0000-0x0000001e0000 : "QSPI.u-boot-env.backup1"
+[    8.210705] 0x0000001e0000-0x0000009e0000 : "QSPI.kernel"
+[    8.224382] (stk) :ldisc_install = 1
+[    8.224383] 0x0000009e0000-0x000002000000 : "QSPI.file-system"
+[    8.336233]  remoteproc2: failed to load dra7-dsp1-fw.xe66
+[    8.343233]  remoteproc0: failed to load dra7-ipu1-fw.xem4
+[    8.348810]  remoteproc3: failed to load dra7-dsp2-fw.xe66
+[    8.354390]  remoteproc1: failed to load dra7-ipu2-fw.xem4
+[    9.202928] (stk) :ldisc installation timeout
+[    9.207134] (stk) :ldisc_install = 0[    9.332094] dwc3 48890000.usb: otg: primary host xhci-hcd.0.auto registered
+[    9.339114] dwc3 48890000.usb: otg: shared host xhci-hcd.0.auto registered
+[    9.346028] dwc3 48890000.usb: otg: can't start till gadget registers
+[    9.352546] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    9.358262] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+[    9.366306] xhci-hcd xhci-hcd.1.auto: irq 425, io mem 0x488d0000
+[    9.372433] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    9.379258] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.386515] usb usb1: Product: xHCI Host Controller
+[    9.391408] usb usb1: Manufacturer: Linux 3.14.37-00348-ge930785 xhci-hcd
+[    9.398228] usb usb1: SerialNumber: xhci-hcd.1.auto
+[    9.403611] hub 1-0:1.0: USB hub found
+[    9.407391] hub 1-0:1.0: 1 port detected
+[    9.411519] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    9.417207] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+[    9.425017] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    9.431832] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.439094] usb usb2: Product: xHCI Host Controller
+[    9.443998] usb usb2: Manufacturer: Linux 3.14.37-00348-ge930785 xhci-hcd
+[    9.450811] usb usb2: SerialNumber: xhci-hcd.1.auto
+[    9.456531] hub 2-0:1.0: USB hub found
+[    9.460319] hub 2-0:1.0: 1 port detected
+done.
+[....] Setting parameters of disc: (none)[   10.202949] (stk) : timed out waiting for ldisc to be un-installed.
+
+[   10.316111] (stk) :ldisc_install = 1[....] Activating swap...done.
+[....] Cleaning up temporary files... /tmp. ok 
+(stk) :ldisc installation timeout
+[   11.315834] (stk) :ldisc_install = 0(stk) : timed out waiting for ldisc to be un-installed
+[   12.424677] (stk) :ldisc_install = 1[....] Activating lvm and md swap...done.
+[....] Checking file systems...fsck from util-linux 2.20.1
+done.
+(stk) :ldisc installation timeout
+[   13.425850] (stk) :ldisc_install = 0[....] Mounting local filesystems...done.
+[....] Activating swapfile swap...done.
+[....] Cleaning up temporary files...(stk) : timed out waiting for ldisc to be un-installed.
+
+[   14.534674] (stk) :ldisc_install = 1[....] Setting kernel variables ...done.
+[....] Configuring network interfaces...[   14.965087] omap_hwmod: oh->enable: disabling dcan1 mux
+[   14.970340] omap_hwmod: oh->enable: enabling dcan1 mux
+[   14.975537] omap_hwmod: oh->disable: disabling dcan1 mux
+[   14.980871] omap_hwmod: oh->disable: enabling dcan1 mux
+done.
+[   15.532944] (stk) :ldisc installation timeout
+[   15.537150] (stk) :ldisc_install = 0[....] Cleaning up temporary files.... ok 
+[....] Setting up ALSA...done.
+[....] Setting up X socket directories... /tmp/.X11-unix /tmp/.ICE-unix. ok 
+INIT: Entering runlevel: 2
+[info] Using makefile-style concurrent boot in runlevel 2.
+(stk) : timed out waiting for ldisc to be un-installed
+[   16.644694] (stk) :ldisc_install = 1[....] Starting advanced IEEE 802.11 management: hostapdioctl(SIOCGIFINDEX): No such device
+ failed!
+[....] Starting enhanced syslogd: rsyslogd. ok 
+Starting very small Busybox based DHCP server: Starting /usr/sbin/udhcpd...
+udhcpd.
+[....] Starting periodic command scheduler: cron. ok 
+[....] Starting system message bus: dbus. ok 
+(stk) :ldisc installation timeout
+[   17.645867] (stk) :ldisc_install = 0[....] Starting OpenBSD Secure Shell server: sshd. ok 
+[   17.789231] omap_hwmod: oh->enable: disabling dcan1 mux
+[   17.794484] omap_hwmod: oh->enable: enabling dcan1 mux
+[   17.799858] omap_hwmod: oh->disable: disabling dcan1 mux
+[   17.805194] omap_hwmod: oh->disable: enabling dcan1 mux
+[....] Starting Avahi mDNS/DNS-SD Daemon: avahi-daemon. ok 
+[....] Starting MTA: exim4[   18.642950] (stk) : timed out waiting for ldisc to be un-installed[ ok 
+[   18.755999] (stk) :ldisc_install = 1.
+ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken
+
+Last login: Sat Jan  1 01:50:06 UTC 2000 on ttyS0
+Linux rockdesk 3.14.37-00348-ge930785 #1231 SMP Fri May 1 13:12:39 EEST 2015 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+[   19.725818] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.731070] omap_hwmod: oh->enable: enabling dcan1 mux
+[   19.736266] omap_hwmod: oh->disable: disabling dcan1 mux
+[   19.741609] omap_hwmod: oh->disable: enabling dcan1 mux
+[   19.752948] (stk) :ldisc installation timeout
+[   19.757210] (stk) :ldisc_install = 0[   19.760791] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.760795] omap_hwmod: oh->enable: enabling dcan1 mux
+D[CANRXPACKETREBOOT test iteration: 199   19.760809] omap_hwmod: oh->disable: disabling dcan1 mux
+[   19.760813] omap_hwmod: oh->disable: enabling dcan1 mux
+
+[   19.800949] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.806200] omap_hwmod: oh->enable: enabling dcan1 mux
+[   19.811856] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+[   20.782930] (stk) : timed out waiting for ldisc to be un-installed
+[   20.790975] Bluetooth: st_register failed -22
+can0 up failed - VAL:0x0
+interface = can0, family = 29, type = 3, proto = 1
+[   20.908672] can: controller area network core (rev 20120528 abi 9)
+[   20.915169] c_can_platform 4ae3c000.can can0: msg lost in buffer 16
+[   20.923074] NET: Registered protocol family 29
+[   20.975034] c_can_platform 4ae3c000.can can0: msg lost in buffer 16
+[   20.990273] can: raw protocol (rev 20120528)
+candump size 60064
+[   21.901803] omap_hwmod: oh->disable: disabling dcan1 mux
+[   21.907143] omap_hwmod: oh->disable: enabling dcan1 mux
+[   21.912450] omap_hwmod: oh->enable: disabling dcan1 mux
+[   21.917699] omap_hwmod: oh->enable: enabling dcan1 mux
+[   21.922896] omap_hwmod: oh->disable: disabling dcan1 mux
+[   21.928230] omap_hwmod: oh->disable: enabling dcan1 mux
+can0 off failed - VAL:0x10000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Boots: 199, UP fails: 6, OFF fails: 199, READ fails: 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Broadcast message from root@rockdesk (ttyS0) (Sat Jan  1 01:50:44 2000):
+
+The system is going down for reboot NOW!
+INIT: Switching to runlevel: 6
+INIT: Sending processes [info] Using makefile-style concurrent boot in runlevel 6.
+Stopping very small Busybox based DHCP server: No /usr/sbin/udhcpd found running; none killed.
+udhcpd.
+[....] Stopping MTA:. ok 
+ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken
+[....] Stopping Avahi mDNS/DNS-SD Daemon: avahi-daemon. ok 
+[....] Stopping advanced IEEE 802.11 management: hostapd. ok 
+[....] Shutting down ALSA...done.
+[....] Asking all remaining processes to terminate...done.
+[....] All processes ended within 1 seconds...done.
+[....] Stopping enhanced syslogd: rsyslogd. ok 
+[....] not deconfiguring network interfaces: network file systems still mounted. ... (warning).
+[info] Saving the system clock.
+[info] Hardware Clock updated to Sat Jan  1 01:50:48 UTC 2000.
+[....] Unmounting temporary filesystems...done.
+[....] Deactivating swap...done.
+[info] Will now restart.
+[   29.168494] reboot: Restarting system
+
+U-Boot SPL 2014.07-00022-g8a51ac8 (May 01 2015 - 09:28:15)
+DRA752 ES1.1
+reading args
+spl_load_image_fat_os: error reading image args, err - -1
+reading u-boot.img
+reading u-boot.img
+
+
+U-Boot 2014.07-00022-g8a51ac8 (May 01 2015 - 09:28:15)
+
+CPU  : DRA752 ES1.1
+Board: DRA7xx
+I2C:   ready
+DRAM:  1.5 GiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Card did not respond to voltage select!
+MMC init failed
+Using default environment
+
+SATA link 0 timeout.
+AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+flags: 64bit ncq stag pm led clo only pmp pio slum part ccc apst 
+scanning bus for devices...
+Found 0 device(s).
+SCSI:  Net:   <ethaddr> not set. Validating first E-fuse MAC
+cpsw
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+SD/MMC found on device 0
+reading uEnv.txt
+900 bytes read in 5 ms (175.8 KiB/s)
+Loaded environment from uEnv.txt
+Importing environment from mmc0 ...
+Running uenvcmd ...
+4508800 bytes read in 281 ms (15.3 MiB/s)
+89835 bytes read in 42 ms (2 MiB/s)
+Kernel image @ 0x82000000 [ 0x000000 - 0x44cc80 ]
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8ffe7000, end 8ffffeea ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.37-00348-ge930785 (roger@rockdesk) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #1231 SMP Fri May 1 13:12:35
+[    0.000000] CPU: ARMv7 Processor [412fc0f2] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: TI DRA742
+[    0.000000] Reserved memory: created CMA memory pool at 0x95800000, size 56 MiB
+[    0.000000] Reserved memory: initialized node ipu2_cma@95800000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x99000000, size 64 MiB
+[    0.000000] Reserved memory: initialized node dsp1_cma@99000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB
+[    0.000000] Reserved memory: initialized node ipu1_cma@9d000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9f000000, size 8 MiB
+[    0.000000] Reserved memory: initialized node dsp2_cma@9f000000, compatible id shared-dma-pool
+[    0.000000] cma: CMA: reserved 24 MiB at ae000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] DRA752 ES1.1
+[    0.000000] PERCPU: Embedded 8 pages/cpu @ed35e000 s8256 r8192 d16320 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 391440
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.1.36:/srv/nfsroot/ ip=dhcp no_console_suspend
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1360376K/1571840K available (6159K kernel code, 397K rwdata, 2068K rodata, 340K init, 255K bss, 211464K reserved, 793600K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc08110b4   (8229 kB)
+[    0.000000]       .init : 0xc0812000 - 0xc0867040   ( 341 kB)
+[    0.000000]       .data : 0xc0868000 - 0xc08cb410   ( 398 kB)
+[    0.000000]        .bss : 0xc08cb418 - 0xc090b14c   ( 256 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] OMAP clockevent source: timer1 at 32786 Hz
+[    0.000030] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 65536000000000ns
+[    0.000030] OMAP clocksource: 32k_counter at 32768 Hz
+[    0.000427] Architected cp15 timer(s) running at 6.14MHz (virt).
+[    0.000432] sched_clock: 56 bits at 6MHz, resolution 162ns, wraps every 2794592043008ns
+[    0.000439] Switching to timer-based delay loop
+[    0.001351] Console: colour dummy device 80x30
+[    0.001367] WARNING: Your 'console=ttyO0' has been replaced by 'ttyS0'
+[    0.001374] This ensures that you still see kernel messages. Please
+[    0.001379] update your kernel commandline.
+[    0.001394] Calibrating delay loop (skipped), value calculated using timer frequency.. 12.29 BogoMIPS (lpj=61475)
+[    0.001406] pid_max: default: 32768 minimum: 301
+[    0.001504] Security Framework initialized
+[    0.001552] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001562] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.020439] CPU: Testing write buffer coherency: ok
+[    0.020656] /cpus/cpu@0 missing clock-frequency property
+[    0.020687] /cpus/cpu@1 missing clock-frequency property
+[    0.020698] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.020718] Setting up static identity map for 0x80609ec0 - 0x80609f18
+[    0.021771] CPU1: Booted secondary processor
+[    0.021798] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.021878] Brought up 2 CPUs
+[    0.021893] SMP: Total of 2 processors activated (24.59 BogoMIPS).
+[    0.021899] CPU: All CPU(s) started in SVC mode.
+[    0.022264] devtmpfs: initialized
+[    0.022851] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.024205] omap_hwmod: l3_main_2 using broken dt data from ocp
+[    0.096120] omap_hwmod: oh->enable: disabling dcan1 mux
+[    0.096129] omap_hwmod: oh->enable: enabling dcan1 mux
+[    0.096138] omap_hwmod: oh->disable: disabling dcan1 mux
+[    0.096144] omap_hwmod: oh->disable: enabling dcan1 mux
+[    0.194148] pinctrl core: initialized pinctrl subsystem
+[    0.194772] regulator-dummy: no parameters
+[    0.198109] NET: Registered protocol family 16
+[    0.199726] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.201443] cpuidle: using governor ladder
+[    0.201452] cpuidle: using governor menu
+[    0.204817] syscon 4a002000.tisysconcore: regmap [mem 0x4a002000-0x4a0026cf] registered
+[    0.205097] syscon 4a002e00.tisyscon: regmap [mem 0x4a002e00-0x4a002e7b] registered
+[    0.206988] OMAP GPIO hardware version 0.1
+[    0.212653] irq: no irq domain found for /ocp/pinmux@4a003400 !
+[    0.218282] platform 58820000.ipu: assigned reserved memory node ipu1_cma@9d000000
+[    0.218532] platform 55020000.ipu: assigned reserved memory node ipu2_cma@95800000
+[    0.218782] platform 40800000.dsp: assigned reserved memory node dsp1_cma@99000000
+[    0.231739] platform 41000000.dsp: assigned reserved memory node dsp2_cma@9f000000
+[    0.236681] No ATAGs?
+[    0.236703] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.236711] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.237842] OMAP DMA hardware revision 0.0
+[    0.238202] omap-dma-xbar 4a002b78.dma-crossbar: OMAP DMA Crossbar driver
+[    0.258683] bio: create slab <bio-0> at 0
+[    0.294022] omap-dma-engine 4a056000.dma-controller: OMAP DMA engine driver
+[    0.294636] platform fixedregulator-sd: Driver reg-fixed-voltage requests probe deferral
+[    0.294869] evm_3v3_sw: 3300 mV 
+[    0.294915] reg-fixed-voltage fixedregulator-evm_3v3_sw: Failed to find supply vin
+[    0.295076] reg-fixed-voltage fixedregulator-evm_3v3_sw: Failed to register regulator: -517
+[    0.295094] platform fixedregulator-evm_3v3_sw: Driver reg-fixed-voltage requests probe deferral
+[    0.295313] aic_dvdd: 1800 mV 
+[    0.295366] reg-fixed-voltage fixedregulator-aic_dvdd: Failed to find supply vin
+[    0.295516] reg-fixed-voltage fixedregulator-aic_dvdd: Failed to register regulator: -517
+[    0.295533] platform fixedregulator-aic_dvdd: Driver reg-fixed-voltage requests probe deferral
+[    0.295798] vmmcwl_fixed: 1800 mV 
+[    0.296136] vtt_fixed: 1350 mV 
+[    0.296182] reg-fixed-voltage fixedregulator-vtt: Failed to find supply vin
+[    0.296367] reg-fixed-voltage fixedregulator-vtt: Failed to register regulator: -517
+[    0.296384] platform fixedregulator-vtt: Driver reg-fixed-voltage requests probe deferral
+[    0.298064] vgaarb: loaded
+[    0.298456] i2c-core: driver [palmas] using legacy suspend method
+[    0.298464] i2c-core: driver [palmas] using legacy resume method
+[    0.298991] SCSI subsystem initialized
+[    0.300075] usbcore: registered new interface driver usbfs
+[    0.300218] usbcore: registered new interface driver hub
+[    0.300375] usbcore: registered new device driver usb
+[    0.303333] palmas 0-0058: IRQ missing: skipping irq request
+[    0.303654] palmas 0-0058: Muxing GPIO 2e, PWM 0, LED 0
+[    0.303791] prom_parse: Bad cell count for /ocp/i2c@48070000/tps659038@58
+[    0.305725] smps123: 850 <--> 1250 mV at 990 mV 
+[    0.307232] smps45: 850 <--> 1150 mV at 960 mV 
+[    0.308751] smps6: 850 <--> 1250 mV at 970 mV 
+[    0.310119] smps7: 850 <--> 1060 mV at 950 mV 
+[    0.311630] smps8: 850 <--> 1250 mV at 980 mV 
+[    0.313024] smps9: 1800 mV 
+[    0.323568] ldo1: 1800 <--> 3300 mV at 3000 mV 
+[    0.331964] ldo2: 3300 mV 
+[    0.342150] ldo3: 1800 mV 
+[    0.342952] LDO4: at 1800 mV 
+[    0.343497] LDO5: no parameters
+[    0.344016] LDO6: no parameters
+[    0.344546] LDO7: no parameters
+[    0.345067] LDO8: no parameters
+[    0.351985] ldo9: 1050 mV 
+[    0.362006] ldoln: 1800 mV 
+[    0.372059] ldousb: 3300 mV 
+[    0.372696] REGEN1: no parameters
+[    0.373083] regen2: no parameters
+[    0.373452] REGEN3: no parameters
+[    0.373818] sysen1: no parameters
+[    0.374345] sysen2: no parameters
+[    0.375198] pcf857x 0-0020: probed
+[    0.375982] pcf857x 0-0021: probed
+[    0.376650] omap_i2c 48070000.i2c: bus 0 rev0.12 at 400 kHz
+[    0.377627] pcf857x 1-0026: probed
+[    0.377648] omap_i2c 48072000.i2c: bus 1 rev0.12 at 400 kHz
+[    0.378015] omap_i2c 48060000.i2c: bus 2 rev0.12 at 3400 kHz
+[    0.378373] pps_core: LinuxPPS API ver. 1 registered
+[    0.378381] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.378472] PTP clock support registered
+[    0.379677] omap-mailbox 48840000.mailbox: omap mailbox rev 0x400
+[    0.380071] omap-mailbox 48842000.mailbox: omap mailbox rev 0x400
+[    0.380987] omap-iommu 40d01000.mmu: 40d01000.mmu registered
+[    0.381094] omap-iommu 40d02000.mmu: 40d02000.mmu registered
+[    0.381189] omap-iommu 58882000.mmu: 58882000.mmu registered
+[    0.381282] omap-iommu 55082000.mmu: 55082000.mmu registered
+[    0.381458] omap-iommu 41501000.mmu: 41501000.mmu registered
+[    0.381551] omap-iommu 41502000.mmu: 41502000.mmu registered
+[    0.381830] Advanced Linux Sound Architecture Driver Initialized.
+[    0.382987] Switched to clocksource arch_sys_counter
+[    0.398346] NET: Registered protocol family 2
+[    0.398982] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.399045] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.399176] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.399216] TCP: reno registered
+[    0.399228] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.399258] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.399442] NET: Registered protocol family 1
+[    0.399681] RPC: Registered named UNIX socket transport module.
+[    0.399689] RPC: Registered udp transport module.
+[    0.399695] RPC: Registered tcp transport module.
+[    0.399701] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.400634] hw perfevents: enabled with ARMv7 Cortex-A15 PMU driver, 7 counters available
+[    0.403205] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.498381] bounce pool size: 64 pages
+[    0.498623] VFS: Disk quotas dquot_6.5.2
+[    0.498735] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.499261] NFS: Registering the id_resolver key type
+[    0.499292] Key type id_resolver registered
+[    0.499300] Key type id_legacy registered
+[    0.499328] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    0.499484] msgmni has been set to 1474
+[    0.500687] NET: Registered protocol family 38
+[    0.500712] io scheduler noop registered
+[    0.500720] io scheduler deadline registered
+[    0.500748] io scheduler cfq registered (default)
+[    0.505823] pinctrl-single 4a003400.pinmux: 281 pins at pa fc003400 size 1124
+[    0.539705] dra7-pcie 51000000.pcie: PCI host bridge to bus 0000:00
+[    0.539720] pci_bus 0000:00: root bus resource [io  0x1000-0x10000]
+[    0.539736] pci_bus 0000:00: root bus resource [mem 0x20013000-0x2fffffff]
+[    0.539746] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.540203] PCI: bus0: Fast back to back transfers disabled
+[    0.540406] PCI: bus1: Fast back to back transfers enabled
+[    0.540516] pci 0000:00:00.0: BAR 0: assigned [mem 0x20100000-0x201fffff]
+[    0.540531] pci 0000:00:00.0: BAR 1: assigned [mem 0x20020000-0x2002ffff]
+[    0.540543] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.540561] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.542448] OMAP DSS rev 6.1
+[    0.547536] pbias_mmc_omap5: 1800 <--> 3000 mV at 3000 mV 
+[    0.548193] abb_mpu: 1060 <--> 1210 mV 
+[    0.548506] abb_ivahd: 1055 <--> 1250 mV 
+[    0.548820] abb_dspeve: 1055 <--> 1250 mV 
+[    0.549129] abb_gpu: 1090 <--> 1280 mV 
+[    0.550075] Serial: 8250/16550 driver, 10 ports, IRQ sharing enabled
+[    0.553933] 4806a000.serial: ttyS0 at MMIO 0x4806a000 (irq = 296, base_baud = 3000000) is a 8250
+[    1.674209] console [ttyS0] enabled
+[    1.678389] 4806c000.serial: ttyS1 at MMIO 0x4806c000 (irq = 297, base_baud = 3000000) is a 8250
+[    1.688061] 48020000.serial: ttyS2 at MMIO 0x48020000 (irq = 298, base_baud = 3000000) is a 8250
+[    1.698462] omap_rng 48090000.rng: OMAP Random Number Generator ver. 20
+[    1.705378] [drm] Initialized drm 1.1.0 20060810
+[    1.719378] brd: module loaded
+[    1.727266] loop: module loaded
+[    1.730627] (stk) :sysfs entries created
+[    1.734599] (stk) : debugfs entries created 
+[    1.738847] (hci_tty): inside hci_tty_init
+[    1.743445] (hci_tty): allocated 250, 0
+[    1.748627] ahci 4a140000.sata: SSS flag set, parallel bus scan disabled
+[    1.755389] ahci 4a140000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.763965] ahci 4a140000.sata: flags: 64bit ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.774328] scsi0 : ahci_platform
+[    1.778081] ata1: SATA max UDMA/133 mmio [mem 0x4a140000-0x4a1410ff] port 0x100 irq 332
+[    1.787235] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    1.798868] usbcore: registered new interface driver asix
+[    1.804437] usbcore: registered new interface driver ax88179_178a
+[    1.810666] usbcore: registered new interface driver cdc_ether
+[    1.816668] usbcore: registered new interface driver smsc95xx
+[    1.822548] usbcore: registered new interface driver net1080
+[    1.828365] usbcore: registered new interface driver cdc_subset
+[    1.834436] usbcore: registered new interface driver zaurus
+[    1.840170] usbcore: registered new interface driver cdc_ncm
+[    1.846216] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.852771] ehci-pci: EHCI PCI platform driver
+[    1.857365] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.862969] usbcore: registered new interface driver cdc_wdm
+[    1.868792] usbcore: registered new interface driver usb-storage
+[    1.875738] mousedev: PS/2 mouse device common for all mice
+[    1.881905] atmel_mxt_ts 0-004a: __mxt_read_reg: i2c transfer failed (-121)
+[    1.888942] atmel_mxt_ts: probe of 0-004a failed with error -121
+[    1.895825] i2c-core: driver [rtc-ds1307] using legacy suspend method
+[    1.902291] i2c-core: driver [rtc-ds1307] using legacy resume method
+[    1.909250] omap_rtc 48838000.rtcss: rtc core: registered 48838000.rtcss as rtc0
+[    1.916730] 48838000.rtcss: already running
+[    1.921379] i2c /dev entries driver
+[    1.925592] Driver for 1-wire Dallas network protocol.
+[    1.935021] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    1.943279] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    1.949896] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.957292] omap_hsmmc 480b4000.mmc: unable to get vmmc regulator -517
+[    1.963904] platform 480b4000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.971083] omap_hsmmc 480d1000.mmc: no pinctrl state for default mode
+[    2.093686] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.103065] omap-aes 4b500000.aes: OMAP AES hw accel rev: 3.3
+[    2.109536] omap-des 480a5000.des: OMAP DES hw accel rev: 2.2
+[    2.116283] omap-sham 4b101000.sham: hw accel on OMAP rev 4.3
+[    2.124663] usbcore: registered new interface driver usbhid
+[    2.130257] usbhid: USB HID core driver
+[    2.134148] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.144143] tlv320aic3x-codec 0-0018: Failed to get supply 'IOVDD': -517
+[    2.150874] tlv320aic3x-codec 0-0018: Failed to request supplies: -517
+[    2.157517] i2c 0-0018: Driver tlv320aic3x-codec requests probe deferral
+[    2.164870] asoc-simple-card asoc-simple-card.0: hdmi-hifi <-> 58040000.encoder mapping ok
+[    2.175069] davinci_evm primary_sound: ASoC: CODEC (null) not registered
+[    2.181820] davinci_evm primary_sound: snd_soc_register_card failed (-517)
+[    2.188782] platform primary_sound: Driver davinci_evm requests probe deferral
+[    2.196804] oprofile: using timer interrupt.
+[    2.201250] TCP: cubic registered
+[    2.204591] Initializing XFRM netlink socket
+[    2.208894] NET: Registered protocol family 17
+[    2.213396] NET: Registered protocol family 15
+[    2.217909] Key type dns_resolver registered
+[    2.222616] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.228948] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.236690] Power Management for TI OMAP4+ devices.
+[    2.241749] ThumbEE CPU extension supported.
+[    2.246060] Registering SWP/SWPB emulation handler
+[    2.252571] vmmcwl_fixed: disabling
+[    2.256094] regulator-dummy: disabling
+[    2.261593] dmm 4e000000.dmm: initialized all PAT entries
+[    2.284833] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.291472] [drm] No driver support for vblank timestamp query.
+[    2.297437] omapdrm omapdrm.0: No connectors reported connected with modes
+[    2.304345] [drm] Cannot find any crtc or sizes - going 1024x768
+[    2.313086] [drm] Enabling DMM ywrap scrolling
+[    2.321584] Console: switching to colour frame buffer device 128x48
+[    2.331548] omapdrm omapdrm.0: fb0: omapdrm frame buffer device
+[    2.337497] omapdrm omapdrm.0: registered panic notifier
+[    2.342833] [drm] Initialized omapdrm 1.0.0 20110917 on minor 0
+[    2.349975] evm_3v3_sd: 3300 mV 
+[    2.353472] evm_3v3_sw: 3300 mV 
+[    2.356732] evm_3v3_sw: supplied by sysen1
+[    2.361233] aic_dvdd: 1800 mV 
+[    2.364334] aic_dvdd: supplied by evm_3v3_sw
+[    2.368852] vtt_fixed: 1350 mV 
+[    2.372027] vtt_fixed: supplied by sysen2
+[    2.454266] davinci_evm primary_sound: tlv320aic3x-hifi <-> 48468000.mcasp mapping ok
+[    2.522997] davinci_mdio 48485000.mdio: davinci mdio revision 1.6
+[    2.529122] davinci_mdio 48485000.mdio: detected phy mask fffffff3
+[    2.539256] libphy: 48485000.mdio: probed
+[    2.543312] davinci_mdio 48485000.mdio: phy[2]: device 48485000.mdio:02, driver unknown
+[    2.551360] davinci_mdio 48485000.mdio: phy[3]: device 48485000.mdio:03, driver unknown
+[    2.560267] cpsw 48484000.ethernet: Detected MACID = b4:99:4c:c7:d2:48
+[    2.567756] cpsw 48484000.ethernet: cpsw: Detected MACID = b4:99:4c:c7:d2:49
+[    2.575941] omap_rtc 48838000.rtcss: setting system clock to 2000-01-01 01:50:56 UTC (946691456)
+[    2.595381] net eth0: initializing cpsw version 1.15 (0)
+[    2.608046] mmc1: host does not support reading read-only switch. assuming write-enable.
+[    2.619676] mmc1: new high speed SD card at address e624
+[    2.625552] mmcblk0: mmc1:e624 SU02G 1.84 GiB 
+[    2.637337]  mmcblk0: p1 p2
+[    2.677608] mmc2: BKOPS_EN bit is not set
+[    2.685597] mmc2: new high speed MMC card at address 0001
+[    2.686759] net eth0: phy found : id is : 0x20005c7a
+[    2.700242] net eth1: initializing cpsw version 1.15 (0)
+[    2.700547] mmcblk1: mmc2:0001 MMC08G 7.25 GiB 
+[    2.700735] mmcblk1boot0: mmc2:0001 MMC08G partition 1 8.00 MiB
+[    2.700927] mmcblk1boot1: mmc2:0001 MMC08G partition 2 8.00 MiB
+[    2.722707]  mmcblk1: unknown partition table
+[    2.728095]  mmcblk1boot1: unknown partition table
+[    2.733906]  mmcblk1boot0: unknown partition table
+[    2.806878] net eth1: phy found : id is : 0x20005c7a
+[    4.689804] libphy: 48485000.mdio:02 - Link is Up - 100/Full
+[    4.713002] Sending DHCP requests ., OK
+[    5.013004] IP-Config: Got DHCP answer from 192.168.1.1, my address is 192.168.1.42
+[    5.024907] IP-Config: Complete:
+[    5.028152]      device=eth0, hwaddr=b4:99:4c:c7:d2:48, ipaddr=192.168.1.42, mask=255.255.255.0, gw=192.168.1.1
+[    5.038304]      host=192.168.1.42, domain=Home, nis-domain=(none)
+[    5.044527]      bootserver=0.0.0.0, rootserver=192.168.1.36, rootpath=
+[    5.050992]      nameserver0=192.168.1.1
+[    5.055423] ALSA device list:
+[    5.058401]   #0: DRA7xx-EVM
+[    5.061291]   #1: HDMI 58040000.encoder
+[    5.075590] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.082022] devtmpfs: mounted
+[    5.085233] Freeing unused kernel memory: 340K (c0812000 - c0867000)
+INIT: version 2.88 booting
+[    5.552708] random: nonblocking pool is initialized
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd[    6.302681] udevd[1294]: starting version 175
+. ok 
+[....] Synthesizing the initial hotplug events...[    6.809073]  remoteproc0: 58820000.ipu is available
+[    6.814014]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    6.823034]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    6.833863]  remoteproc1: 55020000.ipu is available
+[    6.838772]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    6.847816]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    6.913398]  remoteproc2: 40800000.dsp is available
+[    6.918314]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    6.927341]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    6.973321]  remoteproc3: 41000000.dsp is available
+[    6.978229]  remoteproc3: Note: remoteproc is still under development and considered experimental.
+[    6.987253]  remoteproc3: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.024642]  remoteproc1: Direct firmware load failed with error -2
+[    7.030942]  remoteproc1: Falling back to user helper
+[    7.037526]  remoteproc0: Direct firmware load failed with error -2
+[    7.043854]  remoteproc0: Falling back to user helper
+[    7.125021]  remoteproc2: Direct firmware load failed with error -2
+[    7.131328]  remoteproc2: Falling back to user helper
+[    7.183741]  remoteproc3: Direct firmware load failed with error -2
+[[ ok     7.190047]  remoteproc3: Falling back to user helper
+udevd[1340]: error changing net interface name eth0 to eth14: Device or resource busy
+
+done.
+[    7.373899] CAN device driver interface
+[    7.520723] omap_hwmod: oh->enable: disabling dcan1 mux
+[    7.525976] omap_hwmod: oh->enable: enabling dcan1 mux
+[    7.531182] omap_hwmod: oh->disable: disabling dcan1 mux
+[    7.536521] omap_hwmod: oh->disable: enabling dcan1 mux
+[    7.541819] c_can_platform 4ae3c000.can: c_can_platform device registered (regs=fce3c000, irq=346)
+[    7.609202] Bluetooth: Core ver 2.18
+[    7.612847] NET: Registered protocol family 31
+[    7.617341] Bluetooth: HCI device and connection manager initialized
+[    7.674680] Bluetooth: HCI socket layer initialized
+[    7.679594] Bluetooth: L2CAP socket layer initialized
+[....] Waiting for /dev to be fully populated...[    7.763620] Bluetooth: SCO socket layer initialized
+[    7.863074] (stc):  chnl_id list empty :4 
+[    7.867016] (stk) : st_kim_start(stk) :ldisc_install = 1
+[    8.014527] m25p80 spi32766.0: s25fl256s1 (32768 Kbytes)
+[    8.020918] 10 ofpart partitions found on MTD device spi32766.0
+[    8.026896] Creating 10 MTD partitions on "spi32766.0":
+[    8.084252] 0x000000000000-0x000000010000 : "QSPI.SPL"
+[    8.127002] 0x000000010000-0x000000020000 : "QSPI.SPL.backup1"
+[    8.139587] 0x000000020000-0x000000030000 : "QSPI.SPL.backup2"
+[    8.185022] 0x000000030000-0x000000040000 : "QSPI.SPL.backup3"
+[    8.238584] 0x000000040000-0x000000140000 : "QSPI.u-boot"
+[    8.249510] 0x000000140000-0x0000001c0000 : "QSPI.u-boot-spl-os"
+[    8.263506] 0x0000001c0000-0x0000001d0000 : "QSPI.u-boot-env"
+[    8.278805] 0x0000001d0000-0x0000001e0000 : "QSPI.u-boot-env.backup1"
+[    8.302226] 0x0000001e0000-0x0000009e0000 : "QSPI.kernel"
+[    8.310662] 0x0000009e0000-0x000002000000 : "QSPI.file-system"
+[    8.794019]  remoteproc1: failed to load dra7-ipu2-fw.xem4
+[    8.799600]  remoteproc3: failed to load dra7-dsp2-fw.xe66
+[    8.805176]  remoteproc0: failed to load dra7-ipu1-fw.xem4
+[    8.810746]  remoteproc2: failed to load dra7-dsp1-fw.xe66
+[    8.982996] (stk) :ldisc installation timeout
+[    8.987193] (stk) :ldisc_install = 0[    9.340253] dwc3 48890000.usb: otg: primary host xhci-hcd.0.auto registered
+[    9.347258] dwc3 48890000.usb: otg: shared host xhci-hcd.0.auto registered
+[    9.354167] dwc3 48890000.usb: otg: can't start till gadget registers
+[    9.360679] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    9.366340] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+[    9.374388] xhci-hcd xhci-hcd.1.auto: irq 425, io mem 0x488d0000
+[    9.380514] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    9.387342] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.394603] usb usb1: Product: xHCI Host Controller
+[    9.399496] usb usb1: Manufacturer: Linux 3.14.37-00348-ge930785 xhci-hcd
+[    9.406316] usb usb1: SerialNumber: xhci-hcd.1.auto
+[    9.411570] hub 1-0:1.0: USB hub found
+[    9.415360] hub 1-0:1.0: 1 port detected
+[    9.419493] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    9.425119] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+[    9.432910] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    9.439736] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.446996] usb usb2: Product: xHCI Host Controller
+[    9.451891] usb usb2: Manufacturer: Linux 3.14.37-00348-ge930785 xhci-hcd
+[    9.458723] usb usb2: SerialNumber: xhci-hcd.1.auto
+[    9.464178] hub 2-0:1.0: USB hub found
+[    9.467973] hub 2-0:1.0: 1 port detected
+done.
+[    9.983013] (stk) : timed out waiting for ldisc to be un-installed
+[   10.096065] (stk) :ldisc_install = 1[....] Setting parameters of disc: (none). ok 
+[....] Activating swap...done.
+[....] Cleaning up temporary files... /tmp. ok 
+(stk) :ldisc installation timeout
+[   11.095921] (stk) :ldisc_install = 0(stk) : timed out waiting for ldisc to be un-installed
+[   12.204767] (stk) :ldisc_install = 1[....] Activating lvm and md swap...done.
+[....] Checking file systems...(stk) :ldisc installation timeout
+[   13.205902] (stk) :ldisc_install = 0fsck from util-linux 2.20.1
+done.
+[....] Mounting local filesystems...done.
+[....] Activating swapfile swap...done.
+(stk) : timed out waiting for ldisc to be un-installed
+[   14.314774] (stk) :ldisc_install = 1[....] Cleaning up temporary files.... ok 
+[....] Setting kernel variables ...done.
+[....] Configuring network interfaces...[   14.934803] omap_hwmod: oh->enable: disabling dcan1 mux
+[   14.940054] omap_hwmod: oh->enable: enabling dcan1 mux
+[   14.945250] omap_hwmod: oh->disable: disabling dcan1 mux
+[   14.950583] omap_hwmod: oh->disable: enabling dcan1 mux
+[   15.313018] (stk) :ldisc installation timeout
+[   15.317287] (stk) :ldisc_install = 0done.
+[....] Cleaning up temporary files.... ok 
+[....] Setting up ALSA...done.
+[....] Setting up X socket directories... /tmp/.X11-unix /tmp/.ICE-unix. ok 
+INIT: Entering runlevel: 2
+(stk) : timed out waiting for ldisc to be un-installed[info] Using makefile-style concurrent boot in runlevel 2.
+
+[   16.424750] (stk) :ldisc_install = 1[....] Starting advanced IEEE 802.11 management: hostapdioctl(SIOCGIFINDEX): No such device
+ failed!
+[....] Starting enhanced syslogd: rsyslogd. ok 
+[....] Starting periodic command scheduler: cron. ok 
+[....] Starting system message bus: dbus. ok 
+(stk) :ldisc installation timeout
+[   17.425915] (stk) :ldisc_install = 0[   17.744260] omap_hwmod: oh->enable: disabling dcan1 mux
+[   17.749513] omap_hwmod: oh->enable: enabling dcan1 mux
+[   17.754702] omap_hwmod: oh->disable: disabling dcan1 mux
+[   17.760034] omap_hwmod: oh->disable: enabling dcan1 mux
+[....] Starting Avahi mDNS/DNS-SD Daemon: avahi-daemon. ok 
+[....] Starting OpenBSD Secure Shell server: sshd. ok 
+Starting very small Busybox based DHCP server: Starting /usr/sbin/udhcpd...
+udhcpd.
+[....] Starting MTA:[   18.423024] (stk) : timed out waiting for ldisc to be un-installed
+[   18.536073] (stk) :ldisc_install = 1 exim4. ok 
+ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken
+
+Last login: Sat Jan  1 01:50:40 UTC 2000 on ttyS0
+Linux rockdesk 3.14.37-00348-ge930785 #1231 SMP Fri May 1 13:12:39 EEST 2015 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+(stk) :ldisc installation timeout
+[   19.535923] (stk) :ldisc_install = 0[   19.643656] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.648909] omap_hwmod: oh->enable: enabling dcan1 mux
+[   19.654108] omap_hwmod: oh->disable: disabling dcan1 mux
+[   19.659449] omap_hwmod: oh->disable: enabling dcan1 mux
+[   19.674206] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.679457] omap_hwmod: oh->enable: enabling dcan1 mux
+[   19.684645] omap_hwmod: oh->disable: disabling dcan1 mux
+[   19.689986] omap_hwmod: oh->disable: enabling dcan1 mux
+DCANRXPACKETREBOOT test iteration: 200
+[   19.711454] omap_hwmod: oh->enable: disabling dcan1 mux
+[   19.716704] omap_hwmod: oh->enable: enabling dcan1 mux
+[   19.722189] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+[   20.533014] (stk) : timed out waiting for ldisc to be un-installed
+[   20.541060] Bluetooth: st_register failed -22
+interface = can0, family = 29, type = 3, proto = 1
+[   20.809808] can: controller area network core (rev 20120528 abi 9)
+[   20.816230] c_can_platform 4ae3c000.can can0: msg lost in buffer 16
+[   20.822905] NET: Registered protocol family 29
+[   20.861872] can: raw protocol (rev 20120528)
+candump size 62064
+[   21.804552] omap_hwmod: oh->disable: disabling dcan1 mux
+[   21.809893] omap_hwmod: oh->disable: enabling dcan1 mux
+[   21.815193] omap_hwmod: oh->enable: disabling dcan1 mux
+[   21.820447] omap_hwmod: oh->enable: enabling dcan1 mux
+[   21.825646] omap_hwmod: oh->disable: disabling dcan1 mux
+[   21.830981] omap_hwmod: oh->disable: enabling dcan1 mux
+can0 off failed - VAL:0x10000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Boots: 200, UP fails: 6, OFF fails: 200, READ fails: 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
