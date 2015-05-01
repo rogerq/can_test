@@ -1,0 +1,102 @@
+From e930785e02dfa29b871200e2c6bea76062b86293 Mon Sep 17 00:00:00 2001
+From: Roger Quadros <rogerq@ti.com>
+Date: Fri, 1 May 2015 13:11:14 +0300
+Subject: [PATCH] HACK: hwmod: put DCAN1 pinmux in safe mode during module mode
+ transistion
+
+This is to test the theory that DCAN RX pin transitions
+during DCAN module transition cause problems.
+
+Signed-off-by: Roger Quadros <rogerq@ti.com>
+---
+ arch/arm/boot/dts/dra7-evm.dts   |  2 ++
+ arch/arm/mach-omap2/omap_hwmod.c | 27 +++++++++++++++++++++++++++
+ 2 files changed, 29 insertions(+)
+
+diff --git a/arch/arm/boot/dts/dra7-evm.dts b/arch/arm/boot/dts/dra7-evm.dts
+index 708958b..8016c81 100644
+--- a/arch/arm/boot/dts/dra7-evm.dts
++++ b/arch/arm/boot/dts/dra7-evm.dts
+@@ -814,9 +814,11 @@
+ 
+ &dcan1 {
+ 	status = "ok";
++/*
+ 	pinctrl-names = "default", "sleep";
+ 	pinctrl-0 = <&dcan1_pins_default>;
+ 	pinctrl-1 = <&dcan1_pins_sleep>;
++*/
+ };
+ 
+ &mailbox5 {
+diff --git a/arch/arm/mach-omap2/omap_hwmod.c b/arch/arm/mach-omap2/omap_hwmod.c
+index 1723f75..03f3a0f 100644
+--- a/arch/arm/mach-omap2/omap_hwmod.c
++++ b/arch/arm/mach-omap2/omap_hwmod.c
+@@ -163,6 +163,7 @@
+ #include "prminst44xx.h"
+ #include "mux.h"
+ #include "pm.h"
++#include "control.h"
+ 
+ /* Name of the OMAP hwmod for the MPU */
+ #define MPU_INITIATOR_NAME		"mpu"
+@@ -968,6 +969,28 @@ static void _disable_optional_clocks(struct omap_hwmod *oh)
+ 		}
+ }
+ 
++void disable_dcan1_mux(struct omap_hwmod *oh, char *str)
++{
++	if(!strcmp(oh->name, "dcan1")) {
++		pr_info("omap_hwmod: %s: disabling dcan1 mux\n", str);
++		/* dcan1_tx to safe mode, pull_up */
++		omap4_ctrl_pad_writel( (1 << 17) | 0xf , 0x3d0);
++		/* wakeup0 to safe mode, pull_up */
++		omap4_ctrl_pad_writel( (1 << 17) | 0xf, 0x418);
++	}
++}
++
++void enable_dcan1_mux(struct omap_hwmod *oh, char *str)
++{
++	if(!strcmp(oh->name, "dcan1")) {
++		pr_info("omap_hwmod: %s: enabling dcan1 mux\n", str);
++		/* dcan1_tx to mode 0, pull_up */
++		omap4_ctrl_pad_writel( (1 << 17), 0x3d0);
++		/* wakeup0 to mode 1, pull up */
++		omap4_ctrl_pad_writel( (1 << 17) | 0x1, 0x418);
++	}
++}
++
+ /**
+  * _omap4_enable_module - enable CLKCTRL modulemode on OMAP4
+  * @oh: struct omap_hwmod *
+@@ -983,11 +1006,13 @@ static void _omap4_enable_module(struct omap_hwmod *oh)
+ 	pr_debug("omap_hwmod: %s: %s: %d\n",
+ 		 oh->name, __func__, oh->prcm.omap4.modulemode);
+ 
++	disable_dcan1_mux(oh, "oh->enable");
+ 	omap4_cminst_module_enable(oh->prcm.omap4.modulemode,
+ 				   oh->clkdm->prcm_partition,
+ 				   oh->clkdm->cm_inst,
+ 				   oh->clkdm->clkdm_offs,
+ 				   oh->prcm.omap4.clkctrl_offs);
++	enable_dcan1_mux(oh, "oh->enable");
+ }
+ 
+ /**
+@@ -1862,10 +1887,12 @@ static int _omap4_disable_module(struct omap_hwmod *oh)
+ 
+ 	pr_debug("omap_hwmod: %s: %s\n", oh->name, __func__);
+ 
++	disable_dcan1_mux(oh, "oh->disable");
+ 	omap4_cminst_module_disable(oh->clkdm->prcm_partition,
+ 				    oh->clkdm->cm_inst,
+ 				    oh->clkdm->clkdm_offs,
+ 				    oh->prcm.omap4.clkctrl_offs);
++	enable_dcan1_mux(oh, "oh->disable");
+ 
+ 	v = _omap4_wait_target_disable(oh);
+ 	if (v)
+-- 
+2.1.4
+
