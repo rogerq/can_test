@@ -1,0 +1,1071 @@
+U-Boot 2014.07-00055-g93b92d2 (Jun 05 2015 - 14:32:35)
+
+CPU  : DRA722 ES1.0
+Board: DRA7xx
+I2C:   ready
+DRAM:  1 GiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Card did not respond to voltage select!
+MMC init failed
+Using default environment
+
+SATA link 0 timeout.
+AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+flags: 64bit ncq stag pm led clo only pmp pio slum part ccc apst 
+scanning bus for devices...
+Found 0 device(s).
+SCSI:  Net:   <ethaddr> not set. Validating first E-fuse MAC
+cpsw
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+SD/MMC found on device 0
+reading uEnv.txt
+904 bytes read in 12 ms (73.2 KiB/s)
+Loaded environment from uEnv.txt
+Importing environment from mmc0 ...
+Running uenvcmd ...
+cpsw Waiting for PHY auto negotiation to complete. done
+link up on port 0, speed 100, full duplex
+Using cpsw device
+TFTP from server 192.168.1.36; our IP address is 192.168.1.63
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: T T T #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ######################################
+         249 KiB/s
+done
+Bytes transferred = 4519392 (44f5e0 hex)
+link up on port 0, speed 100, full duplex
+Using cpsw device
+TFTP from server 192.168.1.36; our IP address is 192.168.1.63
+Filename 'dra72-evm.dtb'.
+Load address: 0x88000000
+Loading: ##################
+         1.6 MiB/s
+done
+Bytes transferred = 91986 (16752 hex)
+Kernel image @ 0x82000000 [ 0x000000 - 0x44f5e0 ]
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8ffe6000, end 8ffff751 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.43-03328-gebd3232-dirty (roger@rockdesk) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #1395 SMP Mon Jun 15 5
+[    0.000000] CPU: ARMv7 Processor [412fc0f2] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: TI DRA722
+[    0.000000] Reserved memory: created CMA memory pool at 0x95800000, size 56 MiB
+[    0.000000] Reserved memory: initialized node ipu2_cma@95800000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x99000000, size 64 MiB
+[    0.000000] Reserved memory: initialized node dsp1_cma@99000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB
+[    0.000000] Reserved memory: initialized node ipu1_cma@9d000000, compatible id shared-dma-pool
+[    0.000000] cma: CMA: reserved 24 MiB at ae000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] DRA722 ES1.0
+[    0.000000] PERCPU: Embedded 8 pages/cpu @ed76a000 s8256 r8192 d16320 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260368
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.1.36:/srv/nfsroot/ ip=dhcp no_console_suspend
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 848404K/1047552K available (6171K kernel code, 398K rwdata, 2072K rodata, 340K init, 255K bss, 199148K reserved, 269312K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc08150b4   (8245 kB)
+[    0.000000]       .init : 0xc0816000 - 0xc086b040   ( 341 kB)
+[    0.000000]       .data : 0xc086c000 - 0xc08cf950   ( 399 kB)
+[    0.000000]        .bss : 0xc08cf958 - 0xc090f68c   ( 256 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] omap_hwmod: disable HW_AUTO. mpu mpu_clkdm
+[    0.000000] omap_hwmod: disable HW_AUTO. timer1 wkupaon_clkdm
+[    0.000000] omap_hwmod: disable HW_AUTO. timer1 wkupaon_clkdm
+[    0.000000] OMAP clockevent source: timer1 at 32786 Hz
+[    0.000000] omap_hwmod: disable HW_AUTO. counter_32k wkupaon_clkdm
+[    0.000000] omap_hwmod: disable HW_AUTO. counter_32k wkupaon_clkdm
+[    0.000000] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 65536000000000ns
+[    0.000000] OMAP clocksource: 32k_counter at 32768 Hz
+[    0.000427] Architected cp15 timer(s) running at 6.14MHz (virt).
+[    0.000432] sched_clock: 56 bits at 6MHz, resolution 162ns, wraps every 2794592043008ns
+[    0.000439] Switching to timer-based delay loop
+[    0.001345] Console: colour dummy device 80x30
+[    0.001360] WARNING: Your 'console=ttyO0' has been replaced by 'ttyS0'
+[    0.001366] This ensures that you still see kernel messages. Please
+[    0.001371] update your kernel commandline.
+[    0.001384] Calibrating delay loop (skipped), value calculated using timer frequency.. 12.29 BogoMIPS (lpj=61475)
+[    0.001396] pid_max: default: 32768 minimum: 301
+[    0.001481] Security Framework initialized
+[    0.001518] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001527] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.019634] CPU: Testing write buffer coherency: ok
+[    0.019876] /cpus/cpu@0 missing clock-frequency property
+[    0.019889] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.019909] Setting up static identity map for 0x8060ca40 - 0x8060ca98
+[    0.020569] Brought up 1 CPUs
+[    0.020579] SMP: Total of 1 processors activated (12.29 BogoMIPS).
+[    0.020585] CPU: All CPU(s) started in SVC mode.
+[    0.020938] devtmpfs: initialized
+[    0.021533] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.022995] omap_hwmod: l3_main_2 using broken dt data from ocp
+[    0.098954] omap_hwmod: disable HW_AUTO. l3_main_1 l3main1_clkdm
+[    0.098977] omap_hwmod: disable HW_AUTO. dmm emif_clkdm
+[    0.098991] omap_hwmod: disable HW_AUTO. emif_ocp_fw emif_clkdm
+[    0.099005] omap_hwmod: disable HW_AUTO. l3_main_2 l3instr_clkdm
+[    0.099020] omap_hwmod: disable HW_AUTO. l3_instr l3instr_clkdm
+[    0.099035] omap_hwmod: disable HW_AUTO. l4_cfg l4cfg_clkdm
+[    0.099047] omap_hwmod: disable HW_AUTO. l4_per1 l4per_clkdm
+[    0.099060] omap_hwmod: disable HW_AUTO. l4_per2 l4per2_clkdm
+[    0.099072] omap_hwmod: disable HW_AUTO. l4_per3 l4per3_clkdm
+[    0.099084] omap_hwmod: disable HW_AUTO. l4_wkup wkupaon_clkdm
+[    0.099095] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    0.099114] omap_hwmod: disable HW_AUTO. bb2d dss_clkdm
+[    0.099132] omap_hwmod: disable HW_AUTO. ctrl_module_wkup wkupaon_clkdm
+[    0.099143] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[    0.099160] omap_hwmod: disable HW_AUTO. dcan2 l4per2_clkdm
+[    0.099177] omap_hwmod: disable HW_AUTO. gmac gmac_clkdm
+[    0.129753] omap_hwmod: disable HW_AUTO. davinci_mdio gmac_clkdm
+[    0.129769] omap_hwmod: disable HW_AUTO. dma_system dma_clkdm
+[    0.129786] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    0.129849] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    0.129873] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    0.129895] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    0.129919] omap_hwmod: disable HW_AUTO. dss_hdmi dss_clkdm
+[    0.129941] omap_hwmod: disable HW_AUTO. aes1 l4sec_clkdm
+[    0.129957] omap_hwmod: disable HW_AUTO. aes2 l4sec_clkdm
+[    0.129974] omap_hwmod: disable HW_AUTO. sham l4sec_clkdm
+[    0.129990] omap_hwmod: disable HW_AUTO. mcasp3 l4per2_clkdm
+[    0.130010] omap_hwmod: disable HW_AUTO. mcasp8 l4per2_clkdm
+[    0.130028] omap_hwmod: disable HW_AUTO. elm l4per_clkdm
+[    0.130045] omap_hwmod: disable HW_AUTO. gpio1 wkupaon_clkdm
+[    0.130149] omap_hwmod: disable HW_AUTO. gpio2 l4per_clkdm
+[    0.130242] omap_hwmod: disable HW_AUTO. gpio3 l4per_clkdm
+[    0.130333] omap_hwmod: disable HW_AUTO. gpio4 l4per_clkdm
+[    0.130548] omap_hwmod: disable HW_AUTO. gpio5 l4per_clkdm
+[    0.130730] omap_hwmod: disable HW_AUTO. gpio6 l4per_clkdm
+[    0.130913] omap_hwmod: disable HW_AUTO. gpio7 l4per_clkdm
+[    0.131097] omap_hwmod: disable HW_AUTO. gpio8 l4per_clkdm
+[    0.131279] omap_hwmod: disable HW_AUTO. gpmc l3main1_clkdm
+[    0.131291] omap_hwmod: disable HW_AUTO. hdq1w l4per_clkdm
+[    0.144014] omap_hwmod: disable HW_AUTO. i2c1 l4per_clkdm
+[    0.144036] omap_hwmod: disable HW_AUTO. i2c2 l4per_clkdm
+[    0.156790] omap_hwmod: disable HW_AUTO. i2c3 l4per_clkdm
+[    0.169369] omap_hwmod: disable HW_AUTO. i2c4 l4per_clkdm
+[    0.182130] omap_hwmod: disable HW_AUTO. i2c5 ipu_clkdm
+[    0.196317] omap_hwmod: disable HW_AUTO. mailbox1 l4cfg_clkdm
+[    0.196333] omap_hwmod: disable HW_AUTO. mailbox2 l4cfg_clkdm
+[    0.196348] omap_hwmod: disable HW_AUTO. mailbox3 l4cfg_clkdm
+[    0.196362] omap_hwmod: disable HW_AUTO. mailbox4 l4cfg_clkdm
+[    0.196376] omap_hwmod: disable HW_AUTO. mailbox5 l4cfg_clkdm
+[    0.196390] omap_hwmod: disable HW_AUTO. mailbox6 l4cfg_clkdm
+[    0.196403] omap_hwmod: disable HW_AUTO. mailbox7 l4cfg_clkdm
+[    0.196417] omap_hwmod: disable HW_AUTO. mailbox8 l4cfg_clkdm
+[    0.196430] omap_hwmod: disable HW_AUTO. mailbox9 l4cfg_clkdm
+[    0.196444] omap_hwmod: disable HW_AUTO. mailbox10 l4cfg_clkdm
+[    0.196457] omap_hwmod: disable HW_AUTO. mailbox11 l4cfg_clkdm
+[    0.196470] omap_hwmod: disable HW_AUTO. mailbox12 l4cfg_clkdm
+[    0.196484] omap_hwmod: disable HW_AUTO. mailbox13 l4cfg_clkdm
+[    0.196497] omap_hwmod: disable HW_AUTO. mcspi1 l4per_clkdm
+[    0.196516] omap_hwmod: disable HW_AUTO. mcspi2 l4per_clkdm
+[    0.196535] omap_hwmod: disable HW_AUTO. mcspi3 l4per_clkdm
+[    0.196553] omap_hwmod: disable HW_AUTO. mcspi4 l4per_clkdm
+[    0.196571] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    0.196591] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[    0.196610] omap_hwmod: disable HW_AUTO. mmc3 l4per_clkdm
+[    0.196629] omap_hwmod: disable HW_AUTO. mmc4 l4per_clkdm
+[    0.196655] omap_hwmod: disable HW_AUTO. ocp2scp1 l3init_clkdm
+[    0.196674] omap_hwmod: disable HW_AUTO. ocp2scp3 l3init_clkdm
+[    0.196697] omap_hwmod: disable HW_AUTO. pruss1 l4per2_clkdm
+[    0.196713] omap_hwmod: disable HW_AUTO. pruss2 l4per2_clkdm
+[    0.196728] omap_hwmod: disable HW_AUTO. qspi l4per2_clkdm
+[    0.196747] omap_hwmod: disable HW_AUTO. rtcss rtc_clkdm
+[    0.196852] omap_hwmod: disable HW_AUTO. sata l3init_clkdm
+[    0.196871] omap_hwmod: disable HW_AUTO. smartreflex_core coreaon_clkdm
+[    0.196888] omap_hwmod: disable HW_AUTO. smartreflex_mpu coreaon_clkdm
+[    0.196904] omap_hwmod: disable HW_AUTO. spinlock l4cfg_clkdm
+[    0.196920] omap_hwmod: disable HW_AUTO. timer2 l4per_clkdm
+[    0.196938] omap_hwmod: disable HW_AUTO. timer3 l4per_clkdm
+[    0.196958] omap_hwmod: disable HW_AUTO. timer4 l4per_clkdm
+[    0.196979] omap_hwmod: disable HW_AUTO. timer5 ipu_clkdm
+[    0.196999] omap_hwmod: disable HW_AUTO. timer6 ipu_clkdm
+[    0.197020] omap_hwmod: disable HW_AUTO. timer7 ipu_clkdm
+[    0.197041] omap_hwmod: disable HW_AUTO. timer8 ipu_clkdm
+[    0.197062] omap_hwmod: disable HW_AUTO. timer9 l4per_clkdm
+[    0.197083] omap_hwmod: disable HW_AUTO. timer10 l4per_clkdm
+[    0.197102] omap_hwmod: disable HW_AUTO. timer11 l4per_clkdm
+[    0.197122] omap_hwmod: disable HW_AUTO. timer12 wkupaon_clkdm
+[    0.197206] omap_hwmod: disable HW_AUTO. timer13 l4per3_clkdm
+[    0.197226] omap_hwmod: disable HW_AUTO. timer14 l4per3_clkdm
+[    0.197246] omap_hwmod: disable HW_AUTO. timer15 l4per3_clkdm
+[    0.197266] omap_hwmod: disable HW_AUTO. timer16 l4per3_clkdm
+[    0.197286] omap_hwmod: disable HW_AUTO. uart1 l4per_clkdm
+[    0.197307] omap_hwmod: disable HW_AUTO. uart2 l4per_clkdm
+[    0.197327] omap_hwmod: disable HW_AUTO. uart3 l4per_clkdm
+[    0.197347] omap_hwmod: disable HW_AUTO. uart4 l4per_clkdm
+[    0.197367] omap_hwmod: disable HW_AUTO. uart5 l4per_clkdm
+[    0.197387] omap_hwmod: disable HW_AUTO. uart6 ipu_clkdm
+[    0.197408] omap_hwmod: disable HW_AUTO. uart7 l4per2_clkdm
+[    0.197429] omap_hwmod: disable HW_AUTO. uart8 l4per2_clkdm
+[    0.197449] omap_hwmod: disable HW_AUTO. uart9 l4per2_clkdm
+[    0.197469] omap_hwmod: disable HW_AUTO. uart10 wkupaon_clkdm
+[    0.197492] omap_hwmod: disable HW_AUTO. des l4sec_clkdm
+[    0.197509] omap_hwmod: disable HW_AUTO. rng l4sec_clkdm
+[    0.197526] omap_hwmod: disable HW_AUTO. usb_otg_ss1 l3init_clkdm
+[    0.197544] omap_hwmod: disable HW_AUTO. usb_otg_ss2 l3init_clkdm
+[    0.197562] omap_hwmod: disable HW_AUTO. usb_otg_ss3 l3init_clkdm
+[    0.197580] omap_hwmod: disable HW_AUTO. vcp1 l3main1_clkdm
+[    0.197593] omap_hwmod: disable HW_AUTO. vcp2 l3main1_clkdm
+[    0.197605] omap_hwmod: disable HW_AUTO. vpe vpe_clkdm
+[    0.197622] omap_hwmod: disable HW_AUTO. vip1 cam_clkdm
+[    0.197641] omap_hwmod: disable HW_AUTO. wd_timer2 wkupaon_clkdm
+[    0.198163] omap_hwmod: disable HW_AUTO. epwmss0 l4per2_clkdm
+[    0.198181] omap_hwmod: disable HW_AUTO. ecap0 l4per2_clkdm
+[    0.198195] omap_hwmod: disable HW_AUTO. eqep0 l4per2_clkdm
+[    0.198208] omap_hwmod: disable HW_AUTO. ehrpwm0 l4per2_clkdm
+[    0.198221] omap_hwmod: disable HW_AUTO. epwmss1 l4per2_clkdm
+[    0.198237] omap_hwmod: disable HW_AUTO. ecap1 l4per2_clkdm
+[    0.198251] omap_hwmod: disable HW_AUTO. eqep1 l4per2_clkdm
+[    0.198264] omap_hwmod: disable HW_AUTO. ehrpwm1 l4per2_clkdm
+[    0.198278] omap_hwmod: disable HW_AUTO. epwmss2 l4per2_clkdm
+[    0.198294] omap_hwmod: disable HW_AUTO. ecap2 l4per2_clkdm
+[    0.198308] omap_hwmod: disable HW_AUTO. eqep2 l4per2_clkdm
+[    0.198321] omap_hwmod: disable HW_AUTO. ehrpwm2 l4per2_clkdm
+[    0.198334] omap_hwmod: disable HW_AUTO. cal cam_clkdm
+[    0.198755] pinctrl core: initialized pinctrl subsystem
+[    0.199480] regulator-dummy: no parameters
+[    0.202932] NET: Registered protocol family 16
+[    0.204558] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.206530] cpuidle: using governor ladder
+[    0.206540] cpuidle: using governor menu
+[    0.210255] syscon 4a002000.tisysconcore: regmap [mem 0x4a002000-0x4a0026cf] registered
+[    0.210620] syscon 4a002e00.tisyscon: regmap [mem 0x4a002e00-0x4a002e7b] registered
+[    0.212214] omap_hwmod: disable HW_AUTO. gpio1 wkupaon_clkdm
+[    0.212676] OMAP GPIO hardware version 0.1
+[    0.213112] omap_hwmod: disable HW_AUTO. gpio2 l4per_clkdm
+[    0.213937] omap_hwmod: disable HW_AUTO. gpio3 l4per_clkdm
+[    0.214748] omap_hwmod: disable HW_AUTO. gpio4 l4per_clkdm
+[    0.215574] omap_hwmod: disable HW_AUTO. gpio5 l4per_clkdm
+[    0.216418] omap_hwmod: disable HW_AUTO. gpio6 l4per_clkdm
+[    0.217267] omap_hwmod: disable HW_AUTO. gpio7 l4per_clkdm
+[    0.218137] omap_hwmod: disable HW_AUTO. gpio8 l4per_clkdm
+[    0.218809] irq: no irq domain found for /ocp/pinmux@4a003400 !
+[    0.224085] omap_hwmod: disable HW_AUTO. spinlock l4cfg_clkdm
+[    0.224856] platform 58820000.ipu: assigned reserved memory node ipu1_cma@9d000000
+[    0.225140] platform 55020000.ipu: assigned reserved memory node ipu2_cma@95800000
+[    0.225411] platform 40800000.dsp: assigned reserved memory node dsp1_cma@99000000
+[    0.236386] omap-gpmc 50000000.gpmc: could not find pctldev for node /ocp/pinmux@4a003400/nand_default, deferring probe
+[    0.236405] platform 50000000.gpmc: Driver omap-gpmc requests probe deferral
+[    0.244108] No ATAGs?
+[    0.244125] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.244134] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.245371] OMAP DMA hardware revision 0.0
+[    0.245785] omap-dma-xbar 4a002b78.dma-crossbar: OMAP DMA Crossbar driver
+[    0.270146] bio: create slab <bio-0> at 0
+[    0.310556] omap-dma-engine 4a056000.dma-controller: OMAP DMA engine driver
+[    0.312154] platform fixedregulator-sd: Driver reg-fixed-voltage requests probe deferral
+[    0.312425] evm_3v3: 3300 mV 
+[    0.312737] aic_dvdd: 1800 mV 
+[    0.312800] aic_dvdd: supplied by evm_3v3
+[    0.313139] omap_hwmod: disable HW_AUTO. gpio5 l4per_clkdm
+[    0.313179] vmmcwl_fixed: 1800 mV 
+[    0.315066] vgaarb: loaded
+[    0.315461] i2c-core: driver [palmas] using legacy suspend method
+[    0.315469] i2c-core: driver [palmas] using legacy resume method
+[    0.316007] SCSI subsystem initialized
+[    0.317164] usbcore: registered new interface driver usbfs
+[    0.317311] usbcore: registered new interface driver hub
+[    0.317480] usbcore: registered new device driver usb
+[    0.318373] omap_i2c 48070000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c1_pins, deferring probe
+[    0.318390] platform 48070000.i2c: Driver omap_i2c requests probe deferral
+[    0.318424] omap_i2c 4807c000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c5_pins, deferring probe
+[    0.318436] platform 4807c000.i2c: Driver omap_i2c requests probe deferral
+[    0.318778] pps_core: LinuxPPS API ver. 1 registered
+[    0.318786] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.318897] PTP clock support registered
+[    0.320271] omap_hwmod: disable HW_AUTO. mailbox5 l4cfg_clkdm
+[    0.320294] omap-mailbox 48840000.mailbox: omap mailbox rev 0x400
+[    0.320555] omap_hwmod: disable HW_AUTO. mailbox6 l4cfg_clkdm
+[    0.320574] omap-mailbox 48842000.mailbox: omap mailbox rev 0x400
+[    0.321458] omap-iommu 40d01000.mmu: 40d01000.mmu registered
+[    0.321562] omap-iommu 40d02000.mmu: 40d02000.mmu registered
+[    0.321657] omap-iommu 58882000.mmu: 58882000.mmu registered
+[    0.321755] omap-iommu 55082000.mmu: 55082000.mmu registered
+[    0.322142] Advanced Linux Sound Architecture Driver Initialized.
+[    0.323404] Switched to clocksource arch_sys_counter
+[    0.340930] NET: Registered protocol family 2
+[    0.341534] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.341600] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.341731] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.341776] TCP: reno registered
+[    0.341787] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.341817] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.341991] NET: Registered protocol family 1
+[    0.342234] RPC: Registered named UNIX socket transport module.
+[    0.342242] RPC: Registered udp transport module.
+[    0.342248] RPC: Registered tcp transport module.
+[    0.342255] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.343268] hw perfevents: enabled with ARMv7 Cortex-A15 PMU driver, 7 counters available
+[    0.343685] omap_hwmod: disable HW_AUTO. timer2 l4per_clkdm
+[    0.343759] omap_hwmod: disable HW_AUTO. timer3 l4per_clkdm
+[    0.343818] omap_hwmod: disable HW_AUTO. timer4 l4per_clkdm
+[    0.343882] omap_hwmod: disable HW_AUTO. timer5 ipu_clkdm
+[    0.343942] omap_hwmod: disable HW_AUTO. timer6 ipu_clkdm
+[    0.344002] omap_hwmod: disable HW_AUTO. timer7 ipu_clkdm
+[    0.344061] omap_hwmod: disable HW_AUTO. timer8 ipu_clkdm
+[    0.344122] omap_hwmod: disable HW_AUTO. timer9 l4per_clkdm
+[    0.344179] omap_hwmod: disable HW_AUTO. timer10 l4per_clkdm
+[    0.344234] omap_hwmod: disable HW_AUTO. timer11 l4per_clkdm
+[    0.345896] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.438620] bounce pool size: 64 pages
+[    0.438850] VFS: Disk quotas dquot_6.5.2
+[    0.438957] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.439387] NFS: Registering the id_resolver key type
+[    0.439419] Key type id_resolver registered
+[    0.439427] Key type id_legacy registered
+[    0.439459] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    0.439585] msgmni has been set to 1483
+[    0.440925] NET: Registered protocol family 38
+[    0.440950] io scheduler noop registered
+[    0.440957] io scheduler deadline registered
+[    0.440975] io scheduler cfq registered (default)
+[    0.441855] omap_hwmod: disable HW_AUTO. ocp2scp3 l3init_clkdm
+[    0.442740] omap_hwmod: disable HW_AUTO. ocp2scp1 l3init_clkdm
+[    0.443536] platform 4a084000.phy: Driver omap-usb2 requests probe deferral
+[    0.443664] platform 4a085000.phy: Driver omap-usb2 requests probe deferral
+[    0.445832] pinctrl-single 4a003400.pinmux: 281 pins at pa fc003400 size 1124
+[    0.448587] omap_hwmod: disable HW_AUTO. pcie1 pcie_clkdm
+[    0.448608] omap_hwmod: disable HW_AUTO. ocp2scp3 l3init_clkdm
+[    0.477767] dra7-pcie 51000000.pcie: PCI host bridge to bus 0000:00
+[    0.477781] pci_bus 0000:00: root bus resource [io  0x1000-0x10000]
+[    0.477791] pci_bus 0000:00: root bus resource [mem 0x20013000-0x2fffffff]
+[    0.477801] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.478283] PCI: bus0: Fast back to back transfers disabled
+[    0.478508] PCI: bus1: Fast back to back transfers enabled
+[    0.478625] pci 0000:00:00.0: BAR 0: assigned [mem 0x20100000-0x201fffff]
+[    0.478639] pci 0000:00:00.0: BAR 1: assigned [mem 0x20020000-0x2002ffff]
+[    0.478652] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.478670] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.480601] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    0.480700] OMAP DSS rev 6.1
+[    0.481249] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    0.481281] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    0.484068] tpd12s015 encoder@0: failed to parse CT CP HPD gpio
+[    0.484091] platform encoder@0: Driver tpd12s015 requests probe deferral
+[    0.484820] connector-hdmi connector@0: failed to find video source
+[    0.484836] platform connector@0: Driver connector-hdmi requests probe deferral
+[    0.485896] pbias_mmc_omap5: 1800 <--> 3000 mV at 3000 mV 
+[    0.486614] abb_mpu: 1060 <--> 1210 mV 
+[    0.486939] abb_ivahd: 1055 <--> 1250 mV 
+[    0.487285] abb_dspeve: 1055 <--> 1250 mV 
+[    0.487609] abb_gpu: 1090 <--> 1280 mV 
+[    0.488623] Serial: 8250/16550 driver, 10 ports, IRQ sharing enabled
+[    0.492326] omap_hwmod: disable HW_AUTO. uart1 l4per_clkdm
+[    0.492652] 4806a000.serial: ttyS0 at MMIO 0x4806a000 (irq = 296, base_baud = 3000000) is a 8250
+[    2.359774] console [ttyS0] enabled
+[    2.364041] platform 48020000.serial: Driver omap8250 requests probe deferral
+[    2.372245] omap_hwmod: disable HW_AUTO. rng l4sec_clkdm
+[    2.377911] omap_rng 48090000.rng: OMAP Random Number Generator ver. 20
+[    2.384884] [drm] Initialized drm 1.1.0 20060810
+[    2.399212] brd: module loaded
+[    2.407394] loop: module loaded
+[    2.410813] (stk) :sysfs entries created
+[    2.415095] (stk) : debugfs entries created 
+[    2.419344] (hci_tty): inside hci_tty_init
+[    2.423990] (hci_tty): allocated 250, 0
+[    2.429171] omap_hwmod: disable HW_AUTO. sata l3init_clkdm
+[    2.434958] ahci 4a140000.sata: SSS flag set, parallel bus scan disabled
+[    2.441706] ahci 4a140000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    2.450291] ahci 4a140000.sata: flags: 64bit ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    2.460730] scsi0 : ahci_platform
+[    2.464603] ata1: SATA max UDMA/133 mmio [mem 0x4a140000-0x4a1410ff] port 0x100 irq 328
+[    2.473889] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    2.480582] omap_hwmod: disable HW_AUTO. elm l4per_clkdm
+[    2.488011] omap_hwmod: disable HW_AUTO. qspi l4per2_clkdm
+[    2.496538] usbcore: registered new interface driver asix
+[    2.502108] usbcore: registered new interface driver ax88179_178a
+[    2.508460] usbcore: registered new interface driver cdc_ether
+[    2.514497] usbcore: registered new interface driver smsc95xx
+[    2.520406] usbcore: registered new interface driver net1080
+[    2.526360] usbcore: registered new interface driver cdc_subset
+[    2.532447] usbcore: registered new interface driver zaurus
+[    2.538213] usbcore: registered new interface driver cdc_ncm
+[    2.544349] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.550905] ehci-pci: EHCI PCI platform driver
+[    2.555535] ehci-omap: OMAP-EHCI Host Controller driver
+[    2.561190] usbcore: registered new interface driver cdc_wdm
+[    2.567058] usbcore: registered new interface driver usb-storage
+[    2.574118] mousedev: PS/2 mouse device common for all mice
+[    2.580928] i2c-core: driver [rtc-ds1307] using legacy suspend method
+[    2.587416] i2c-core: driver [rtc-ds1307] using legacy resume method
+[    2.594062] omap_hwmod: disable HW_AUTO. rtcss rtc_clkdm
+[    2.599768] omap_rtc 48838000.rtcss: rtc core: registered 48838000.rtcss as rtc0
+[    2.607858] i2c /dev entries driver
+[    2.611472] Driver for 1-wire Dallas network protocol.
+[    2.617967] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    2.625429] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    2.632857] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    2.640293] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    2.647728] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    2.657529] omap_hwmod: disable HW_AUTO. wd_timer2 wkupaon_clkdm
+[    2.664517] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    2.672606] omap_hwmod: disable HW_AUTO. gpio6 l4per_clkdm
+[    2.678368] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    2.684959] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    2.690645] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    2.697359] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    2.704594] omap_hsmmc 480b4000.mmc: no pinctrl state for default mode
+[    2.711151] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[    2.753628] omap_hwmod: disable HW_AUTO. mmc4 l4per_clkdm
+[    2.794011] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.800283] omap_hwmod: disable HW_AUTO. aes1 l4sec_clkdm
+[    2.805779] omap-aes 4b500000.aes: OMAP AES hw accel rev: 3.3
+[    2.811976] omap_hwmod: disable HW_AUTO. aes2 l4sec_clkdm
+[    2.817457] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.822950] omap-aes 4b700000.aes: OMAP AES hw accel rev: 3.3
+[    2.829179] omap_hwmod: disable HW_AUTO. des l4sec_clkdm
+[    2.834641] omap-des 480a5000.des: OMAP DES hw accel rev: 2.2
+[    2.841260] omap_hwmod: disable HW_AUTO. sham l4sec_clkdm
+[    2.846720] omap-sham 4b101000.sham: hw accel on OMAP rev 4.3
+[    2.854053] usbcore: registered new interface driver usbhid
+[    2.859649] usbhid: USB HID core driver
+[    2.863823] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    2.869025] mmc0: BKOPS_EN bit is not set
+[    2.874632] platform extcon_usb1: Driver extcon-usb-gpio requests probe deferral
+[    2.882181] platform extcon_usb2: Driver extcon-usb-gpio requests probe deferral
+[    2.891904] asoc-simple-card asoc-simple-card.0: hdmi-hifi <-> 58040000.encoder mapping ok
+[    2.901646] omap_hsmmc 480b4000.mmc: no pinctrl state for hs200 mode
+[    2.908428] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    2.913651] omap_hsmmc 480b4000.mmc: no pinctrl state for hs200 mode
+[    2.920573] davinci_evm primary_sound: ASoC: CODEC (null) not registered
+[    2.927439] davinci_evm primary_sound: snd_soc_register_card failed (-517)
+[    2.934404] platform primary_sound: Driver davinci_evm requests probe deferral
+[    2.943088] oprofile: using timer interrupt.
+[    2.947668] TCP: cubic registered
+[    2.950996] Initializing XFRM netlink socket
+[    2.955343] NET: Registered protocol family 17
+[    2.959839] NET: Registered protocol family 15
+[    2.964442] Key type dns_resolver registered
+[    2.968872] mmc0: new HS200 MMC card at address 0001
+[    2.974237] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.980531] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.987349] mmcblk0: mmc0:0001 MMC08G 7.25 GiB 
+[    2.992061] mmcblk0boot0: mmc0:0001 MMC08G partition 1 8.00 MiB
+[    2.998069] omap_voltdm 4a003b20.voltdm: Unable to get vdd regulator:-517
+[    3.004914] cpu cpu0: of_pm_voltdm_notifier_register: Failed to get cpu0 regulator/voltdm: -517
+[    3.013661] cpu cpu0: cpu0 clock notifier not ready, retry
+[    3.019343] mmcblk0boot1: mmc0:0001 MMC08G partition 2 8.00 MiB
+[    3.025454] platform cpufreq-cpu0.0: Driver cpufreq-cpu0 requests probe deferral
+[    3.033527] Power Management for TI OMAP4+ devices.
+[    3.038677]  mmcblk0: unknown partition table
+[    3.043166] ThumbEE CPU extension supported.
+[    3.048144] Registering SWP/SWPB emulation handler
+[    3.053137]  mmcblk0boot1: unknown partition table
+[    3.059249] aic_dvdd: disabling
+[    3.062405] regulator-dummy: disabling
+[    3.066917]  mmcblk0boot0: unknown partition table
+[    3.071847] dmm 4e000000.dmm: workaround for errata i878 in use
+[    3.078109] omap_hwmod: disable HW_AUTO. mmc4 l4per_clkdm
+[    3.083547] omap_hwmod: enable HW_AUTO. mmc4 l4per_clkdm
+[    3.091921] dmm 4e000000.dmm: initialized all PAT entries
+[    3.099839] platform omapdrm.0: Driver omapdrm requests probe deferral
+[    3.108080] omap-gpmc 50000000.gpmc: GPMC revision 6.0
+[    3.114184] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xca
+[    3.120565] nand: Micron NAND 256MiB 3,3V 16-bit
+[    3.125223] nand: 256MiB, SLC, page size: 2048, OOB size: 64
+[    3.130904] nand: using OMAP_ECC_BCH8_CODE_HW ECC scheme
+[    3.136382] 10 ofpart partitions found on MTD device omap2-nand.0
+[    3.142535] Creating 10 MTD partitions on "omap2-nand.0":
+[    3.148054] 0x000000000000-0x000000020000 : "NAND.SPL"
+[    3.154614] 0x000000020000-0x000000040000 : "NAND.SPL.backup1"
+[    3.162855] 0x000000040000-0x000000060000 : "NAND.SPL.backup2"
+[    3.170038] 0x000000060000-0x000000080000 : "NAND.SPL.backup3"
+[    3.176044] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[    3.181564] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[    3.188180] 0x000000080000-0x0000000c0000 : "NAND.u-boot-spl-os"
+[    3.195701] 0x0000000c0000-0x0000001c0000 : "NAND.u-boot"
+[    3.203119] 0x0000001c0000-0x0000001e0000 : "NAND.u-boot-env"
+[    3.210198] 0x0000001e0000-0x000000200000 : "NAND.u-boot-env.backup1"
+[    3.218040] 0x000000200000-0x000000a00000 : "NAND.kernel"
+[    3.231231] 0x000000a00000-0x000010000000 : "NAND.file-system"
+[    3.440079] omap_hwmod: disable HW_AUTO. mmc4 l4per_clkdm
+[    3.445511] omap_hwmod: enable HW_AUTO. mmc4 l4per_clkdm
+[    3.452231] platform fixedregulator-sd: Driver reg-fixed-voltage requests probe deferral
+[    3.460770] omap_hwmod: disable HW_AUTO. i2c1 l4per_clkdm
+[    3.466205] omap_hwmod: enable HW_AUTO. i2c1 l4per_clkdm
+[    3.472625] palmas 0-0058: Irq flag is 0x00000000
+[    3.480074] palmas 0-0058: Muxing GPIO 1d, PWM 0, LED 0
+[    3.485592] prom_parse: Bad cell count for /ocp/i2c@48070000/tps65917@58
+[    3.493937] smps1: 850 <--> 1250 mV at 1060 mV 
+[    3.499760] smps2: 850 <--> 1060 mV at 1030 mV 
+[    3.505599] smps3: 850 <--> 1250 mV at 1060 mV 
+[    3.511403] smps4: 1800 mV 
+[    3.515536] smps5: 1350 mV 
+[    3.519641] ldo1: 1800 <--> 3300 mV at 3000 mV 
+[    3.525015] ldo2: 1800 <--> 3300 mV 
+[    3.530166] ldo3: 1800 mV 
+[    3.534502] ldo4: 3300 mV 
+[    3.538767] ldo5: 1800 mV 
+[    3.542114] REGEN1: no parameters
+[    3.545693] REGEN2: no parameters
+[    3.549248] REGEN3: no parameters
+[    3.552748] prom_parse: Bad cell count for /ocp/i2c@48070000/tps65917@58
+[    3.559919] palmas_pwrbutton 48070000.i2c:tps65917@58:tps65917_power_button: h/w controlled shutdown duration=6 seconds
+[    3.572295] input: palmas_pwron as /devices/44000000.ocp/48070000.i2c/i2c-0/0-0058/48070000.i2c:tps65917@58:tps65917_power_button/input/input0
+[    3.586150] pcf857x 0-0020: probed
+[    3.589608] omap_hwmod: disable HW_AUTO. gpio6 l4per_clkdm
+[    3.595130] omap_hwmod: enable HW_AUTO. gpio6 l4per_clkdm
+[    3.601553] pcf857x 0-0021: probed
+[    3.605800] omap_i2c 48070000.i2c: bus 0 rev0.12 at 400 kHz
+[    3.611582] omap_hwmod: disable HW_AUTO. i2c5 ipu_clkdm
+[    3.631539] pcf857x 4-0026: probed
+[    3.635351] omap_i2c 4807c000.i2c: bus 4 rev0.12 at 400 kHz
+[    3.641153] omap-usb2 4a084000.phy: Unbalanced pm_runtime_enable!
+[    3.647790] omap-usb2 4a085000.phy: Unbalanced pm_runtime_enable!
+[    3.654709] omap_hwmod: disable HW_AUTO. gpio7 l4per_clkdm
+[    3.660231] omap_hwmod: enable HW_AUTO. gpio7 l4per_clkdm
+[    3.666258] omap_hwmod: disable HW_AUTO. uart3 l4per_clkdm
+[    3.671779] omap_hwmod: enable HW_AUTO. uart3 l4per_clkdm
+[    3.677572] 48020000.serial: ttyS2 at MMIO 0x48020000 (irq = 297, base_baud = 3000000) is a 8250
+[    3.687091] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    3.693703] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    3.699224] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[    3.704871] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    3.711438] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    3.716952] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[    3.722456] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    3.732321] omap_hwmod: disable HW_AUTO. mcasp3 l4per2_clkdm
+[    3.738026] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    3.743196] omap_hwmod: enable HW_AUTO. atl atl_clkdm
+[    3.748338] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    3.753505] omap_hwmod: enable HW_AUTO. atl atl_clkdm
+[    3.759042] davinci_evm primary_sound: tlv320aic3x-hifi <-> 48468000.mcasp mapping ok
+[    3.766994] omap_hwmod: disable HW_AUTO. mcasp3 l4per2_clkdm
+[    3.772689] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    3.777857] omap_hwmod: enable HW_AUTO. atl atl_clkdm
+[    3.782988] omap_hwmod: disable HW_AUTO. atl atl_clkdm
+[    3.788153] omap_hwmod: enable HW_AUTO. atl atl_clkdm
+[    3.795469] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    3.801765] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    3.808426] cpu cpu0: of_pm_voltdm_notifier_register: Fail calculating voltage latency[1060000<->1060000]:-22
+[    3.820288] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.825923] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.831451] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.837142] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.842879] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.848568] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.854208] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.859811] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.865467] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.871097] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.876620] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.882310] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.888040] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.893727] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.899372] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.904975] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.910831] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.916459] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.921982] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.927672] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.933389] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.939077] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.944717] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.950319] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.955927] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.961556] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    3.967077] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.972766] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.978488] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    3.984176] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    3.989805] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    3.995408] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.000982] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.006609] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.012131] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.017820] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.023543] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.029231] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.034861] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.040463] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.046033] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.051661] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.057182] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.062871] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.068585] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.074274] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.079898] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.085501] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.091044] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.096671] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.102192] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.107881] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.113596] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.119285] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.124911] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.130514] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.136057] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.141683] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.147205] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.152893] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.158603] omap_hwmod: disable HW_AUTO. dss_dispc dss_clkdm
+[    4.164291] omap_hwmod: enable HW_AUTO. dss_dispc dss_clkdm
+[    4.169914] omap_hwmod: disable HW_AUTO. dss_core dss_clkdm
+[    4.175517] omap_hwmod: enable HW_AUTO. dss_core dss_clkdm
+[    4.181053] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    4.187704] [drm] No driver support for vblank timestamp query.
+[    4.193685] omapdrm omapdrm.0: No connectors reported connected with modes
+[    4.200591] [drm] Cannot find any crtc or sizes - going 1024x768
+[    4.210484] [drm] Enabling DMM ywrap scrolling
+[    4.220850] Console: switching to colour frame buffer device 128x48
+[    4.232533] omapdrm omapdrm.0: fb0: omapdrm frame buffer device
+[    4.238498] omapdrm omapdrm.0: registered panic notifier
+[    4.243867] [drm] Initialized omapdrm 1.0.0 20110917 on minor 0
+[    4.250314] evm_3v3_sd: 3300 mV 
+[    4.254043] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    4.260601] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    4.266124] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[    4.315759] omap_hwmod: disable HW_AUTO. gmac gmac_clkdm
+[    4.321117] omap_hwmod: enable HW_AUTO. gmac gmac_clkdm
+[    4.341038] omap_hwmod: disable HW_AUTO. davinci_mdio gmac_clkdm
+[    4.347078] omap_hwmod: enable HW_AUTO. davinci_mdio gmac_clkdm
+[    4.403418] davinci_mdio 48485000.mdio: davinci mdio revision 1.6
+[    4.409541] davinci_mdio 48485000.mdio: detected phy mask fffffff7
+[    4.417975] libphy: 48485000.mdio: probed
+[    4.422004] davinci_mdio 48485000.mdio: phy[3]: device 48485000.mdio:03, driver unknown
+[    4.430608] cpsw 48484000.ethernet: Detected MACID = b4:99:4c:1c:23:ac
+[    4.438716] omap_rtc 48838000.rtcss: setting system clock to 2000-01-01 00:00:01 UTC (946684801)
+[    4.458683] net eth0: initializing cpsw version 1.15 (0)
+[    4.494578] mmc2: host does not support reading read-only switch. assuming write-enable.
+[    4.506101] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    4.512227] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    4.518393] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    4.525323] mmc2: new high speed SD card at address e624
+[    4.531173] mmcblk1: mmc2:e624 SU02G 1.84 GiB 
+[    4.543087]  mmcblk1: p1 p2
+[    4.549761] net eth0: phy found : id is : 0x20005c7a
+[    4.653426] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[    4.658948] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[    5.273415] omap_hwmod: disable HW_AUTO. i2c1 l4per_clkdm
+[    5.278845] omap_hwmod: enable HW_AUTO. i2c1 l4per_clkdm
+[    6.550204] libphy: 48485000.mdio:03 - Link is Up - 100/Full
+[    6.583418] Sending DHCP requests ., OK
+[    6.843862] IP-Config: Got DHCP answer from 192.168.1.1, my address is 192.168.1.48
+[    6.851731] IP-Config: Complete:
+[    6.854998]      device=eth0, hwaddr=b4:99:4c:1c:23:ac, ipaddr=192.168.1.48, mask=255.255.255.0, gw=192.168.1.1
+[    6.865142]      host=192.168.1.48, domain=Home, nis-domain=(none)
+[    6.871347]      bootserver=0.0.0.0, rootserver=192.168.1.36, rootpath=
+[    6.877826]      nameserver0=192.168.1.1
+[    6.882261] ALSA device list:
+[    6.885255]   #0: DRA7xx-EVM
+[    6.888145]   #1: HDMI 58040000.encoder
+[    6.929290] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    6.935831] devtmpfs: mounted
+[    6.939008] Freeing unused kernel memory: 340K (c0816000 - c086b000)
+INIT: version 2.88 booting
+[    7.428076] random: nonblocking pool is initialized
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd[    8.284498] udevd[1296]: starting version 175
+. ok 
+[....] Synthesizing the initial hotplug events...[    8.841572]  remoteproc0: 58820000.ipu is available
+[    8.846520]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    8.855529]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    8.962898]  remoteproc1: 55020000.ipu is available
+[    8.967845]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    8.976941]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    8.988671]  remoteproc0: Direct firmware load failed with error -2
+[    8.994985]  remoteproc0: Falling back to user helper
+[    9.083214]  remoteproc2: 40800000.dsp is available
+[    9.088149]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    9.097157]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    9.170847]  remoteproc1: Direct firmware load failed with error -2
+[    9.177178]  remoteproc1: Falling back to user helper
+udevd[1338]: error changing net interface name eth0 to eth9: Device or resource busy
+
+[    9.331620] media: Linux media interface: v0.10
+[    9.431178] omap_hwmod: disable HW_AUTO. usb_otg_ss1 l3init_clkdm
+[    9.437320] omap_hwmod: enable HW_AUTO. usb_otg_ss1 l3init_clkdm
+[    9.459398]  remoteproc2: Direct firmware load failed with error -2
+[    9.465749]  remoteproc2: Falling back to user helper
+[    9.586506] omap_hwmod: disable HW_AUTO. usb_otg_ss2 l3init_clkdm
+[    9.592647] omap_hwmod: enable HW_AUTO. usb_otg_ss2 l3init_clkdm
+[ ok [    9.725320] Linux video capture interface: v2.00
+done.
+[   10.024255] omap_hwmod: disable HW_AUTO. vip1 cam_clkdm
+[   10.075810] vip 48970000.vip: loading firmware vpdma-1b8.bin
+[   10.081876] omap_hwmod: disable HW_AUTO. vpe vpe_clkdm
+[   10.087056] omap_hwmod: enable HW_AUTO. vpe vpe_clkdm
+[....] [   10.108921] vip 48970000.vip: Direct firmware load failed with error -2
+[   10.115615] vip 48970000.vip: Falling back to user helper
+Waiting for /dev to be fully populated...[   10.155985] vpe 489d0000.vpe: loading firmware vpdma-1b8.bin
+[   10.193103] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   10.198637] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   10.205250] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   10.210775] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   10.377790] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   10.383319] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   10.429806] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   10.435332] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   10.792060] omap_hwmod: disable HW_AUTO. qspi l4per2_clkdm
+[   10.840307] m25p80 spi32766.0: s25fl256s1 (32768 Kbytes)
+[   10.846600] CAN device driver interface
+[   10.934828] 10 ofpart partitions found on MTD device spi32766.0
+[   10.941292] Creating 10 MTD partitions on "spi32766.0":
+[   11.034391] 0x000000000000-0x000000010000 : "QSPI.SPL"
+[   11.081196] 0x000000010000-0x000000020000 : "QSPI.SPL.backup1"
+[   11.115486] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.121187] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.126814] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.132502] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.138126] c_can_platform 4ae3c000.can: c_can_platform device registered (regs=fce3c000, irq=344)
+[   11.159368] 0x000000020000-0x000000030000 : "QSPI.SPL.backup2"
+[   11.217863] 0x000000030000-0x000000040000 : "QSPI.SPL.backup3"
+[   11.282849] 0x000000040000-0x000000140000 : "QSPI.u-boot"
+[   11.313935] 0x000000140000-0x0000001c0000 : "QSPI.u-boot-spl-os"
+[   11.344481] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   11.350014] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   11.364294] 0x0000001c0000-0x0000001d0000 : "QSPI.u-boot-env"
+[   11.398536] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   11.404070] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   11.418569] 0x0000001d0000-0x0000001e0000 : "QSPI.u-boot-env.backup1"
+[   11.469146] 0x0000001e0000-0x0000009e0000 : "QSPI.kernel"
+[   11.526179] 0x0000009e0000-0x000002000000 : "QSPI.file-system"
+[   11.533636] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   11.539160] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   11.613610] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   11.619141] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   11.669266] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   11.674799] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   11.750016] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   11.755549] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   11.857888] omap_hwmod: disable HW_AUTO. ocp2scp1 l3init_clkdm
+[   11.863770] omap_hwmod: enable HW_AUTO. ocp2scp1 l3init_clkdm
+[   11.892702]  remoteproc0: failed to load dra7-ipu1-fw.xem4
+[   11.899941]  remoteproc1: failed to load dra7-ipu2-fw.xem4
+[   11.907387]  remoteproc2: failed to load dra7-dsp1-fw.xe66
+[   11.913605] vpe 489d0000.vpe: couldn't get firmware
+[   11.918595] vip 48970000.vip: couldn't get firmware
+[   11.961974] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   11.967502] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   12.002395] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   12.007928] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   12.449055] omap_hwmod: disable HW_AUTO. i2c1 l4per_clkdm
+[   12.454502] omap_hwmod: enable HW_AUTO. i2c1 l4per_clkdm
+[   12.896494] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   12.902020] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   13.003519] omap_hwmod: disable HW_AUTO. mmc2 l3init_clkdm
+[   13.009049] omap_hwmod: enable HW_AUTO. mmc2 l3init_clkdm
+[   13.065951] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   13.071484] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   13.128555] Bluetooth: Core ver 2.18
+[   13.132875] NET: Registered protocol family 31
+[   13.137376] Bluetooth: HCI device and connection manager initialized
+[   13.155024] Bluetooth: HCI socket layer initialized
+[   13.173507] omap_hwmod: disable HW_AUTO. mmc1 l3init_clkdm
+[   13.179035] omap_hwmod: enable HW_AUTO. mmc1 l3init_clkdm
+[   13.193531] Bluetooth: L2CAP socket layer initialized
+[   13.198644] Bluetooth: SCO socket layer initialized
+[   13.278955] dwc3 48890000.usb: otg: primary host xhci-hcd.0.auto registered
+[   13.293502] (stc):  chnl_id list empty :4 
+[   13.297441] (stk) : st_kim_start(stk) :ldisc_install = 1
+[   13.407832] dwc3 48890000.usb: otg: shared host xhci-hcd.0.auto registered
+[   13.414948] dwc3 48890000.usb: otg: can't start till gadget registers
+[   13.427931] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   13.436022] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+[   13.444329] xhci-hcd xhci-hcd.1.auto: irq 427, io mem 0x488d0000
+[   13.452256] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   13.459117] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.466450] usb usb1: Product: xHCI Host Controller
+[   13.471348] usb usb1: Manufacturer: Linux 3.14.43-03328-gebd3232-dirty xhci-hcd
+[   13.478706] usb usb1: SerialNumber: xhci-hcd.1.auto
+[   13.485348] hub 1-0:1.0: USB hub found
+[   13.489819] hub 1-0:1.0: 1 port detected
+[   13.494373] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   13.501254] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+[   13.510063] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   13.516919] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.524236] usb usb2: Product: xHCI Host Controller
+[   13.529136] usb usb2: Manufacturer: Linux 3.14.43-03328-gebd3232-dirty xhci-hcd
+[   13.536486] usb usb2: SerialNumber: xhci-hcd.1.auto
+[   13.543065] hub 2-0:1.0: USB hub found
+[   13.549123] hub 2-0:1.0: 1 port detected
+done.
+[   14.043462] omap_hwmod: disable HW_AUTO. i2c1 l4per_clkdm
+[   14.048904] omap_hwmod: enable HW_AUTO. i2c1 l4per_clkdm
+[....] Setting parameters of disc: (none)[   14.403451] (stk) :ldisc installation timeout
+[   14.407656] (stk) :ldisc_install = 0. ok 
+[....] Activating swap...done.
+[....] Cleaning up temporary files... /tmp. ok 
+(stk) : timed out waiting for ldisc to be un-installed
+[   15.515179] (stk) :ldisc_install = 1(stk) :ldisc installation timeout
+[   16.516418] (stk) :ldisc_install = 0(stk) : timed out waiting for ldisc to be un-installed
+[   17.625185] (stk) :ldisc_install = 1[....] Activating lvm and md swap...done.
+[....] Checking file systems...fsck from util-linux 2.20.1
+done.
+(stk) :ldisc installation timeout
+[   18.626346] (stk) :ldisc_install = 0[....] Mounting local filesystems...done.
+[....] Activating swapfile swap...done.
+(stk) : timed out waiting for ldisc to be un-installed
+[   19.735192] (stk) :ldisc_install = 1[....] Cleaning up temporary files.... ok 
+[....] Setting kernel variables ...done.
+[....] Configuring network interfaces...[   20.523637] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.529340] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.534967] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.540657] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.733512] (stk) :ldisc installation timeout
+[   20.737718] (stk) :ldisc_install = 0done.
+[....] Cleaning up temporary files.... ok 
+[....] Setting up ALSA...done.
+(stk) : timed out waiting for ldisc to be un-installed
+[   21.845268] (stk) :ldisc_install = 1[....] Setting up X socket directories... /tmp/.X11-unix /tmp/.ICE-unix. ok 
+INIT: Entering runlevel: 2
+[info] Using makefile-style concurrent boot in runlevel 2.
+(stk) :ldisc installation timeout
+[   22.846331] (stk) :ldisc_install = 0[....] Starting advanced IEEE 802.11 management: hostapdioctl(SIOCGIFINDEX): No such device
+ failed!
+[....] Starting enhanced syslogd: rsyslogd. ok 
+[....] Starting periodic command scheduler: cron. ok 
+[....] Starting system message bus: dbus. ok 
+[....] Starting Avahi mDNS/DNS-SD Daemon: avahi-daemon(stk) : timed out waiting for ldisc to be un-installed
+[   23.955182] (stk) :ldisc_install = 1[   24.008853] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.014555] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.020211] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.025901] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+. ok 
+[....] Starting MTA:[   24.953488] (stk) :ldisc installation timeout
+[   24.957694] (stk) :ldisc_install = 0 exim4. ok 
+ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken
+(stk) : timed out waiting for ldisc to be un-installed
+[   25.960179] Bluetooth: st_register failed -22
+[....] Starting OpenBSD Secure Shell server: sshd. ok 
+Starting very small Busybox based DHCP server: Starting /usr/sbin/udhcpd...
+udhcpd.
+
+Last login: Sat Jan  1 00:00:22 UTC 2000 on ttyS0
+Linux rockdesk 3.14.43-03328-gebd3232-dirty #1395 SMP Mon Jun 15 11:32:01 EEST 2015 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@rockdesk:~# 
+root@rockdesk:~# 
+root@rockdesk:~# dmesg | grep dcan1
+[    0.099143] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.115486] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.121187] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.126814] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   11.132502] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   19.735192] (stk) :ldisc_install = 1<6>[   20.523637] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.529340] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.534967] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   20.540657] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   23.955182] (stk) :ldisc_install = 1<6>[   24.008853] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.014555] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.020211] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   24.025901] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+root@rockdesk:~# ./canup.sh 
+[   48.216865] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.222567] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.228205] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.233895] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.261599] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.267301] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   48.275073] net can0: c_can_hw_raminit_wait_syscon: time out
+[   48.281196] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+root@rockdesk:~# 
+root@rockdesk:~# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03328-gebd3232-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1395 SMP
+    Date: Mon Jun 15 11:32:01 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0003D103 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00000002 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+root@rockdesk:~# ifconfig can0 down
+[   77.494800] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   77.508745] omap_hwmod: dcan1: _wait_target_disable failed
+[   77.514253] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   77.519902] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   77.525595] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+[   77.531209] omap_hwmod: disable HW_AUTO. dcan1 wkupaon_clkdm
+[   77.545061] omap_hwmod: dcan1: _wait_target_disable failed
+[   77.550567] omap_hwmod: enable HW_AUTO. dcan1 wkupaon_clkdm
+root@rockdesk:~# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03328-gebd3232-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1395 SMP
+    Date: Mon Jun 15 11:32:01 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0003D103 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00010000 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+
