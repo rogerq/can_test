@@ -25,7 +25,7 @@ Workaround:
 Add a flag in hwmod data so that for DCAN1 module we never put the WKUPAON clockdomain
 in HW_AUTO whenever DCAN1 is active.
 
-Observation:
+Observation on 3.14 kernel:
 - DCAN1 RAMINIT passes fine while bringing up can0.
 - DCAN1 is not stuck in transition while bringing down can0.
 
@@ -34,3 +34,21 @@ https://github.com/rogerq/linux/commits/cantest/disable_hwauto_module_active
 
 Test log:
 https://github.com/rogerq/can_test/blob/master/clkdomain_tests/disable_hwauto_module_active.log
+
+PRCM dump:
+https://github.com/rogerq/can_test/blob/master/clkdomain_tests/can_3.14.prcm
+
+
+Observation on 4.1 kernel:
+- DCAN1 RAMINIT times out while bringing out can0.
+Probably due to different PRCM configuration than 3.14. Use prcm dumps to compare.
+- DCAN1 is not stuck in transition while bringing down can0.
+
+Testing Branch:
+https://github.com/rogerq/linux/commits/cantest/dcan-hwauto-debug
+
+Test log:
+https://github.com/rogerq/can_test/blob/master/clkdomain_tests/disable_hwauto_module_active_4.1.log
+
+PRCM dump:
+https://github.com/rogerq/can_test/blob/master/clkdomain_tests/can_4.1.prcm
