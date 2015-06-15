@@ -1,0 +1,1157 @@
+U-Boot SPL 2014.07-00055-g93b92d2 (Jun 05 2015 - 14:32:35)
+DRA722 ES1.0
+reading args
+spl_load_image_fat_os: error reading image args, err - -1
+reading u-boot.img
+reading u-boot.img
+
+
+U-Boot 2014.07-00055-g93b92d2 (Jun 05 2015 - 14:32:35)
+
+CPU  : DRA722 ES1.0
+Board: DRA7xx
+I2C:   ready
+DRAM:  1 GiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Card did not respond to voltage select!
+MMC init failed
+Using default environment
+
+SATA link 0 timeout.
+AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+flags: 64bit ncq stag pm led clo only pmp pio slum part ccc apst 
+scanning bus for devices...
+Found 0 device(s).
+SCSI:  Net:   <ethaddr> not set. Validating first E-fuse MAC
+cpsw
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+SD/MMC found on device 0
+reading uEnv.txt
+904 bytes read in 12 ms (73.2 KiB/s)
+Loaded environment from uEnv.txt
+Importing environment from mmc0 ...
+Running uenvcmd ...
+cpsw Waiting for PHY auto negotiation to complete. done
+link up on port 0, speed 100, full duplex
+Using cpsw device
+TFTP from server 192.168.1.36; our IP address is 192.168.1.63
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #######################################
+         1.7 MiB/s
+done
+Bytes transferred = 4521592 (44fe78 hex)
+link up on port 0, speed 100, full duplex
+Using cpsw device
+TFTP from server 192.168.1.36; our IP address is 192.168.1.63
+Filename 'dra72-evm.dtb'.
+Load address: 0x88000000
+Loading: ##################
+         1.6 MiB/s
+done
+Bytes transferred = 91986 (16752 hex)
+Kernel image @ 0x82000000 [ 0x000000 - 0x44fe78 ]
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8ffe6000, end 8ffff751 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.43-03329-g318034f-dirty (roger@rockdesk) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #1401 SMP Mon Jun 15 5
+[    0.000000] CPU: ARMv7 Processor [412fc0f2] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: TI DRA722
+[    0.000000] Reserved memory: created CMA memory pool at 0x95800000, size 56 MiB
+[    0.000000] Reserved memory: initialized node ipu2_cma@95800000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x99000000, size 64 MiB
+[    0.000000] Reserved memory: initialized node dsp1_cma@99000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB
+[    0.000000] Reserved memory: initialized node ipu1_cma@9d000000, compatible id shared-dma-pool
+[    0.000000] cma: CMA: reserved 24 MiB at ae000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] DRA722 ES1.0
+[    0.000000] PERCPU: Embedded 8 pages/cpu @ed76a000 s8256 r8192 d16320 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260368
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.1.36:/srv/nfsroot/ ip=dhcp no_console_suspend
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 848404K/1047552K available (6171K kernel code, 399K rwdata, 2072K rodata, 340K init, 255K bss, 199148K reserved, 269312K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc08150b4   (8245 kB)
+[    0.000000]       .init : 0xc0816000 - 0xc086b040   ( 341 kB)
+[    0.000000]       .data : 0xc086c000 - 0xc08cffd0   ( 400 kB)
+[    0.000000]        .bss : 0xc08cffd8 - 0xc090fd0c   ( 256 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] OMAP clockevent source: timer1 at 32786 Hz
+[    0.000000] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 65536000000000ns
+[    0.000030] OMAP clocksource: 32k_counter at 32768 Hz
+[    0.000396] Architected cp15 timer(s) running at 6.14MHz (virt).
+[    0.000432] sched_clock: 56 bits at 6MHz, resolution 162ns, wraps every 2794592043008ns
+[    0.000439] Switching to timer-based delay loop
+[    0.001333] Console: colour dummy device 80x30
+[    0.001348] WARNING: Your 'console=ttyO0' has been replaced by 'ttyS0'
+[    0.001355] This ensures that you still see kernel messages. Please
+[    0.001360] update your kernel commandline.
+[    0.001373] Calibrating delay loop (skipped), value calculated using timer frequency.. 12.29 BogoMIPS (lpj=61475)
+[    0.001385] pid_max: default: 32768 minimum: 301
+[    0.001470] Security Framework initialized
+[    0.001508] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001518] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.020037] CPU: Testing write buffer coherency: ok
+[    0.020312] /cpus/cpu@0 missing clock-frequency property
+[    0.020326] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.020348] Setting up static identity map for 0x8060cbc0 - 0x8060cc18
+[    0.020988] Brought up 1 CPUs
+[    0.020998] SMP: Total of 1 processors activated (12.29 BogoMIPS).
+[    0.021004] CPU: All CPU(s) started in SVC mode.
+[    0.021349] devtmpfs: initialized
+[    0.021935] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.023366] omap_hwmod: l3_main_2 using broken dt data from ocp
+[    0.098769] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[    0.098782] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[    0.098789] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.129661] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197018] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197324] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197457] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.198493] pinctrl core: initialized pinctrl subsystem
+[    0.199216] regulator-dummy: no parameters
+[    0.202653] NET: Registered protocol family 16
+[    0.204245] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.206192] cpuidle: using governor ladder
+[    0.206202] cpuidle: using governor menu
+[    0.209878] syscon 4a002000.tisysconcore: regmap [mem 0x4a002000-0x4a0026cf] registered
+[    0.210187] syscon 4a002e00.tisyscon: regmap [mem 0x4a002e00-0x4a002e7b] registered
+[    0.211841] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.212298] OMAP GPIO hardware version 0.1
+[    0.218368] irq: no irq domain found for /ocp/pinmux@4a003400 !
+[    0.224399] platform 58820000.ipu: assigned reserved memory node ipu1_cma@9d000000
+[    0.224682] platform 55020000.ipu: assigned reserved memory node ipu2_cma@95800000
+[    0.224951] platform 40800000.dsp: assigned reserved memory node dsp1_cma@99000000
+[    0.235914] omap-gpmc 50000000.gpmc: could not find pctldev for node /ocp/pinmux@4a003400/nand_default, deferring probe
+[    0.235933] platform 50000000.gpmc: Driver omap-gpmc requests probe deferral
+[    0.243666] No ATAGs?
+[    0.243684] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.243693] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.244924] OMAP DMA hardware revision 0.0
+[    0.245335] omap-dma-xbar 4a002b78.dma-crossbar: OMAP DMA Crossbar driver
+[    0.269601] bio: create slab <bio-0> at 0
+[    0.309602] omap-dma-engine 4a056000.dma-controller: OMAP DMA engine driver
+[    0.310285] platform fixedregulator-sd: Driver reg-fixed-voltage requests probe deferral
+[    0.310558] evm_3v3: 3300 mV 
+[    0.311772] aic_dvdd: 1800 mV 
+[    0.311843] aic_dvdd: supplied by evm_3v3
+[    0.312224] vmmcwl_fixed: 1800 mV 
+[    0.314111] vgaarb: loaded
+[    0.314503] i2c-core: driver [palmas] using legacy suspend method
+[    0.314511] i2c-core: driver [palmas] using legacy resume method
+[    0.315044] SCSI subsystem initialized
+[    0.316210] usbcore: registered new interface driver usbfs
+[    0.316357] usbcore: registered new interface driver hub
+[    0.316524] usbcore: registered new device driver usb
+[    0.317418] omap_i2c 48070000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c1_pins, deferring probe
+[    0.317436] platform 48070000.i2c: Driver omap_i2c requests probe deferral
+[    0.317472] omap_i2c 4807c000.i2c: could not find pctldev for node /ocp/pinmux@4a003400/pinmux_i2c5_pins, deferring probe
+[    0.317485] platform 4807c000.i2c: Driver omap_i2c requests probe deferral
+[    0.317838] pps_core: LinuxPPS API ver. 1 registered
+[    0.317846] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.317953] PTP clock support registered
+[    0.319347] omap-mailbox 48840000.mailbox: omap mailbox rev 0x400
+[    0.319621] omap-mailbox 48842000.mailbox: omap mailbox rev 0x400
+[    0.320444] omap-iommu 40d01000.mmu: 40d01000.mmu registered
+[    0.320549] omap-iommu 40d02000.mmu: 40d02000.mmu registered
+[    0.320675] omap-iommu 58882000.mmu: 58882000.mmu registered
+[    0.320776] omap-iommu 55082000.mmu: 55082000.mmu registered
+[    0.321165] Advanced Linux Sound Architecture Driver Initialized.
+[    0.322410] Switched to clocksource arch_sys_counter
+[    0.339880] NET: Registered protocol family 2
+[    0.340483] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.340549] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.340680] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.340723] TCP: reno registered
+[    0.340735] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.340765] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.340940] NET: Registered protocol family 1
+[    0.341183] RPC: Registered named UNIX socket transport module.
+[    0.341191] RPC: Registered udp transport module.
+[    0.341197] RPC: Registered tcp transport module.
+[    0.341203] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.342210] hw perfevents: enabled with ARMv7 Cortex-A15 PMU driver, 7 counters available
+[    0.344764] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.444461] bounce pool size: 64 pages
+[    0.444692] VFS: Disk quotas dquot_6.5.2
+[    0.444798] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.445226] NFS: Registering the id_resolver key type
+[    0.445258] Key type id_resolver registered
+[    0.445266] Key type id_legacy registered
+[    0.445298] jffs2: version 2.2. (NAND) (SUMMARY)  �© 2001-2006 Red Hat, Inc.
+[    0.445419] msgmni has been set to 1483
+[    0.446775] NET: Registered protocol family 38
+[    0.446803] io scheduler noop registered
+[    0.446810] io scheduler deadline registered
+[    0.446828] io scheduler cfq registered (default)
+[    0.449338] platform 4a084000.phy: Driver omap-usb2 requests probe deferral
+[    0.449462] platform 4a085000.phy: Driver omap-usb2 requests probe deferral
+[    0.451652] pinctrl-single 4a003400.pinmux: 281 pins at pa fc003400 size 1124
+[    0.483459] dra7-pcie 51000000.pcie: PCI host bridge to bus 0000:00
+[    0.483473] pci_bus 0000:00: root bus resource [io  0x1000-0x10000]
+[    0.483484] pci_bus 0000:00: root bus resource [mem 0x20013000-0x2fffffff]
+[    0.483495] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.483979] PCI: bus0: Fast back to back transfers disabled
+[    0.484202] PCI: bus1: Fast back to back transfers enabled
+[    0.484323] pci 0000:00:00.0: BAR 0: assigned [mem 0x20100000-0x201fffff]
+[    0.484337] pci 0000:00:00.0: BAR 1: assigned [mem 0x20020000-0x2002ffff]
+[    0.484349] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.484368] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.486417] OMAP DSS rev 6.1
+[    0.489718] tpd12s015 encoder@0: failed to parse CT CP HPD gpio
+[    0.489742] platform encoder@0: Driver tpd12s015 requests probe deferral
+[    0.490470] connector-hdmi connector@0: failed to find video source
+[    0.490488] platform connector@0: Driver connector-hdmi requests probe deferral
+[    0.491555] pbias_mmc_omap5: 1800 <--> 3000 mV at 3000 mV 
+[    0.492272] abb_mpu: 1060 <--> 1210 mV 
+[    0.492682] abb_ivahd: 1055 <--> 1250 mV 
+[    0.493032] abb_dspeve: 1055 <--> 1250 mV 
+[    0.493357] abb_gpu: 1090 <--> 1280 mV 
+[    0.494383] Serial: 8250/16550 driver, 10 ports, IRQ sharing enabled
+[    0.498414] 4806a000.serial: ttyS0 at MMIO 0x4806a000 (irq = 296, base_baud = 3000000) is a 8250
+[    1.512570] console [ttyS0] enabled
+[    1.516459] platform 48020000.serial: Driver omap8250 requests probe deferral
+[    1.524968] omap_rng 48090000.rng: OMAP Random Number Generator ver. 20
+[    1.531901] [drm] Initialized drm 1.1.0 20060810
+[    1.546254] brd: module loaded
+[    1.554406] loop: module loaded
+[    1.557816] (stk) :sysfs entries created
+[    1.561779] (stk) : debugfs entries created 
+[    1.566066] (hci_tty): inside hci_tty_init
+[    1.570672] (hci_tty): allocated 250, 0
+[    1.575978] ahci 4a140000.sata: SSS flag set, parallel bus scan disabled
+[    1.582747] ahci 4a140000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.591312] ahci 4a140000.sata: flags: 64bit ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.601767] scsi0 : ahci_platform
+[    1.605559] ata1: SATA max UDMA/133 mmio [mem 0x4a140000-0x4a1410ff] port 0x100 irq 328
+[    1.614816] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    1.626530] usbcore: registered new interface driver asix
+[    1.632105] usbcore: registered new interface driver ax88179_178a
+[    1.638381] usbcore: registered new interface driver cdc_ether
+[    1.644401] usbcore: registered new interface driver smsc95xx
+[    1.650317] usbcore: registered new interface driver net1080
+[    1.656128] usbcore: registered new interface driver cdc_subset
+[    1.662214] usbcore: registered new interface driver zaurus
+[    1.667975] usbcore: registered new interface driver cdc_ncm
+[    1.674048] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.680604] ehci-pci: EHCI PCI platform driver
+[    1.685222] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.690890] usbcore: registered new interface driver cdc_wdm
+[    1.696738] usbcore: registered new interface driver usb-storage
+[    1.703764] mousedev: PS/2 mouse device common for all mice
+[    1.710640] i2c-core: driver [rtc-ds1307] using legacy suspend method
+[    1.717125] i2c-core: driver [rtc-ds1307] using legacy resume method
+[    1.724130] omap_rtc 48838000.rtcss: rtc core: registered 48838000.rtcss as rtc0
+[    1.732107] i2c /dev entries driver
+[    1.735745] Driver for 1-wire Dallas network protocol.
+[    1.742241] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    1.749688] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    1.757126] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    1.764563] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    1.771989] ti-soc-thermal 4a0021e0.bandgap: Non-trimmed BGAP, Temp not accurate
+[    1.781921] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    1.787123] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    1.795318] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    1.802058] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    1.808739] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    1.815962] omap_hsmmc 480b4000.mmc: no pinctrl state for default mode
+[    1.903050] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.909361] omap-aes 4b500000.aes: OMAP AES hw accel rev: 3.3
+[    1.915646] omap-aes 4b700000.aes: OMAP AES hw accel rev: 3.3
+[    1.921857] omap-des 480a5000.des: OMAP DES hw accel rev: 2.2
+[    1.928519] omap-sham 4b101000.sham: hw accel on OMAP rev 4.3
+[    1.935871] usbcore: registered new interface driver usbhid
+[    1.941477] usbhid: USB HID core driver
+[    1.947226] platform extcon_usb1: Driver extcon-usb-gpio requests probe deferral
+[    1.954836] platform extcon_usb2: Driver extcon-usb-gpio requests probe deferral
+[    1.962288] mmc0: BKOPS_EN bit is not set
+[    1.966375] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.974193] asoc-simple-card asoc-simple-card.0: hdmi-hifi <-> 58040000.encoder mapping ok
+[    1.984678] davinci_evm primary_sound: ASoC: CODEC (null) not registered
+[    1.991491] davinci_evm primary_sound: snd_soc_register_card failed (-517)
+[    1.998457] platform primary_sound: Driver davinci_evm requests probe deferral
+[    2.005768] omap_hsmmc 480b4000.mmc: no pinctrl state for hs200 mode
+[    2.012153] omap_hsmmc 480b4000.mmc: no pinctrl state for hs200 mode
+[    2.019514] oprofile: using timer interrupt.
+[    2.024068] TCP: cubic registered
+[    2.027395] Initializing XFRM netlink socket
+[    2.031693] NET: Registered protocol family 17
+[    2.036224] NET: Registered protocol family 15
+[    2.040940] Key type dns_resolver registered
+[    2.071887] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.078256] mmc0: new HS200 MMC card at address 0001
+[    2.083256] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.089569] omap_voltdm 4a003b20.voltdm: Unable to get vdd regulator:-517
+[    2.096401] cpu cpu0: of_pm_voltdm_notifier_register: Failed to get cpu0 regulator/voltdm: -517
+[    2.105146] cpu cpu0: cpu0 clock notifier not ready, retry
+[    2.111131] mmcblk0: mmc0:0001 MMC08G 7.25 GiB 
+[    2.115868] mmcblk0boot0: mmc0:0001 MMC08G partition 1 8.00 MiB
+[    2.121986] mmcblk0boot1: mmc0:0001 MMC08G partition 2 8.00 MiB
+[    2.128503] platform cpufreq-cpu0.0: Driver cpufreq-cpu0 requests probe deferral
+[    2.136013]  mmcblk0: unknown partition table
+[    2.141014] Power Management for TI OMAP4+ devices.
+[    2.146498] ThumbEE CPU extension supported.
+[    2.150854] Registering SWP/SWPB emulation handler
+[    2.155759]  mmcblk0boot1: unknown partition table
+[    2.161926]  mmcblk0boot0: unknown partition table
+[    2.167131] aic_dvdd: disabling
+[    2.170287] regulator-dummy: disabling
+[    2.174464] omap_hwmod: HW_AUTO l4per_clkdm
+[    2.178934] dmm 4e000000.dmm: workaround for errata i878 in use
+[    2.190289] dmm 4e000000.dmm: initialized all PAT entries
+[    2.196291] platform omapdrm.0: Driver omapdrm requests probe deferral
+[    2.204513] omap-gpmc 50000000.gpmc: GPMC revision 6.0
+[    2.210593] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xca
+[    2.216998] nand: Micron NAND 256MiB 3,3V 16-bit
+[    2.221635] nand: 256MiB, SLC, page size: 2048, OOB size: 64
+[    2.227326] nand: using OMAP_ECC_BCH8_CODE_HW ECC scheme
+[    2.233813] 10 ofpart partitions found on MTD device omap2-nand.0
+[    2.239931] Creating 10 MTD partitions on "omap2-nand.0":
+[    2.245386] 0x000000000000-0x000000020000 : "NAND.SPL"
+[    2.251851] 0x000000020000-0x000000040000 : "NAND.SPL.backup1"
+[    2.259065] 0x000000040000-0x000000060000 : "NAND.SPL.backup2"
+[    2.266235] 0x000000060000-0x000000080000 : "NAND.SPL.backup3"
+[    2.273459] 0x000000080000-0x0000000c0000 : "NAND.u-boot-spl-os"
+[    2.280863] 0x0000000c0000-0x0000001c0000 : "NAND.u-boot"
+[    2.288407] 0x0000001c0000-0x0000001e0000 : "NAND.u-boot-env"
+[    2.295475] 0x0000001e0000-0x000000200000 : "NAND.u-boot-env.backup1"
+[    2.303314] 0x000000200000-0x000000a00000 : "NAND.kernel"
+[    2.316470] 0x000000a00000-0x000010000000 : "NAND.file-system"
+[    2.526665] platform fixedregulator-sd: Driver reg-fixed-voltage requests probe deferral
+[    2.535219] omap_hwmod: HW_AUTO l4per_clkdm
+[    2.540487] palmas 0-0058: Irq flag is 0x00000000
+[    2.547937] palmas 0-0058: Muxing GPIO 1d, PWM 0, LED 0
+[    2.553453] prom_parse: Bad cell count for /ocp/i2c@48070000/tps65917@58
+[    2.561774] smps1: 850 <--> 1250 mV at 1060 mV 
+[    2.567599] smps2: 850 <--> 1060 mV at 1030 mV 
+[    2.573409] smps3: 850 <--> 1250 mV at 1060 mV 
+[    2.579201] smps4: 1800 mV 
+[    2.583262] smps5: 1350 mV 
+[    2.587369] ldo1: 1800 <--> 3300 mV at 3000 mV 
+[    2.592740] ldo2: 1800 <--> 3300 mV 
+[    2.597868] ldo3: 1800 mV 
+[    2.602120] ldo4: 3300 mV 
+[    2.606447] ldo5: 1800 mV 
+[    2.609791] REGEN1: no parameters
+[    2.613365] REGEN2: no parameters
+[    2.616917] REGEN3: no parameters
+[    2.620417] prom_parse: Bad cell count for /ocp/i2c@48070000/tps65917@58
+[    2.627583] palmas_pwrbutton 48070000.i2c:tps65917@58:tps65917_power_button: h/w controlled shutdown duration=6 seconds
+[    2.639957] input: palmas_pwron as /devices/44000000.ocp/48070000.i2c/i2c-0/0-0058/48070000.i2c:tps65917@58:tps65917_power_button/input/input0
+[    2.653804] pcf857x 0-0020: probed
+[    2.657273] omap_hwmod: HW_AUTO l4per_clkdm
+[    2.662486] pcf857x 0-0021: probed
+[    2.666689] omap_i2c 48070000.i2c: bus 0 rev0.12 at 400 kHz
+[    2.687246] pcf857x 4-0026: probed
+[    2.691022] omap_i2c 4807c000.i2c: bus 4 rev0.12 at 400 kHz
+[    2.696855] omap-usb2 4a084000.phy: Unbalanced pm_runtime_enable!
+[    2.703437] omap-usb2 4a085000.phy: Unbalanced pm_runtime_enable!
+[    2.710338] omap_hwmod: HW_AUTO l4per_clkdm
+[    2.715191] omap_hwmod: HW_AUTO l4per_clkdm
+[    2.719738] 48020000.serial: ttyS2 at MMIO 0x48020000 (irq = 297, base_baud = 3000000) is a 8250
+[    2.729238] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    2.735895] omap_hwmod: HW_AUTO l3init_clkdm
+[    2.740323] omap_hsmmc 4809c000.mmc: unable to get vmmc regulator -517
+[    2.746964] platform 4809c000.mmc: Driver omap_hsmmc requests probe deferral
+[    2.756852] omap_hwmod: HW_AUTO atl_clkdm
+[    2.761361] davinci_evm primary_sound: tlv320aic3x-hifi <-> 48468000.mcasp mapping ok
+[    2.769343] omap_hwmod: HW_AUTO atl_clkdm
+[    2.775679] Adding alias for supply vdd,cpu0 -> vdd,4a003b20.voltdm
+[    2.781977] Adding alias for supply vbb,cpu0 -> vbb,4a003b20.voltdm
+[    2.788677] cpu cpu0: of_pm_voltdm_notifier_register: Fail calculating voltage latency[1060000<->1060000]:-22
+[    2.800557] omap_hwmod: HW_AUTO dss_clkdm
+[    2.804617] omap_hwmod: HW_AUTO dss_clkdm
+[    2.808926] omap_hwmod: HW_AUTO dss_clkdm
+[    2.812977] omap_hwmod: HW_AUTO dss_clkdm
+[    2.817565] omap_hwmod: HW_AUTO dss_clkdm
+[    2.821618] omap_hwmod: HW_AUTO dss_clkdm
+[    2.825878] omap_hwmod: HW_AUTO dss_clkdm
+[    2.829929] omap_hwmod: HW_AUTO dss_clkdm
+[    2.834174] omap_hwmod: HW_AUTO dss_clkdm
+[    2.838225] omap_hwmod: HW_AUTO dss_clkdm
+[    2.842428] omap_hwmod: HW_AUTO dss_clkdm
+[    2.846478] omap_hwmod: HW_AUTO dss_clkdm
+[    2.850729] omap_hwmod: HW_AUTO dss_clkdm
+[    2.854780] omap_hwmod: HW_AUTO dss_clkdm
+[    2.858995] omap_hwmod: HW_AUTO dss_clkdm
+[    2.863044] omap_hwmod: HW_AUTO dss_clkdm
+[    2.867236] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.873894] [drm] No driver support for vblank timestamp query.
+[    2.879868] omapdrm omapdrm.0: No connectors reported connected with modes
+[    2.886787] [drm] Cannot find any crtc or sizes - going 1024x768
+[    2.896677] [drm] Enabling DMM ywrap scrolling
+[    2.907053] Console: switching to colour frame buffer device 128x48
+[    2.918747] omapdrm omapdrm.0: fb0: omapdrm frame buffer device
+[    2.924709] omapdrm omapdrm.0: registered panic notifier
+[    2.930060] [drm] Initialized omapdrm 1.0.0 20110917 on minor 0
+[    2.936535] evm_3v3_sd: 3300 mV 
+[    2.940240] omap_hsmmc 4809c000.mmc: no pinctrl state for default mode
+[    2.946852] omap_hwmod: HW_AUTO l3init_clkdm
+[    2.994766] omap_hwmod: HW_AUTO gmac_clkdm
+[    3.013566] omap_hwmod: HW_AUTO gmac_clkdm
+[    3.062435] davinci_mdio 48485000.mdio: davinci mdio revision 1.6
+[    3.068558] davinci_mdio 48485000.mdio: detected phy mask fffffff7
+[    3.076781] libphy: 48485000.mdio: probed
+[    3.080812] davinci_mdio 48485000.mdio: phy[3]: device 48485000.mdio:03, driver unknown
+[    3.089404] cpsw 48484000.ethernet: Detected MACID = b4:99:4c:1c:23:ac
+[    3.097543] omap_rtc 48838000.rtcss: setting system clock to 2000-01-01 00:00:00 UTC (946684800)
+[    3.117362] net eth0: initializing cpsw version 1.15 (0)
+[    3.153586] mmc2: host does not support reading read-only switch. assuming write-enable.
+[    3.165128] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    3.171253] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    3.177422] omap_hsmmc 4809c000.mmc: no pinctrl state for hs mode
+[    3.184129] mmc2: new high speed SD card at address e624
+[    3.189980] mmcblk1: mmc2:e624 SU02G 1.84 GiB 
+[    3.201896]  mmcblk1: p1 p2
+[    3.208568] net eth0: phy found : id is : 0x20005c7a
+[    5.209531] libphy: 48485000.mdio:03 - Link is Up - 100/Full
+[    5.232426] Sending DHCP requests ., OK
+[    5.492895] IP-Config: Got DHCP answer from 192.168.1.1, my address is 192.168.1.48
+[    5.500765] IP-Config: Complete:
+[    5.504033]      device=eth0, hwaddr=b4:99:4c:1c:23:ac, ipaddr=192.168.1.48, mask=255.255.255.0, gw=192.168.1.1
+[    5.514177]      host=192.168.1.48, domain=Home, nis-domain=(none)
+[    5.520383]      bootserver=0.0.0.0, rootserver=192.168.1.36, rootpath=
+[    5.526867]      nameserver0=192.168.1.1
+[    5.531303] ALSA device list:
+[    5.534297]   #0: DRA7xx-EVM
+[    5.537188]   #1: HDMI 58040000.encoder
+[    5.573426] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.579898] devtmpfs: mounted
+[    5.583112] Freeing unused kernel memory: 340K (c0816000 - c086b000)
+INIT: version 2.88 booting
+[    6.091275] random: nonblocking pool is initialized
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd[    6.873027] udevd[1296]: starting version 175
+. ok 
+[....] Synthesizing the initial hotplug events...[    7.387132]  remoteproc0: 58820000.ipu is available
+[    7.392037]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    7.401078]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.635522]  remoteproc1: 55020000.ipu is available
+[    7.640534]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    7.649568]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.661388]  remoteproc0: Direct firmware load failed with error -2
+[    7.667719]  remoteproc0: Falling back to user helper
+[    7.713790]  remoteproc2: 40800000.dsp is available
+[    7.718694]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    7.728210]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    7.745517]  remoteproc1: Direct firmware load failed with error -2
+[    7.752288]  remoteproc1: Falling back to user helper
+udevd[1338]: error changing net interface name eth0 to eth9: Device or resource busy
+
+[    7.835382] media: Linux media interface: v0.10
+[    7.916357] omap_hwmod: HW_AUTO l3init_clkdm
+[    7.938170]  remoteproc2: Direct firmware load failed with error -2
+[    7.944522]  remoteproc2: Falling back to user helper
+[    7.967666] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.149542] Linux video capture interface: v2.00
+[    8.180062] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.185620] omap_hwmod: HW_AUTO l3init_clkdm
+done.
+[    8.425977] omap_hwmod: HW_AUTO vpe_clkdm
+[    8.462668] vpe 489d0000.vpe: loading firmware vpdma-1b8.bin
+[    8.470020] vpe 489d0000.vpe: Direct firmware load failed with error -2
+[    8.476709] vpe 489d0000.vpe: Falling back to user helper
+[    8.510068] vip 48970000.vip: loading firmware vpdma-1b8.bin
+[....] Waiting for /dev to be fully populated...[    8.737056] CAN device driver interface
+[    8.743058] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.748161] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.779666] m25p80 spi32766.0: s25fl256s1 (32768 Kbytes)
+[    8.803967] 10 ofpart partitions found on MTD device spi32766.0
+[    8.810310] Creating 10 MTD partitions on "spi32766.0":
+[    8.881785] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.888344] omap_hwmod: HW_AUTO l3init_clkdm
+[    8.949625] 0x000000000000-0x000000010000 : "QSPI.SPL"
+[    8.963832] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[    8.969694] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[    8.974713] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[    8.980394] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    8.984796] c_can_platform 4ae3c000.can: c_can_platform device registered (regs=fce3c000, irq=344)
+[    9.067315] 0x000000010000-0x000000020000 : "QSPI.SPL.backup1"
+[    9.135258] omap_hwmod: HW_AUTO l3init_clkdm
+[    9.249526] omap_hwmod: HW_AUTO l3init_clkdm
+[    9.276483] 0x000000020000-0x000000030000 : "QSPI.SPL.backup2"
+[    9.360242] 0x000000030000-0x000000040000 : "QSPI.SPL.backup3"
+[    9.524673] 0x000000040000-0x000000140000 : "QSPI.u-boot"
+[    9.623414] 0x000000140000-0x0000001c0000 : "QSPI.u-boot-spl-os"
+[    9.705314] 0x0000001c0000-0x0000001d0000 : "QSPI.u-boot-env"
+[    9.773802] 0x0000001d0000-0x0000001e0000 : "QSPI.u-boot-env.backup1"
+[    9.842354] 0x0000001e0000-0x0000009e0000 : "QSPI.kernel"
+[    9.926774] 0x0000009e0000-0x000002000000 : "QSPI.file-system"
+[   10.040218] Bluetooth: Core ver 2.18
+[   10.072884] NET: Registered protocol family 31
+[   10.077840] Bluetooth: HCI device and connection manager initialized
+[   10.089618] Bluetooth: HCI socket layer initialized
+[   10.163184] Bluetooth: L2CAP socket layer initialized
+[   10.170180]  remoteproc0: failed to load dra7-ipu1-fw.xem4
+[   10.176645]  remoteproc1: failed to load dra7-ipu2-fw.xem4
+[   10.192683] Bluetooth: SCO socket layer initialized
+[   10.199871] vpe 489d0000.vpe: couldn't get firmware
+[   10.204827] vip 48970000.vip: couldn't get firmware
+[   10.219909]  remoteproc2: failed to load dra7-dsp1-fw.xe66
+[   10.246429] omap_hwmod: HW_AUTO l3init_clkdm
+[   10.672048] omap_hwmod: HW_AUTO l4per_clkdm
+[   10.680930] omap_hwmod: HW_AUTO l3init_clkdm
+[   10.718338] (stc):  chnl_id list empty :4 
+[   10.722340] (stk) : st_kim_start(stk) :ldisc_install = 1
+[   11.501483] dwc3 48890000.usb: otg: primary host xhci-hcd.0.auto registered
+[   11.509828] dwc3 48890000.usb: otg: shared host xhci-hcd.0.auto registered
+[   11.516790] dwc3 48890000.usb: otg: can't start till gadget registers
+[   11.524201] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   11.530041] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+[   11.538141] xhci-hcd xhci-hcd.1.auto: irq 427, io mem 0x488d0000
+[   11.544358] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   11.551178] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   11.558465] usb usb1: Product: xHCI Host Controller
+[   11.563388] usb usb1: Manufacturer: Linux 3.14.43-03329-g318034f-dirty xhci-hcd
+[   11.570727] usb usb1: SerialNumber: xhci-hcd.1.auto
+[   11.576408] hub 1-0:1.0: USB hub found
+[   11.580200] hub 1-0:1.0: 1 port detected
+[   11.584472] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   11.590233] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 2
+[   11.598111] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   11.604944] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   11.612198] usb usb2: Product: xHCI Host Controller
+[   11.617106] usb usb2: Manufacturer: Linux 3.14.43-03329-g318034f-dirty xhci-hcd
+[   11.624455] usb usb2: SerialNumber: xhci-hcd.1.auto
+[   11.630029] hub 2-0:1.0: USB hub found
+[   11.633835] hub 2-0:1.0: 1 port detected
+done.
+[   11.842511] (stk) :ldisc installation timeout
+[   11.846779] (stk) :ldisc_install = 0[....] Setting parameters of disc: (none). ok 
+[....] Activating swap...done.
+(stk) : timed out waiting for ldisc to be un-installed
+[   12.954235] (stk) :ldisc_install = 1[....] Cleaning up temporary files... /tmp. ok 
+(stk) :ldisc installation timeout
+[   13.955346] (stk) :ldisc_install = 0(stk) : timed out waiting for ldisc to be un-installed
+[   15.064179] (stk) :ldisc_install = 1(stk) :ldisc installation timeout
+[   16.065359] (stk) :ldisc_install = 0[....] Activating lvm and md swap...done.
+[....] Checking file systems...fsck from util-linux 2.20.1
+done.
+[....] Mounting local filesystems...done.
+[....] Activating swapfile swap...done.
+(stk) : timed out waiting for ldisc to be un-installed
+[   17.174306] (stk) :ldisc_install = 1[....] Cleaning up temporary files.... ok 
+[....] Setting kernel variables ...done.
+[....] Configuring network interfaces...(stk) :ldisc installation timeout
+[   18.177040] (stk) :ldisc_install = 0[   18.353407] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[   18.359270] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[   18.364293] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[   18.369976] omap_hwmod: HW_AUTO wkupaon_clkdm
+done.
+[....] Cleaning up temporary files.... ok 
+[   19.172464] (stk) : timed out waiting for ldisc to be un-installed
+[   19.285507] (stk) :ldisc_install = 1[....] Setting up ALSA...done.
+[....] Setting up X socket directories... /tmp/.X11-unix /tmp/.ICE-unix. ok 
+INIT: Entering runlevel: 2
+[info] Using makefile-style concurrent boot in runlevel 2.
+(stk) :ldisc installation timeout
+[   20.285412] (stk) :ldisc_install = 0[....] Starting advanced IEEE 802.11 management: hostapdioctl(SIOCGIFINDEX): No such device
+ failed!
+[....] Starting enhanced syslogd: rsyslogd. ok 
+[....] Starting periodic command scheduler: cron. ok 
+[....] Starting system message bus: dbus(stk) : timed out waiting for ldisc to be un-installed
+[   21.394249] (stk) :ldisc_install = 1. ok 
+[....] Starting Avahi mDNS/DNS-SD Daemon: avahi-daemon[   21.760598] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[   21.766463] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[   21.771500] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[   21.777183] omap_hwmod: HW_AUTO wkupaon_clkdm
+. ok 
+[....] Starting MTA:[   22.392458] (stk) :ldisc installation timeout
+[   22.396664] (stk) :ldisc_install = 0 exim4(stk) : timed out waiting for ldisc to be un-installed
+[   23.399196] Bluetooth: st_register failed -22
+. ok 
+ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken
+[....] Starting OpenBSD Secure Shell server: sshd. ok 
+Starting very small Busybox based DHCP server: Starting /usr/sbin/udhcpd...
+udhcpd.
+
+Last login: Sat Jan  1 00:00:22 UTC 2000 on ttyS0
+Linux rockdesk 3.14.43-03329-g318034f-dirty #1401 SMP Mon Jun 15 14:24:36 EEST 2015 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@rockdesk:~# dmesg | grep wkup
+[    0.098769] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[    0.098782] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[    0.098789] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.129661] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197018] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197324] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.197457] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    0.211841] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    1.781921] omap_hwmod: HW_AUTO wkupaon_clkdm
+[    8.963832] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[    8.969694] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[    8.974713] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[    8.980394] omap_hwmod: HW_AUTO wkupaon_clkdm
+[   18.177040] (stk) :ldisc_install = 0<6>[   18.353407] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[   18.359270] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[   18.364293] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[   18.369976] omap_hwmod: HW_AUTO wkupaon_clkdm
+[   21.394249] (stk) :ldisc_install = 1<6>[   21.760598] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[   21.766463] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[   21.771500] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[   21.777183] omap_hwmod: HW_AUTO wkupaon_clkdm
+root@rockdesk:~# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03329-g318034f-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1401 SMP
+    Date: Mon Jun 15 14:24:36 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0002D103 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00030000 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+root@rockdesk:~# ./canup.sh 
+[  101.473175] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[  101.479040] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[  101.484069] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[  101.489751] omap_hwmod: HW_AUTO wkupaon_clkdm
+[  101.515258] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[  101.521121] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[  101.526614] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+root@rockdesk:~# 
+root@rockdesk:~# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03329-g318034f-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1401 SMP
+    Date: Mon Jun 15 14:24:36 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0003D102 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00000002 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+
+root@rockdesk:~# 
+root@rockdesk:~# ifconfig can0 down
+[  131.325826] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[  131.331516] omap_hwmod: HW_AUTO wkupaon_clkdm
+[  131.335954] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[  131.341811] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[  131.346819] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[  131.352499] omap_hwmod: HW_AUTO wkupaon_clkdm
+root@rockdesk:~# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03329-g318034f-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1401 SMP
+    Date: Mon Jun 15 14:24:36 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0002D103 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00030000 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+root@rockdesk:~# cd /sys/kernel/debug/gpio 
+-bash: cd: /sys/kernel/debug/gpio: Not a directory
+root@rockdesk:~# ls
+8k                           dpll_audit_report.txt
+8k.nor                       dra72evm_CTT-DRA7xx_ES1.rd1
+blobs                        dump_gpmc.sh
+can                          dump_nor.sh
+can.dump                     dwc3_gadget
+canreceive.sh                dwc3_gadget.sh
+canregmux.sh                 epos_audio_init.sh
+canregstart2.sh              lcpd3.8_usb.txt
+canregstart.sh               mtd_oobtest.sh
+canregstartstopinitremux.sh  nand_dpll_working.log
+canregstartstopinit.sh       nanddump.sh
+canregstartstopremux.sh      nand_fail.clk
+canregstartstop.sh           nand_fail_CTT-DRA7xx_ES1.rd1
+canregtransition.sh          nand_fail.gpmc
+cansendpacket.sh             nandthroughput.sh
+cansendtraffic.sh            nand_working.clk
+can_test                     nand_working_CTT-DRA7xx_ES1.rd1
+cantraffic.sh                nand_working.gpmc
+canup2.sh                    nor_failure.gpmc
+canup_50.sh                  nor_working.gpmc
+canup.sh                     oob.bin
+cpufreq_userspace.sh         oobff.bin
+createdump                   rtc_standby.sh
+createdump.c                 rtc_suspend.sh
+ctt                          sata_not_working_attached.txt
+CTT-DRA7xx_ES1.rd1           sata_not_working.txt
+data.bin                     satareboot.log
+dcanrxpacket2_am43x.sh       satareboot.logx
+dcanrxpacket_am33x.sh        sata_reboot.sh
+dcanrxpacket_am43x.sh        sata_working_connected.txt
+dcanrxpacketreboot.log       sata_working.txt
+dcanrxpacketreboot.logx      sound_test.sh
+dcanrxpacketreboot.sh        suspend.sh
+dcanrxpacket.sh              testnor.sh
+dcanstartstop2_am43x.sh      transition,
+dcanstartstop2.sh            try-dcan1.sh
+dcanstartstop_am43x.sh       ubicreate.sh
+dcanstartstop.sh             ubimount.sh
+debug.sh                     usb_dump.sh
+devdump.sh
+root@rockdesk:~# cd /sys/class/gpio/
+root@rockdesk:/sys/class/gpio# ls
+export       gpiochip160  gpiochip32   gpiochip496  unexport
+gpiochip0    gpiochip192  gpiochip464  gpiochip64
+gpiochip128  gpiochip224  gpiochip480  gpiochip96
+root@rockdesk:/sys/class/gpio# cat /sys/kernel/debug/gpio 
+[  180.254553] omap_hwmod: HW_AUTO l4per_clkdm
+GPIOs 0-31, gpio:
+
+GPIOs 32-63, gpio:
+
+GPIOs 64-95, gpio:
+
+GPIOs 96-127, gpio:
+
+GPIOs 128-159, gpio:
+ gpio-132 (kim                 ) out lo    
+ gpio-136 (vmmcwl_fixed        ) out lo    
+
+GPIOs 160-191, gpio:
+ gpio-187 (mmc_cd              ) in  lo IRQ
+
+GPIOs 192-223, gpio:
+ gpio-204 (hdmi_hpd            ) in  lo    
+
+GPIOs 224-255, gpio:
+
+GPIOs 464-479, i2c/4-0026, pcf8575, can sleep:
+ gpio-468 (hdmi_ct_cp_hpd      ) out hi    
+ gpio-469 (hdmi_ls_oe          ) out lo    
+
+GPIOs 480-495, i2c/0-0021, pcf8575, can sleep:
+ gpio-481 (id                  ) in  hi    
+ gpio-482 (id                  ) in  hi    
+ gpio-484 (cpsw_sel_s0         ) out lo    
+ gpio-485 (evm_3v3_sd          ) out hi    
+ gpio-494 (uart_sel            ) out lo    
+
+GPIOs 496-511, i2c/0-0020, pcf8575, can sleep:
+root@rockdesk:/sys/class/gpio# echo 0 > export 
+[  195.412644] omap_hwmod: HW_AUTO wkupaon_clkdm
+root@rockdesk:/sys/class/gpio# echo 0 > unexport 
+root@rockdesk:/sys/class/gpio# ifconfig can0 up
+[  214.723820] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[  214.729684] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[  214.735060] c_can_platform 4ae3c000.can can0: setting BTR=1c04 BRPE=0000
+root@rockdesk:/sys/class/gpio# echo 0 > export
+[  221.542616] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+root@rockdesk:/sys/class/gpio# echo 1 > export
+root@rockdesk:/sys/class/gpio# echo 1 > unexport 
+root@rockdesk:/sys/class/gpio# echo 0 > unexport 
+root@rockdesk:/sys/class/gpio# echo 1 > export 
+[  245.472591] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+root@rockdesk:/sys/class/gpio# echo 1 > unexport 
+root@rockdesk:/sys/class/gpio# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03329-g318034f-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1401 SMP
+    Date: Mon Jun 15 14:24:36 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0003D102 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00000002 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+root@rockdesk:/sys/class/gpio# ifconfig can0 down
+[  270.362110] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[  270.367799] omap_hwmod: HW_AUTO wkupaon_clkdm
+[  270.372242] omap_hwmod: preventing HW_AUTO dcan1 wkupaon_clkdm
+[  270.378099] omap_hwmod: didn't HW_AUTO wkupaon_clkdm
+[  270.383113] omap_hwmod: allowing HW_AUTO dcan1 wkupaon_clkdm
+[  270.388795] omap_hwmod: HW_AUTO wkupaon_clkdm
+root@rockdesk:/sys/class/gpio# omapconf dump prcm wkupaon
+OMAPCONF (rev v1.70-2-g596557b built Mon Sep 29 16:09:22 EEST 2014)
+
+HW Platform:
+  Generic DRA72X (Flattened Device Tree)
+  DRA72X ES1.0 GP Device (STANDARD performance (1.0GHz))
+  UNKNOWN POWER IC
+
+SW Build Details:
+  Build:
+    Version: Debian GNU/Linux 7.0
+  Kernel:
+    Version: 3.14.43-03329-g318034f-dirty
+    Author: roger@rockdesk
+    Toolchain: gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03)
+    Type: #1401 SMP
+    Date: Mon Jun 15 14:24:36 EEST 2015
+
+|---------------------------------------------------------------|
+| PRM WKUPAON Reg. Name             | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| RM_WKUPAON_L4_WKUP_CONTEXT        | 0x4AE07724   | 0x00000000 |
+| PM_WKUPAON_WD_TIMER1_WKDEP        | 0x4AE07728   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER1_CONTEXT      | 0x4AE0772C   | 0x00000001 |
+| PM_WKUPAON_WD_TIMER2_WKDEP        | 0x4AE07730   | 0x00000000 |
+| RM_WKUPAON_WD_TIMER2_CONTEXT      | 0x4AE07734   | 0x00000000 |
+| PM_WKUPAON_GPIO1_WKDEP            | 0x4AE07738   | 0x00000000 |
+| RM_WKUPAON_GPIO1_CONTEXT          | 0x4AE0773C   | 0x00000000 |
+| PM_WKUPAON_TIMER1_WKDEP           | 0x4AE07740   | 0x00000000 |
+| RM_WKUPAON_TIMER1_CONTEXT         | 0x4AE07744   | 0x00000000 |
+| PM_WKUPAON_TIMER12_WKDEP          | 0x4AE07748   | 0x00000000 |
+| RM_WKUPAON_TIMER12_CONTEXT        | 0x4AE0774C   | 0x00000000 |
+| RM_WKUPAON_COUNTER_32K_CONTEXT    | 0x4AE07754   | 0x00000000 |
+| RM_WKUPAON_SAR_RAM_CONTEXT        | 0x4AE07764   | 0x00000101 |
+| PM_WKUPAON_KBD_WKDEP              | 0x4AE07778   | 0x00000000 |
+| RM_WKUPAON_KBD_CONTEXT            | 0x4AE0777C   | 0x00000001 |
+| PM_WKUPAON_UART10_WKDEP           | 0x4AE07780   | 0x00000000 |
+| RM_WKUPAON_UART10_CONTEXT         | 0x4AE07784   | 0x00000000 |
+| PM_WKUPAON_DCAN1_WKDEP            | 0x4AE07788   | 0x00000000 |
+| RM_WKUPAON_DCAN1_CONTEXT          | 0x4AE0778C   | 0x00000000 |
+| PM_WKUPAON_ADC_WKDEP              | 0x4AE077A0   | 0x00000000 |
+| RM_WKUPAON_ADC_CONTEXT            | 0x4AE077A4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY1_CONTEXT  | 0x4AE077B4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY2_CONTEXT  | 0x4AE077BC   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY3_CONTEXT  | 0x4AE077C4   | 0x00000001 |
+| RM_WKUPAON_SPARE_SAFETY4_CONTEXT  | 0x4AE077CC   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN2_CONTEXT | 0x4AE077D4   | 0x00000001 |
+| RM_WKUPAON_SPARE_UNKNOWN3_CONTEXT | 0x4AE077DC   | 0x00000001 |
+|---------------------------------------------------------------|
+
+|---------------------------------------------------------------|
+| CM WKUPAON Reg. Name              | Reg. Address | Reg. Value |
+|---------------------------------------------------------------|
+| CM_WKUPAON_CLKSTCTRL              | 0x4AE07800   | 0x0002D103 |
+| CM_WKUPAON_L4_WKUP_CLKCTRL        | 0x4AE07820   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER1_CLKCTRL      | 0x4AE07828   | 0x00000001 |
+| CM_WKUPAON_WD_TIMER2_CLKCTRL      | 0x4AE07830   | 0x00030000 |
+| CM_WKUPAON_GPIO1_CLKCTRL          | 0x4AE07838   | 0x00030000 |
+| CM_WKUPAON_TIMER1_CLKCTRL         | 0x4AE07840   | 0x01000002 |
+| CM_WKUPAON_TIMER12_CLKCTRL        | 0x4AE07848   | 0x00000001 |
+| CM_WKUPAON_COUNTER_32K_CLKCTRL    | 0x4AE07850   | 0x00000001 |
+| CM_WKUPAON_SAR_RAM_CLKCTRL        | 0x4AE07860   | 0x00000001 |
+| CM_WKUPAON_KBD_CLKCTRL            | 0x4AE07878   | 0x00030000 |
+| CM_WKUPAON_UART10_CLKCTRL         | 0x4AE07880   | 0x00030000 |
+| CM_WKUPAON_DCAN1_CLKCTRL          | 0x4AE07888   | 0x00030000 |
+| CM_WKUPAON_SCRM_CLKCTRL           | 0x4AE07890   | 0x00000300 |
+| CM_WKUPAON_IO_SRCOMP_CLKCTRL      | 0x4AE07898   | 0x00000000 |
+| CM_WKUPAON_ADC_CLKCTRL            | 0x4AE078A0   | 0x00030000 |
+| CM_WKUPAON_SPARE_SAFETY1_CLKCTRL  | 0x4AE078B0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY2_CLKCTRL  | 0x4AE078B8   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY3_CLKCTRL  | 0x4AE078C0   | 0x00000001 |
+| CM_WKUPAON_SPARE_SAFETY4_CLKCTRL  | 0x4AE078C8   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN2_CLKCTRL | 0x4AE078D0   | 0x00000001 |
+| CM_WKUPAON_SPARE_UNKNOWN3_CLKCTRL | 0x4AE078D8   | 0x00000001 |
+|---------------------------------------------------------------|
+
+omapconf: powerdm_deinit(): cpu not supported!!!
+omapconf: clockdm_deinit(): cpu not supported!!!
+root@rockdesk:/sys/class/gpio# echo 1 > export 
+[  282.822633] omap_hwmod: HW_AUTO wkupaon_clkdm
+root@rockdesk:/sys/class/gpio# echo 1 > unexport 
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+INIT: Id "T1" respawning too fast: disabled for 5 minutes
+INIT: Id "T0" respawning too fast: disabled for 5 minutes
+
+root@rockdesk:/sys/class/gpio#
