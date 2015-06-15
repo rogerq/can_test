@@ -1,0 +1,36 @@
+Possible workarounds to get rid of DCAN1 stuck-in-transition while keeping
+clockdomain in HW_AUTO as long as possible to allow CORE INActive.
+======================================================================
+
+A) Disable HW_AUTO of WKUPAON clockdomain during DCAN1 module disable
+
+Workaround:
+Current hw-mode code doesn't disable clockdomain HW_AUTO while disabling
+the module. Try disabling HW_AUTO for WKUPAON domain while disabling module
+
+Observation:
+- DCAN1 RAMINIT still times out while bringing up can0.
+- DCAN1 stuck in transition after bringing down can0.
+
+Testing branch:
+https://github.com/rogerq/linux/commits/cantest/disable_hwauto_module_disable
+
+Test log:
+https://github.com/rogerq/can_test/blob/master/clkdomain_tests/disable_hwauto_module_disable.log
+
+
+B) Disable HW_AUTO of WKUPAON clockdomain when DCAN1 is active
+
+Workaround:
+Add a flag in hwmod data so that for DCAN1 module we never put the WKUPAON clockdomain
+in HW_AUTO whenever DCAN1 is active.
+
+Observation:
+- DCAN1 RAMINIT passes fine while bringing up can0.
+- DCAN1 is not stuck in transition while bringing down can0.
+
+Testing branch:
+https://github.com/rogerq/linux/commits/cantest/disable_hwauto_module_active
+
+Test log:
+https://github.com/rogerq/can_test/blob/master/clkdomain_tests/disable_hwauto_module_active.log
